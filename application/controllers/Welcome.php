@@ -27,4 +27,5 @@ class Welcome extends CI_Controller {
 			echo 'test';
 		# code...
 	}
+	
 }
