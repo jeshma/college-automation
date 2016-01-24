@@ -105,7 +105,7 @@ box-shadow:0px 0px 5px #C0C0C0;
 </th>
 </table>
 </div>
-<img src="img/ab.gif" width=100% height=40%>
+<img src="<?php echo base_url('img/ab.gif');?>"> width=100% height=40%>
 <div id="intel">
 <table>
 <tr><td><b><a href="home.html" style="text-decoration:none;"><font color=green><li><font color=#DB7093">College documentory</font></li></font></a></b></td></tr>
@@ -141,10 +141,10 @@ box-shadow:0px 0px 5px #C0C0C0;
                               <input name="email" type="text" id="email" placeholder="Enter Email Here…" /><center>
                               </label><br/>
                             <label><center>
-                            <a href="home.html" style="text-decoration:none;"><img src="img/btn-subscribe.gif"></center>
+                            <a href="home.html" style="text-decoration:none;"><img src="<?php echo base_url('img/btn-subscribe.gif');?>"></center>
                             </label>
                           </form>
-                          <p class="style19"><span class="style3">Follw Us </span> <img src="img/fl.png" width="27" height="26" align="absmiddle" /> <a href="Links/Facebook - Log In or Sign Up/Facebook - Log In or Sign Up.htm"><img src="img/fb.png" width="27" height="26" align="absmiddle" /></a> <a href="Links/Twitter - Login or Sign up/Welcome to Twitter - Login or Sign up.htm"><img src="img/tw.png" width="27" height="26" align="absmiddle" /></a> <a href="Links/Gmail - Free Storage and Email from Google/Gmail - Free Storage and Email from Google.htm"><img src="img/em.png" width="27" height="26" align="absmiddle" /></a></p>
+                          <p class="style19"><span class="style3">Follw Us </span> <img src="<?php echo base_url('img/fl.png');?>" width="27" height="26" align="absmiddle" /> <a href="Links/Facebook - Log In or Sign Up/Facebook - Log In or Sign Up.htm"><img src="<?php echo base_url('img/fb.png');?>"> width="27" height="26" align="absmiddle" /></a> <a href="Links/Twitter - Login or Sign up/Welcome to Twitter - Login or Sign up.htm"><img src="<?php echo base_url('img/tw.png');?>"> width="27" height="26" align="absmiddle" /></a> <a href="Links/Gmail - Free Storage and Email from Google/Gmail - Free Storage and Email from Google.htm"><img src="<?php echo base_url('img/em.png');?>"> width="27" height="26" align="absmiddle" /></a></p>
                          </center>
                           <blockquote>
                            <center> <p class="style19"><span class="copyright style20">Copyright © 2015 Dec</span></p></center>
