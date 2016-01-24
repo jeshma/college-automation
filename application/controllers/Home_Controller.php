@@ -3,12 +3,13 @@ defined('BASEPATH') OR exit('no direct script access allowed');
 /**
 * home class
 */
-class Home extends CI_Controller
+class Home_Controller extends CI_Controller
 {
 	/*construtor method*/
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('url');
 	}
 
 

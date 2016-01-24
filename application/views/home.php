@@ -138,7 +138,7 @@ box-shadow:0px 0px 5px #C0C0C0;
 <br/><div id="lilo"><center><p class="style19 style3">Subcribe To Our Newsletter</p></center>
  <form id="form1" name="form1" method="post" action="">
                             <label><center>
-                              <input name="email" type="text" id="email" placeholder="Enter Email Hereï¿½" /><center>
+                              <input name="email" type="text" id="email" placeholder="Enter Email Here…" /><center>
                               </label><br/>
                             <label><center>
                             <a href="home.html" style="text-decoration:none;"><img src="img/btn-subscribe.gif"></center>
@@ -147,7 +147,7 @@ box-shadow:0px 0px 5px #C0C0C0;
                           <p class="style19"><span class="style3">Follw Us </span> <img src="img/fl.png" width="27" height="26" align="absmiddle" /> <a href="Links/Facebook - Log In or Sign Up/Facebook - Log In or Sign Up.htm"><img src="img/fb.png" width="27" height="26" align="absmiddle" /></a> <a href="Links/Twitter - Login or Sign up/Welcome to Twitter - Login or Sign up.htm"><img src="img/tw.png" width="27" height="26" align="absmiddle" /></a> <a href="Links/Gmail - Free Storage and Email from Google/Gmail - Free Storage and Email from Google.htm"><img src="img/em.png" width="27" height="26" align="absmiddle" /></a></p>
                          </center>
                           <blockquote>
-                           <center> <p class="style19"><span class="copyright style20">Copyright ï¿½ 2015 Dec</span></p></center>
+                           <center> <p class="style19"><span class="copyright style20">Copyright © 2015 Dec</span></p></center>
 <center> <p class="style19"><span class="copyright style20">Developed & Designed by JESHMA NASRIN , NOUFAL CK , FAIZ MOHD</span></p></center></div>
 
 </body>
