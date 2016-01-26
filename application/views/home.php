@@ -33,7 +33,7 @@ width:23%;
 height:54%;
 margin-top:2%;
 background color:white;
-background :url(img/tutu.jpeg);
+background :"<?php echo base_url('img/tutu.jpeg');?>">
 box-shadow:0px 0px 10px #C0C0C0;
 text-align:justify;
 } 

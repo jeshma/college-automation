@@ -22,6 +22,14 @@ class Home_Controller extends CI_Controller
 	{
 		$this->load->view($page);
 	}
+	public function regist($page = 'regist')
+	{
+		$this->load->view($page);
+	}
+	public function application($page = 'application')
+	{
+		$this->load->view($page);
+	}
 }
 
  ?>
