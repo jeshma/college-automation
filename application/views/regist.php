@@ -11,8 +11,8 @@
 	<h2>APPLICATION FORM</h2>
 	<BR/>
 	<br/>
-	ID:<input type="text"name="ID"><br/>
-	NAME:<input type="text"name="NAME"ID="NAME"><br/>
+	
+	NAME:<input type="text"name="NAME"ID="NAME"><br/><br/>
 	DOB:<select name="day">
 <option namevalue="1">1</option>
 <option namevalue="2">2</option>
@@ -72,34 +72,34 @@
 <option namevalue="1998">1998</option>
 <option namevalue="1999">1999</option>
 <option namevalue="2000">2000</option>
-<select/>
-<br/>
+</select>
+<br/><br/>
 
-ADDRESS:<textarea name="address" id="SADDRES"></textarea><br/>
+ADDRESS:<textarea name="address" id="SADDRES"></textarea><br/><br/>
 GENDER:</font></td><td><input type="radio"name="sex"value="M">M
 <input type="radio"name="sex"value="F">F
-<BR/>
-FATHER NAME:<input type="text"name="ufather" id="father"><br/>
-MOTHER NAME:<input type="text"name="umother" id="mother"><br/>
-PIN:<input type="tell" name="num" id="pin"><br/>
-INCOME:<input type="tell" name="in" id="income"><br/>
-NUMBER:<input type="tell" name="num" id="number"><br/>
-MAIL:<input type="mail" name="ma" id="mail"><br/>
-RELIGION&COMMUNITY:<input type="text" name="RELIGION" id="community"><br/>
-CAST:<input type="text"name="ucast"id="cast"><br/>
+<BR/><br/>
+FATHER NAME:<input type="text"name="ufather" id="father"><br/><br/>
+MOTHER NAME:<input type="text"name="umother" id="mother"><br/><br/>
+PIN:<input type="tell" name="num" id="pin"><br/><br/>
+INCOME:<input type="tell" name="in" id="income"><br/><br/>
+NUMBER:<input type="tell" name="num" id="number"><br/><br/>
+MAIL:<input type="mail" name="ma" id="mail"><br/><br/>
+RELIGION&COMMUNITY:<input type="text" name="RELIGION" id="community"><br/><br/>
+CAST:<input type="text"name="ucast"id="cast"><br/><br/>
 PANCHAYATH:<input type="text"name="upanchayath"id="panchayath">
-<br/>
-TALUK:<input type="text"name="uyaluk"id="taluk"><br/>
-DISTRICT:<input type="text"name="udistrict"id="dist"><br/>
-MARTIAL STATUS:<input type="radio" name="umartial"id="martial">yes
-<input type="radio" name="um"id="mart">no<br/>
-SPOUSE NAME:<input type="text"name="NAME"id="sname"><br/>
+<br/><br/>
+TALUK:<input type="text"name="uyaluk"id="taluk"><br/><br/>
+DISTRICT:<input type="text"name="udistrict"id="dist"><br/><br/>
+MARTIAL STATUS:<input type="radio" name="umartial"id="martial">Yes
+<input type="radio" name="um"id="mart">No<br/><br/>
+SPOUSE NAME:<input type="text"name="NAME"id="sname"><br/><br/>
 
-LAST INSTITUTION:<input type="text"name="NAME" ID="last"><br/>
-PHYSICALLY HANDICAPPED:<input type="radio" name="uhand"id="hand">yes
-<input type="radio" name="phand"id="phand">no<br/>
-COURSE ID:<input type="text"name="Ucourse"id="cours"><br/>
-I AGREE<input type="checkbox"name="agree"id="uagree"><br/><br/>
+LAST INSTITUTION:<input type="text"name="NAME" ID="last"><br/><br/>
+PHYSICALLY HANDICAPPED:<input type="radio" name="uhand"id="hand">Yes
+<input type="radio" name="phand"id="phand">No<br/><br/>
+COURSE ID:<input type="text"name="Ucourse"id="cours"><br/><br/>
+<input type="checkbox"name="agree"id="uagree">I agree to this<br/><br/>
 <input type="submit" name="usubmit" id="submit" value="next">
 <input type="submit" name="ucancel" id="cancel" value="cancel">
 </form>
