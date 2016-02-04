@@ -72,8 +72,7 @@ class Application_Model extends CI_Model
 		public function delete($id)
 	{
 		$this->db->where('id',$id);
-		$this->db->delete($this->table, $data);
-		if($delete)
+		if($this->db->delete($this->table) === TRUE)
 		{
 			return TRUE;
 		}
@@ -81,6 +80,7 @@ class Application_Model extends CI_Model
 		{
 			return FALSE;
 		}
+		
 	}
 	
 }
