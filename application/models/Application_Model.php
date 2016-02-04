@@ -58,7 +58,8 @@ class Application_Model extends CI_Model
 	public function edit($where, $data)
 	{
 		$this->db->where($where);
-		if($this->db->update($this->table, $data) )
+		$update=$this->db->update($this->table, $data);
+		if($update)
 		{
 			return TRUE;
 		}
@@ -71,10 +72,15 @@ class Application_Model extends CI_Model
 		public function delete($id)
 	{
 		$this->db->where('id',$id);
-		if($this->db->delete($this->table,$data) );
+		$this->db->delete($this->table, $data);
+		if($delete)
 		{
-			return $this->db->delete_id();
+			return TRUE;
 		}
-
-			}
+		else
+		{
+			return FALSE;
 		}
+	}
+	
+}

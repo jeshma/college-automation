@@ -53,17 +53,13 @@ class Admin_Controller extends CI_Controller
 		}
 	}
 
-	public function selected($id)
-	{		
-		$result =$this->Application_Model->view_where($where);
-		var_dump($result);
-		}
-	
-	public function deleted($id)
+
+	public function delete($id)
 	{
 
-		$result=$this->Application_Model->view_where($where);
-		$this->load->view('admin/view view_selected',$data)
+		$result=$this->Application_Model->view_where($id);
+		var_dump($result);
+		$this->load->view('admin/view_application');
 
 	}
 		}
