@@ -61,13 +61,9 @@ class Admin_Controller extends CI_Controller
 
 	public function delete($id)
 	{
-
-
-	
-
-		$result=$this->Application_Model->view_where($id);
-		var_dump($result);
-		$this->load->view('admin/view_application');
+		var_dump('expression');
+		// $result=$this->Application_Model->view_where($id);
+		// $this->load->view('admin/view_applications');
 
 	}
 		}
