@@ -63,8 +63,12 @@ class Admin_Controller extends CI_Controller
 	{
 
 		$result=$this->Application_Model->view_where($where);
+		$this->load->view('admin/view view_selected',$data)
 
 	}
 		}
+	
+		
+
 
 
