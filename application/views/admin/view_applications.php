@@ -62,7 +62,9 @@
 			<td><?php echo $value->statistics ?></td>
 			<td><?php echo $value->status ?></td>
 
-			<td><a href="<?php echo base_url('index.php/Admin_Controller/accept/'.$value->id) ?>">select</a></td>
+			<td><a href="<?php echo base_url('index.php/Admin_Controller/accept/'.$value->id) ?>">Select</a></td>
+			<td><a href="<?php echo base_url('index.php/Admin_Controller/accept/'.$value->id) ?>">Remove</a></td>
+			
 		</tr>		
 		<?php }
 		}

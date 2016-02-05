@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 24, 2016 at 10:33 AM
+-- Generation Time: Feb 04, 2016 at 06:32 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.16
 
@@ -25,6 +25,55 @@ USE `website`;
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `applications`
+--
+
+CREATE TABLE IF NOT EXISTS `applications` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `gender` varchar(1) DEFAULT NULL,
+  `guardian_name` varchar(100) DEFAULT NULL,
+  `pin` varchar(10) DEFAULT NULL,
+  `firstlang` int(10) DEFAULT NULL,
+  `secondlang` int(10) DEFAULT NULL,
+  `maths` int(10) DEFAULT NULL,
+  `english` int(10) DEFAULT NULL,
+  `chemistry` int(10) DEFAULT NULL,
+  `physics` int(10) DEFAULT NULL,
+  `electronics` int(10) DEFAULT NULL,
+  `zoology` int(10) DEFAULT NULL,
+  `botony` int(10) DEFAULT NULL,
+  `course` varchar(50) DEFAULT NULL,
+  `bussiness` int(11) DEFAULT NULL,
+  `accounting` int(11) DEFAULT NULL,
+  `economics` int(11) DEFAULT NULL,
+  `politics` int(11) DEFAULT NULL,
+  `statistics` int(11) DEFAULT NULL,
+  `status` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
+
+--
+-- Dumping data for table `applications`
+--
+
+INSERT INTO `applications` (`id`, `name`, `address`, `dob`, `gender`, `guardian_name`, `pin`, `firstlang`, `secondlang`, `maths`, `english`, `chemistry`, `physics`, `electronics`, `zoology`, `botony`, `course`, `bussiness`, `accounting`, `economics`, `politics`, `statistics`, `status`) VALUES
+(16, 'nbv', 'sdfgh', NULL, NULL, 'wertyu', '56', 78, 6, 5, 4, 3, 2, 1, 0, 9, 'dfghj', 8, 7, 6, 5, 4, 'listed'),
+(17, 'sdf', 'ert', NULL, NULL, 'rt', '76', 7, 6, 5, 4, 3, 2, 1, 0, 9, '8', 8, 7, 6, 0, 0, 'listed'),
+(18, 'noufalck', 'ert', NULL, NULL, 'rt', '76', 7, 6, 5, 4, 3, 2, 1, 0, 10, '8', 8, 7, 6, 0, 0, 'listed'),
+(19, 'shameem', 'bjom', NULL, NULL, 'bbb', '7654', 99, 88, 77, 66, 55, 44, 33, 22, 11, 'vvvv', 2, 33, 44, 55, 66, 'listed'),
+(20, 'noufal', 'asdfghjk', NULL, NULL, 'qwertyu', '652136', 3, 4, 5, 6, 7, 8, 9, 7, 56, 'bba', 5, 4, 3, 2, 1, 'listed'),
+(21, 'noufal', 'asdfghjk', NULL, NULL, 'qwertyu', '652136', 3, 4, 5, 6, 7, 8, 9, 7, 56, 'bba', 5, 4, 3, 2, 1, 'listed'),
+(22, 'xxx', 'bbb', NULL, NULL, 'nnn', '786543', 67, 88, 99, 0, 77, 66, 55, 44, 33, 'bbv', 22, 22, 11, 77, 88, 'listed'),
+(26, 'murshid', 'hbbb', NULL, NULL, 'ghh', '786543', 5, 4, 3, 2, 6, 7, 8, 9, 7, 'gh', 5, 4, 4, 3, 2, 'listed'),
+(27, 'panth', 'rhbbb', NULL, NULL, 'r', 'r', 9, 6, 6, 5, 4, 3, 2, 1, 3, 'gh', 344, 5, 77, 88, 99, 'listed'),
+(28, 'jeshma', 'chettiyarammal', NULL, NULL, 'afsal', '12345', 32, 55, 66, 88, 66, 55, 44, 33, 22, 'bca', 111, 22, 333, 44, 55, 'listed');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `courses`
 --
 
@@ -32,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -140,10 +189,42 @@ CREATE TABLE IF NOT EXISTS `payroll` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `scholor`
+-- Table structure for table `registrations`
 --
 
-CREATE TABLE IF NOT EXISTS `scholor` (
+CREATE TABLE IF NOT EXISTS `registrations` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  `dob` date DEFAULT NULL,
+  `address` varchar(150) DEFAULT NULL,
+  `gender` varchar(1) DEFAULT NULL,
+  `father` varchar(50) DEFAULT NULL,
+  `mother` varchar(50) DEFAULT NULL,
+  `pin` int(10) DEFAULT NULL,
+  `income` int(20) DEFAULT NULL,
+  `number` int(15) DEFAULT NULL,
+  `mail` varchar(50) DEFAULT NULL,
+  `religion_community` varchar(50) DEFAULT NULL,
+  `cast` varchar(50) DEFAULT NULL,
+  `panchayath` varchar(50) DEFAULT NULL,
+  `taluk` varchar(50) DEFAULT NULL,
+  `district` varchar(50) DEFAULT NULL,
+  `martia_status` varchar(50) DEFAULT NULL,
+  `spouse_name_address` varchar(50) DEFAULT NULL,
+  `institution_last_attend` varchar(50) DEFAULT NULL,
+  `physically_handicapped` varchar(50) DEFAULT NULL,
+  `course_id` int(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `couse` (`course_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `scholorships`
+--
+
+CREATE TABLE IF NOT EXISTS `scholorships` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `type` varchar(50) DEFAULT NULL,
   `description` varchar(500) DEFAULT NULL,
@@ -183,33 +264,15 @@ CREATE TABLE IF NOT EXISTS `staffs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `students`
+-- Table structure for table `userlogin`
 --
 
-CREATE TABLE IF NOT EXISTS `students` (
+CREATE TABLE IF NOT EXISTS `userlogin` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) DEFAULT NULL,
-  `dob` date DEFAULT NULL,
-  `address` varchar(150) DEFAULT NULL,
-  `gender` varchar(1) DEFAULT NULL,
-  `father` varchar(50) DEFAULT NULL,
-  `mother` varchar(50) DEFAULT NULL,
-  `pin` int(10) DEFAULT NULL,
-  `income` int(20) DEFAULT NULL,
-  `number` int(15) DEFAULT NULL,
-  `mail` varchar(50) DEFAULT NULL,
-  `religion_community` varchar(50) DEFAULT NULL,
-  `cast` varchar(50) DEFAULT NULL,
-  `panchayath` varchar(50) DEFAULT NULL,
-  `taluk` varchar(50) DEFAULT NULL,
-  `district` varchar(50) DEFAULT NULL,
-  `martia_status` varchar(50) DEFAULT NULL,
-  `spouse_name_address` varchar(50) DEFAULT NULL,
-  `institution_last_attend` varchar(50) DEFAULT NULL,
-  `physically_handicapped` varchar(50) DEFAULT NULL,
-  `course_id` int(50) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `couse` (`course_id`)
+  `user_name` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  `student_id` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
@@ -220,26 +283,32 @@ CREATE TABLE IF NOT EXISTS `students` (
 -- Constraints for table `examresults`
 --
 ALTER TABLE `examresults`
-  ADD CONSTRAINT `student` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`),
-  ADD CONSTRAINT `exam_type` FOREIGN KEY (`exam_type_id`) REFERENCES `examtypes` (`id`);
+  ADD CONSTRAINT `exam_type` FOREIGN KEY (`exam_type_id`) REFERENCES `examtypes` (`id`),
+  ADD CONSTRAINT `student` FOREIGN KEY (`student_id`) REFERENCES `registrations` (`id`);
 
 --
 -- Constraints for table `marks`
 --
 ALTER TABLE `marks`
-  ADD CONSTRAINT `studentid` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`);
+  ADD CONSTRAINT `studentid` FOREIGN KEY (`student_id`) REFERENCES `registrations` (`id`);
 
 --
 -- Constraints for table `parentlogin`
 --
 ALTER TABLE `parentlogin`
-  ADD CONSTRAINT `parentstudents` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`);
+  ADD CONSTRAINT `parentstudents` FOREIGN KEY (`student_id`) REFERENCES `registrations` (`id`);
 
 --
 -- Constraints for table `payroll`
 --
 ALTER TABLE `payroll`
   ADD CONSTRAINT `staff` FOREIGN KEY (`staff_id`) REFERENCES `staffs` (`id`);
+
+--
+-- Constraints for table `registrations`
+--
+ALTER TABLE `registrations`
+  ADD CONSTRAINT `couse` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`);
 
 --
 -- Constraints for table `staffattend`
@@ -252,12 +321,6 @@ ALTER TABLE `staffattend`
 --
 ALTER TABLE `staffs`
   ADD CONSTRAINT `departmet` FOREIGN KEY (`dapartment_id`) REFERENCES `departments` (`id`);
-
---
--- Constraints for table `students`
---
-ALTER TABLE `students`
-  ADD CONSTRAINT `couse` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

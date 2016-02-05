@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>application view</title>
+	<title>Selected view</title>
 </head>
 <body>
 
-	<h2>Applications</h2>
+	<h2>SELECTED APPLICATION</h2>
 	<?php 
 		if($result != null)
 			
@@ -62,7 +62,9 @@
 			<td><?php echo $value->statistics ?></td>
 			<td><?php echo $value->status ?></td>
 
-			<td><a href="<?php echo base_url('index.php/Admin_Controller/accept/'.$value->id) ?>">approve</a></td>
+			<td><a href="<?php echo base_url('index.php/Admin_Controller/accept/'.$value->id) ?>">Approve</a></td>
+			<td><a href="<?php echo base_url('index.php/Admin_Controller/accept/'.$value->id) ?>">Reject</a></td>
+		
 		</tr>		
 		<?php }
 		}

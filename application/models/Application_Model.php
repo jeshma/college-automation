@@ -67,4 +67,14 @@ class Application_Model extends CI_Model
 			return FALSE;
 		}
 	}
-}
+
+		public function delete($id)
+	{
+		$this->db->where('id',$id);
+		if($this->db->delete($this->table,$data) );
+		{
+			return $this->db->delete_id();
+		}
+
+			}
+		}

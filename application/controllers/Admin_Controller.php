@@ -21,7 +21,7 @@ class Admin_Controller extends CI_Controller
 		if( $result != FALSE)
 		{
 			$data['result'] = $result;
-			$this->load->view('admin/view_application', $data);
+			$this->load->view('Admin/view_applications', $data);
 		}
 	}
 
@@ -33,16 +33,17 @@ class Admin_Controller extends CI_Controller
 		$data['result'] = $result;
 		$this->load->view('admin/view_selected', $data);
 		
+	
 	}
+
 
 
 	public function accept($id)
 	{
 		$where = ['id' => $id];
-		$data = [
-			'status' => 'listed'
-		];
-		if ($this->Application_Model->edit($where, $data)) {
+		$data = ['status' => 'listed'];
+		if ($this->Application_Model->edit($where, $data))
+		 {
 
 			redirect($_SERVER['HTTP_REFERER']);
 		}
@@ -51,9 +52,23 @@ class Admin_Controller extends CI_Controller
 			var_dump('fail');
 		}
 	}
-	public function selcted($id)
-	{
-		# code...
-	}
-}
+
+	public function selected($id)
+	{		
+		$result =$this->Application_Model->view_where($where);
+		var_dump($result);
+		}
 	
+	public function deleted($id)
+	{
+
+		$result=$this->Application_Model->view_where($where);
+		$this->load->view('admin/view view_selected',$data)
+
+	}
+		}
+	
+		
+
+
+
