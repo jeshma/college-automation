@@ -1,0 +1,23 @@
+<?php 
+defined('BASEPATH') OR exit('no direct script access allowed');
+/**
+* contact_us class
+*/
+class contact_us extends CI_Controller
+{
+	/*construtor method*/
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
+
+	public function index($page = 'contact_us')
+	{
+		$this->load->view($page);
+	}
+
+	
+}
+
+ ?>
