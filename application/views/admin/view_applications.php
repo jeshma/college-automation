@@ -5,9 +5,11 @@
 	<title>application view</title>
 </head>
 <body>
+`
 
 	<h2>Applications</h2>
 	<?php 
+	
 		if($result != null)
 			
 		{?>

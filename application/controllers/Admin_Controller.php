@@ -22,10 +22,10 @@ class Admin_Controller extends CI_Controller
 
 	public function view_application()
 	{
-		$result =$this->Application_Model->view_all();
-		if( $result != FALSE)
+		$data['result'] =$this->Application_Model->view_all();
+		if( $data['result']!= FALSE)
 		{
-			$data['result'] = $result;
+			
 			$this->load->view('Admin/view_applications', $data);
 		}
 	}
@@ -61,9 +61,9 @@ class Admin_Controller extends CI_Controller
 
 	public function delete($id)
 	{
-		var_dump('expression');
-		// $result=$this->Application_Model->view_where($id);
-		// $this->load->view('admin/view_applications');
+		var_dump($result);
+		 $result=$this->Application_Model->view_where($id);
+		 $this->load->view('admin/view_applications');
 
 	}
 		}
