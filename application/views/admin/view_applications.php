@@ -10,7 +10,7 @@
 	<h2>Applications</h2>
 	<?php 
 	
-		if($result != null)
+		if(isset($result))
 			
 		{?>
 			<table border="2px">
