@@ -15,6 +15,11 @@ class Admin_Controller extends CI_Controller
 
 	}
 
+	public function index()
+	{
+		echo 'welcome to admin';
+	}
+
 	public function view_application()
 	{
 		$result =$this->Application_Model->view_all();
@@ -63,7 +68,7 @@ class Admin_Controller extends CI_Controller
 	{
 
 		$result=$this->Application_Model->view_where($where);
-		$this->load->view('admin/view view_selected',$data)
+		$this->load->view('admin/view_selected',$data);
 
 	}
 		}
