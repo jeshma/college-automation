@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 04, 2016 at 06:32 PM
+-- Generation Time: Feb 04, 2016 at 09:34 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.16
 
@@ -127,7 +127,11 @@ CREATE TABLE IF NOT EXISTS `examresults` (
 CREATE TABLE IF NOT EXISTS `examtypes` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `time` time DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `department_id` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `department_id` (`department_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -285,6 +289,12 @@ CREATE TABLE IF NOT EXISTS `userlogin` (
 ALTER TABLE `examresults`
   ADD CONSTRAINT `exam_type` FOREIGN KEY (`exam_type_id`) REFERENCES `examtypes` (`id`),
   ADD CONSTRAINT `student` FOREIGN KEY (`student_id`) REFERENCES `registrations` (`id`);
+
+--
+-- Constraints for table `examtypes`
+--
+ALTER TABLE `examtypes`
+  ADD CONSTRAINT `department_id` FOREIGN KEY (`department_id`) REFERENCES `departments` (`id`);
 
 --
 -- Constraints for table `marks`
