@@ -119,7 +119,9 @@ class Home_Controller extends CI_Controller
 			}
 			 
 		}
+		
 	}
+
 
 }
 
