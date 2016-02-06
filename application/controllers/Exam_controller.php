@@ -3,14 +3,14 @@ defined('BASEPATH') OR exit('no direct script access allowed');
 /**
 * home class
 */
-class Admin_Controller extends CI_Controller
+class Exam_Controller extends CI_Controller
 {
 	/*construtor method*/
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->helper(['url', 'form']);
-		$this->load->model('Application_Model');
+		$this->load->model('exam_Model');
 		
 
 	}
@@ -20,13 +20,13 @@ class Admin_Controller extends CI_Controller
 		echo 'welcome to admin';
 	}
 
-	public function view_application()
+	public function view_exam()
 	{
-		$result =$this->Application_Model->view_all();
+		$result =$this->exam_Model->view_all();
 		if( $result != FALSE)
 		{
 			$data['result'] = $result;
-			$this->load->view('Admin/view_applications', $data);
+			$this->load->view('Admin/view_exam', $data);
 		}
 	}
 
@@ -34,7 +34,7 @@ class Admin_Controller extends CI_Controller
 	public function view_selected()
 	{
 		$where = ['status' => 'listed'];
-		$result =$this->Application_Model->view_where($where);
+		$result =$this->exam_Model->view_where($where);
 		$data['result'] = $result;
 		$this->load->view('admin/view_selected', $data);
 		
@@ -47,7 +47,7 @@ class Admin_Controller extends CI_Controller
 	{
 		$where = ['id' => $id];
 		$data = ['status' => 'listed'];
-		if ($this->Application_Model->edit($where, $data))t 
+		if ($this->exam_Model->edit($where, $data))t 
 		 {
 
 			redirect($_SERVER['HTTP_REFERER']);

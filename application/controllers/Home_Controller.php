@@ -33,6 +33,7 @@ class Home_Controller extends CI_Controller
 		$this->load->view($page);
 
 	}
+	
 
 
 	public function add_application()
