@@ -9,10 +9,10 @@
 	name:<input type="text" name="name" id="name"><br/>
 	address : <input type="text" name="address" id="address"><br>
 	department:<select name="department" id="department">
-		<option value="dep1">dep 1</option>
-		<option value="dep2">dep 2</option>
-		<option value="dep3">dep 3</option>
-		<option value="dep4">dep 4</option>
+		<option value="1">dep 1</option>
+		<option value="2">dep 2</option>
+		<option value="3">dep 3</option>
+		<option value="4">dep 4</option>
 	</select><br>
 	<button name="submit">submit</button>
 </form>

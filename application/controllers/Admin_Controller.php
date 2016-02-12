@@ -81,6 +81,8 @@ class Admin_Controller extends CI_Controller
 
 	public function add_staff()
 	{
+		// get all department and pass to the view file
+
 		$this->load->view('admin/add_staff');
 	}
 }

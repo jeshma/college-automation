@@ -5,21 +5,24 @@
 /**
 * 
 */
-class Staff_COntroller extends CI_Controller
+class Staff_Controller extends CI_Controller
 {
 	
 	public function __construct()
 	{
 		parent::__construct();
-		// LOAD MODEL
+		$this->load->helper('form');		
+		$this->load->helper('url');	
+		$this->load->library('form_validation');
+		$this->load->model('Staff_Model');
 	}
 
 
 	public function add()
 	{
-		$this->form_validation->set_rule('name','Name','required');		
-		$this->form_validation->set_rule('name','Name','required');		
-		$this->form_validation->set_rule('name','Name','required');
+		$this->form_validation->set_rules('name','Name','required');		
+		$this->form_validation->set_rules('address','Address','required');		
+		$this->form_validation->set_rules('department','Department','required');
 
 		if($this->form_validation->run() === FALSE)		
 		{
@@ -27,16 +30,27 @@ class Staff_COntroller extends CI_Controller
 		}
 		else
 		{
-			$data[
+
+			$data=[
 				'name' => $this->input->post('name'),
-				'address',
-				'department_id'
+				'address' => $this->input->post('address') ,
+				'dapartment_id' => $this->input->post('department')
 			];
-			// CALL method from model class for insert
+			if ($this->Staff_Model->add($data) == TRUE) 
+			{
+
+				$this->load->view('admin/add_staff');
+			}
+			else
+			{
+				// CALL method from model class for insert
 
 			// if fail
-			$data['error'] => 'insertion failed';
-			$this->load->view('admin/add_staff',$data);
+				$data=['error' => 'insertion failed'];
+			    $this->load->view('admin/add_staff',$data);
+			}
+			
+			
 		}
 	}
 }
