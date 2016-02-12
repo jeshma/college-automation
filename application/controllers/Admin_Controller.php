@@ -23,6 +23,7 @@ class Admin_Controller extends CI_Controller
 	public function view_application()
 	{
 		$data['result'] =$this->Application_Model->view_all();
+	
 		if( $data['result']!= FALSE)
 		{
 			$this->load->view('admin/view_applications', $data);
@@ -61,11 +62,16 @@ class Admin_Controller extends CI_Controller
 
 	public function delete($id)
 	{
-		var_dump($result);
-		 $result=$this->Application_Model->view_where($id);
-		 $this->load->view('admin/view_applications');
-
+		if($this->Application_Model->delete($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
 	}
+
 
 	public function add_exam()
 	{
@@ -79,6 +85,8 @@ class Admin_Controller extends CI_Controller
 	}
 }
 
+
+	
 
 		
 
