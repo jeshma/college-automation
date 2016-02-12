@@ -16,7 +16,10 @@ class Staff_Controller extends CI_Controller
 		$this->load->library('form_validation');
 		$this->load->model('Staff_Model');
 	}
-
+	/*public function index()
+	{
+		$this->load->view('admin/add_staff');
+	}*/
 
 	public function add()
 	{
@@ -26,6 +29,7 @@ class Staff_Controller extends CI_Controller
 
 		if($this->form_validation->run() === FALSE)		
 		{
+
 			$this->load->view('admin/add_staff');
 		}
 		else
@@ -34,18 +38,19 @@ class Staff_Controller extends CI_Controller
 			$data=[
 				'name' => $this->input->post('name'),
 				'address' => $this->input->post('address') ,
-				'dapartment_id' => $this->input->post('department')
+				'departments_id' => $this->input->post('department')
 			];
-			if ($this->Staff_Model->add($data) == TRUE) 
+			if ($this->Staff_Model->add($data) != FALSE) 
 			{
 
-				$this->load->view('admin/add_staff');
+				$data['message'] = '<script type="text/javascript">
+										alert("adding success");
+										window.location = "'.base_url().'Admin_Controller/add_staff"
+									</script>';
+				$this->load->view('admin/add_staff',$data);
 			}
 			else
 			{
-				// CALL method from model class for insert
-
-			// if fail
 				$data=['error' => 'insertion failed'];
 			    $this->load->view('admin/add_staff',$data);
 			}

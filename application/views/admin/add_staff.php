@@ -20,6 +20,10 @@
 <?php if (isset($error)) {
 	echo $error;
 }
+if (isset($message)) {
+	echo $message;
+}
+
  ?>
 
 </body>

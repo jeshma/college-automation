@@ -3,24 +3,16 @@
 /**
 * 
 */
-class Staff_Model extends CI_Model
+class Department_Model extends CI_Model
 {
-	
-	protected $table = 'staffs';
+	protected $table = 'departments';
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->database();
 	}
-
-
-	/**
-	* @param array $data
-	* @return mixed
-	*/
 	public function add($data)
 	{
-		// $this->db->query("SET FOREIGN_KEY_CHECKS = 0");
 		if ($this->db->insert($this->table,$data) === true)
 		{ 
 			return $this->db->insert_id();
@@ -28,6 +20,10 @@ class Staff_Model extends CI_Model
 		else
 		{
 			return FALSE;
-		}
-	}
+	    }
+
+
+	}	
+
 }
+ ?>
