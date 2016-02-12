@@ -25,8 +25,8 @@ class Admin_Controller extends CI_Controller
 		$data['result'] =$this->Application_Model->view_all();
 		if( $data['result']!= FALSE)
 		{
-			
-			$this->load->view('Admin/view_applications', $data);
+			$this->load->view('admin/view_applications', $data);
+
 		}
 	}
 
@@ -47,8 +47,8 @@ class Admin_Controller extends CI_Controller
 	{
 		$where = ['id' => $id];
 		$data = ['status' => 'listed'];
-		if ($this->Application_Model->edit($where, $data))t 
-		 {
+		if ($this->Application_Model->edit($where, $data)) 
+		{
 
 			redirect($_SERVER['HTTP_REFERER']);
 		}
@@ -66,8 +66,20 @@ class Admin_Controller extends CI_Controller
 		 $this->load->view('admin/view_applications');
 
 	}
-		}
-	
+
+	public function add_exam()
+	{
+		$this->load->view('admin/add_exam');
+	}
+
+
+	public function add_staff()
+	{
+		$this->load->view('admin/add_staff');
+	}
+}
+
+
 		
 
 
