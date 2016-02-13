@@ -15,6 +15,22 @@ class Staff_Model extends CI_Model
 
 
 	/**
+	*@return mixed
+	*/
+	public function view()
+	{
+		$query = $this->db->select($this->table);
+		
+		if($query->num_rows() >= 1){
+			return $query->result();	
+		}
+		else
+		{
+			return FALSE;
+		}
+	}
+
+	/**
 	* @param array $data
 	* @return mixed
 	*/

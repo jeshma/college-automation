@@ -11,6 +11,7 @@ class Admin_Controller extends CI_Controller
 		parent::__construct();
 		$this->load->helper(['url', 'form']);
 		$this->load->model('Application_Model');
+		$this->load->model('Staff_Model');
 		
 
 	}
@@ -89,6 +90,13 @@ class Admin_Controller extends CI_Controller
 	{
 		
 		$this->load->view('admin/add_department');
+	}
+
+	public function add_attendence()
+	{
+		$data['staff'] = $this->Staff_Model->view();
+		var_dump($staff);
+		// $this->load->view('admin/add_attendence');
 	}
 }
 
