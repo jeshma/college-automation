@@ -11,6 +11,7 @@ class Admin_Controller extends CI_Controller
 		parent::__construct();
 		$this->load->helper(['url', 'form']);
 		$this->load->model('Application_Model');
+		$this->load->model('Staff_Model');
 		
 
 	}
@@ -26,8 +27,8 @@ class Admin_Controller extends CI_Controller
 	
 		if( $data['result']!= FALSE)
 		{
-			
-			$this->load->view('Admin/view_applications', $data);
+			$this->load->view('admin/view_applications', $data);
+
 		}
 	}
 
@@ -48,7 +49,11 @@ class Admin_Controller extends CI_Controller
 	{
 		$where = ['id' => $id];
 		$data = ['status' => 'listed'];
+<<<<<<< HEAD
 		if ($this->Application_Model->edit($where, $data))
+=======
+		if ($this->Application_Model->edit($where, $data)) 
+>>>>>>> 89250d2519d902abd68f7ea04cba923e41d2d7fe
 		{
 
 			redirect($_SERVER['HTTP_REFERER']);
@@ -71,6 +76,7 @@ class Admin_Controller extends CI_Controller
 			var_dump('fail');
 		}
 	}
+<<<<<<< HEAD
 	public function reject($id)
 	{
 		if($this->Application_Model->reject($id))
@@ -81,10 +87,41 @@ class Admin_Controller extends CI_Controller
 		{
 			var_dump('fail');
 		}
+=======
+
+
+	public function add_exam()
+	{
+		$this->load->view('admin/add_exam');
+	}
+
+
+	public function add_staff()
+	{
+		// get all department and pass to the view file
+
+		$this->load->view('admin/add_staff');
+	}
+	public function add_department()
+	{
+		
+		$this->load->view('admin/add_department');
+	}
+
+	public function add_attendence()
+	{
+		$data['staff'] = $this->Staff_Model->view();
+		$this->load->view('admin/add_attendence',$data);
+>>>>>>> 89250d2519d902abd68f7ea04cba923e41d2d7fe
 	}
 }
 
 
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> 89250d2519d902abd68f7ea04cba923e41d2d7fe
 		
 
 

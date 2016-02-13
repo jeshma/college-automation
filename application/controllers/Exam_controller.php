@@ -17,62 +17,13 @@ class Exam_Controller extends CI_Controller
 
 	public function index()
 	{
-		echo 'welcome to admin';
+		echo 'welcome to exam';
 	}
 
-	public function view_exam()
+	public function add()
 	{
-		$result =$this->exam_Model->view_all();
-		if( $result != FALSE)
-		{
-			$data['result'] = $result;
-			$this->load->view('Admin/view_exam', $data);
-		}
-	}
-
-
-	public function view_selected()
-	{
-		$where = ['status' => 'listed'];
-		$result =$this->exam_Model->view_where($where);
-		$data['result'] = $result;
-		$this->load->view('admin/view_selected', $data);
 		
-	
 	}
-
-
-
-	public function accept($id)
-	{
-		$where = ['id' => $id];
-		$data = ['status' => 'listed'];
-		if ($this->exam_Model->edit($where, $data))t 
-		 {
-
-			redirect($_SERVER['HTTP_REFERER']);
-		}
-		else
-		{
-			var_dump('fail');
-		}
-	}
-
-
-	public function delete($id)
-	{
-
+}
 
 	
-
-		$result=$this->Application_Model->view_where($id);
-		var_dump($result);
-		$this->load->view('admin/view_application');
-
-	}
-		}
-	
-		
-
-
-
