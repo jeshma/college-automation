@@ -95,8 +95,7 @@ class Admin_Controller extends CI_Controller
 	public function add_attendence()
 	{
 		$data['staff'] = $this->Staff_Model->view();
-		var_dump($staff);
-		// $this->load->view('admin/add_attendence');
+		$this->load->view('admin/add_attendence',$data);
 	}
 }
 

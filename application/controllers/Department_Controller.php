@@ -27,9 +27,7 @@ class Department_Controller extends CI_Controller
 			$data=[
 				'name' => $this->input->post('name'),
 				'description' => $this->input->post('description') 
-				
 			];
-		}
 		if ($this->Department_Model->add($data) != FALSE) 
 			{
 
@@ -43,7 +41,8 @@ class Department_Controller extends CI_Controller
 			{
 				$data=['error' => 'insertion failed'];
 			    $this->load->view('admin/add_department',$data);
-			}	
+			}
+		}	
     }
 
 }

@@ -19,9 +19,10 @@ class Staff_Model extends CI_Model
 	*/
 	public function view()
 	{
-		$query = $this->db->select($this->table);
+		$query = $this->db->get($this->table);
 		
-		if($query->num_rows() >= 1){
+		if($query->num_rows() >= 1)
+		{
 			return $query->result();	
 		}
 		else

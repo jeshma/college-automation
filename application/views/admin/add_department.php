@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	
@@ -10,7 +10,7 @@
 	name:<input type="text"name="name"id="name"><br/>
 	description:<input type="text"name="description"id="description"><br/>
 	<button name="submit">submit</button>
-	</form>>
+	</form>
 	<?php if (isset($error)) {
 	echo $error;
 }
@@ -20,4 +20,4 @@ if (isset($message)) {
 
  ?>
 </body>
-</html>>
+</html>
