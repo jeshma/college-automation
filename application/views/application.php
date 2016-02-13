@@ -8,7 +8,7 @@
 </head>
 <body>
 <!-- <form name="application"action=""method="post"> -->
-<?php echo form_open(base_url('index.php/Home_Controller/add_application'), ['name' => 'addform', 'id' => 'addform']); 
+<?php echo form_open(base_url('Home_Controller/add_application'), ['name' => 'addform', 'id' => 'addform']); 
 	echo validation_errors();
 ?>
 <h1>Application</h1><br/><br/>

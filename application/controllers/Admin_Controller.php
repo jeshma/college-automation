@@ -48,8 +48,8 @@ class Admin_Controller extends CI_Controller
 	{
 		$where = ['id' => $id];
 		$data = ['status' => 'listed'];
-		if ($this->Application_Model->edit($where, $data))t 
-		 {
+		if ($this->Application_Model->edit($where, $data))
+		{
 
 			redirect($_SERVER['HTTP_REFERER']);
 		}
@@ -71,8 +71,19 @@ class Admin_Controller extends CI_Controller
 			var_dump('fail');
 		}
 	}
-	
+	public function reject($id)
+	{
+		if($this->Application_Model->reject($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
+	}
 }
+
 
 		
 
