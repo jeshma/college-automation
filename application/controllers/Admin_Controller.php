@@ -12,6 +12,7 @@ class Admin_Controller extends CI_Controller
 		$this->load->helper(['url', 'form']);
 		$this->load->model('Application_Model');
 		$this->load->model('Staff_Model');
+		$this->load->model('Attendence_Model');
 		
 
 	}
@@ -97,6 +98,17 @@ class Admin_Controller extends CI_Controller
 		$data['staff'] = $this->Staff_Model->view();
 		$this->load->view('admin/add_attendence',$data);
 	}
+
+	public function view_attendence()
+	    {
+		$result =$this->Attendence_Model->view_all();
+		var_dump($result);
+		$data['result'] = $result;
+		$this->load->view('admin/view_attendence', $data);
+		
+		}
+	
+	
 }
 
 
