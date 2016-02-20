@@ -13,7 +13,7 @@ class Department_Controller extends CI_Controller
 	}
 	public function add()
 	{
-		$this->form_validation->set_rules('name','Name','required');	
+		$this->form_validation->set_rules('name','name','required');	
 		$this->form_validation->set_rules('description','Description','required');	
 	
 	if($this->form_validation->run() === FALSE)		

@@ -49,11 +49,9 @@ class Admin_Controller extends CI_Controller
 	{
 		$where = ['id' => $id];
 		$data = ['status' => 'listed'];
-<<<<<<< HEAD
-		if ($this->Application_Model->edit($where, $data))
-=======
+ 
+		
 		if ($this->Application_Model->edit($where, $data)) 
->>>>>>> 89250d2519d902abd68f7ea04cba923e41d2d7fe
 		{
 
 			redirect($_SERVER['HTTP_REFERER']);
@@ -76,7 +74,7 @@ class Admin_Controller extends CI_Controller
 			var_dump('fail');
 		}
 	}
-<<<<<<< HEAD
+
 	public function reject($id)
 	{
 		if($this->Application_Model->reject($id))
@@ -87,8 +85,8 @@ class Admin_Controller extends CI_Controller
 		{
 			var_dump('fail');
 		}
-=======
 
+}
 
 	public function add_exam()
 	{
@@ -110,18 +108,12 @@ class Admin_Controller extends CI_Controller
 
 	public function add_attendence()
 	{
-		$data['staff'] = $this->Staff_Model->view();
+		$data['staffs'] = $this->Staff_Model->view();
 		$this->load->view('admin/add_attendence',$data);
->>>>>>> 89250d2519d902abd68f7ea04cba923e41d2d7fe
+
 	}
 }
 
-
-<<<<<<< HEAD
-=======
-	
-
->>>>>>> 89250d2519d902abd68f7ea04cba923e41d2d7fe
 		
 
 
