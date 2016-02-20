@@ -11,6 +11,30 @@ class Department_Controller extends CI_Controller
 		parent::__construct();
 		$this->load->model('Department_Model');
 	}
+
+	public function index()
+	{
+		$data['result'] = $this->Department_Model->get_all();
+		$this->load->view('admin/view_departments',$data);
+	}
+
+
+	public function view($id)
+	{
+		$where = ['id' => $id];
+		$data['result'] = $this->Department_Model->get($where);
+		if ($data['result'] != FALSE) {
+			$this->load->view('admin/view_department',$data);
+		}
+		else
+		{
+			$data['message'] = 'No record found';
+			$this->load->view('admin/view_department',$data);
+
+		}
+	}
+
+
 	public function add()
 	{
 		$this->form_validation->set_rules('name','name','required');	

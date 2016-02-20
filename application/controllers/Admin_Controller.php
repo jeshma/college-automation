@@ -12,6 +12,7 @@ class Admin_Controller extends CI_Controller
 		$this->load->helper(['url', 'form']);
 		$this->load->model('Application_Model');
 		$this->load->model('Staff_Model');
+		$this->load->model('Attendence_Model');
 		
 
 	}
@@ -49,8 +50,7 @@ class Admin_Controller extends CI_Controller
 	{
 		$where = ['id' => $id];
 		$data = ['status' => 'listed'];
- 
-		
+
 		if ($this->Application_Model->edit($where, $data)) 
 		{
 
@@ -86,7 +86,8 @@ class Admin_Controller extends CI_Controller
 			var_dump('fail');
 		}
 
-}
+		{
+			redirect($_SERVER['HTTP_REFERER']);
 
 	public function add_exam()
 	{
@@ -112,9 +113,16 @@ class Admin_Controller extends CI_Controller
 		$this->load->view('admin/add_attendence',$data);
 
 	}
-}
 
+	public function view_attendence()
+	{
+		$result =$this->Attendence_Model->view_all();
+		var_dump($result);
+		$data['result'] = $result;
+		$this->load->view('admin/view_attendence', $data);
 		
+	}
+
 
 
 

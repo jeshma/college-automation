@@ -38,9 +38,9 @@ class Home_Controller extends CI_Controller
 
 	public function add_application()
 	{
-		$this->form_validation->set_rules('name', 'Name', 'required');
-		$this->form_validation->set_rules('address', 'address', 'required');
-		$this->form_validation->set_rules('guardian', 'guardian', 'required');
+		 $this->form_validation->set_rules('name', 'Name', 'required');
+		 $this->form_validation->set_rules('address', 'address', 'required');
+		 $this->form_validation->set_rules('guardian', 'guardian', 'required');
 		 $this->form_validation->set_rules('pin', 'pin', 'required');
 		 $this->form_validation->set_rules('course', 'course', 'required');
 		 $this->form_validation->set_rules('firstlang', 'first_lang', 'required');
@@ -121,6 +121,7 @@ class Home_Controller extends CI_Controller
 		}
 		
 	}
+
 
 
 }
