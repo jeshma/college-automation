@@ -23,6 +23,7 @@ class Department_Controller extends CI_Controller
 	{
 		$where = ['id' => $id];
 		$data['result'] = $this->Department_Model->get($where);
+		
 		if ($data['result'] != FALSE) {
 			$this->load->view('admin/view_department',$data);
 		}
