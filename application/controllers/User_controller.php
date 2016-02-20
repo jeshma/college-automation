@@ -42,7 +42,7 @@ class User_controller extends CI_Controller
 		{
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
-			if($this->User_Model->login($username, $password) == TRUE)
+			if($this->User_Model->login($username, $password) === TRUE)
 			{
 				$userdata = [
 					'username' => $username,

@@ -48,11 +48,11 @@ class Application_Model extends CI_Model
 	public function add($data)
 	{
 		if($this->db->insert($this->table,$data))
-			 {
+			{
 
 				return $this->db->insert_id();
 			 	
-			 }
+			}
 	}
 
 	public function edit($where, $data)
@@ -69,7 +69,7 @@ class Application_Model extends CI_Model
 		}
 	}
 
-		public function delete($id)
+	public function delete($id)
 	{
 		
 		$this->db->where('id',$id);
@@ -81,7 +81,8 @@ class Application_Model extends CI_Model
 		{
 			return FALSE;
 		}
-		
 	}
+
 	
 }
+
