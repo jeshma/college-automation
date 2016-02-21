@@ -31,7 +31,17 @@ class Course_Model extends CI_Model
 
 	public function get_where($where)
 	{
+		$this->db->where($where);
+		$query = $this->db->get('courses');
 		
+		if ($query->num_rows() > 0) 
+		{
+			return $query->result();
+		}
+		else
+		{
+			return FALSE;
+		}
 	}
 
 	public function add($data)

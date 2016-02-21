@@ -27,7 +27,7 @@
  			<td><?php echo $value->description ?></td>
  	</tr>	
  <?php 
-  }}?>	
+        }}?>	
   </table>
  
 </body>

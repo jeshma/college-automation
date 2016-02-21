@@ -14,6 +14,7 @@ class Course_Controller extends CI_Controller
 		$this->load->model('Course_Model');
 	}
     public function index()
+    
     {
     	$data['result'] = $this->Course_Model->get_all();
 			$this->load->view('admin/view_course',$data);
@@ -45,7 +46,7 @@ class Course_Controller extends CI_Controller
 	 					'description'=>$description,
 	 					'department_id'=>$id
 	 			];
-    				
+
     		  $query= $this->Course_Model->add($data);
 			  if($query != FALSE)
 			  {

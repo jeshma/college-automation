@@ -2,23 +2,35 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>courses</title>
 </head>
 <body>	
-	<table>
-		<caption><?php echo $result[0]->name ?></caption>
+<table>
+
+		<caption><?php
+		if(isset($result)){
+		 echo $result[0]->name ?></caption>
+		<?php 
+		}?>
+		
 		<thead>
 			<tr>
-				<th>cource</th>
+				<th>course</th>
 				<th>Description</th>
 			</tr>
 		</thead>
 		<tbody>
-		<?php foreach ($course as $key => $value){ ?>
+		<?php 
+		if(isset($course))
+		{
+
+		
+		foreach ($course as $key => $value){
+		 ?>
 			<tr>
 				<td><?php echo $value->name ?></td>
 			</tr>
-		<?php } ?>
+		<?php } } ?>
 		</tbody>
 	</table>
 <!-- 	<form action="<?php //echo base_url('Course_Controller/add') ?>" name="addform" id="addform" method="post">
