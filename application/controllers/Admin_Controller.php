@@ -89,6 +89,9 @@ class Admin_Controller extends CI_Controller
 		{
 			redirect($_SERVER['HTTP_REFERER']);
 
+		}
+	}
+
 	public function add_exam()
 	{
 		$this->load->view('admin/add_exam');
@@ -122,6 +125,7 @@ class Admin_Controller extends CI_Controller
 		$this->load->view('admin/view_attendence', $data);
 		
 	}
+}
 
 
 

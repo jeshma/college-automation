@@ -12,9 +12,17 @@ class Cource_Controller extends CI_Controller
 		$this->load->helper(['url']);
 		$this->load->model('Cource_Model');
 	}
-    public function cource($data ='addcource')
+    
+
+    public function course($data ='addcourse')
     {
     	$this->load->view($data);
+    }
+
+
+    public function add()
+    {
+    	# code...
     }
 }
  ?>

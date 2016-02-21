@@ -14,8 +14,12 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php if (isset($result)){ 
-				foreach ($result as $key => $value) {
+			<?php if(isset($result))
+
+			{ var_dump($result);
+				foreach ($result as $key => $value) 
+
+				{
 				?>
 				<tr>
 					<td><?php echo $value->id ?></td>
