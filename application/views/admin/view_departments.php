@@ -14,7 +14,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php if (isset($result)){ 
+			<?php if (isset($result)&&$result != FALSE){ 
 				foreach ($result as $key => $value) {
 				?>
 				<tr>

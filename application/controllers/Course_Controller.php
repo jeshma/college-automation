@@ -13,9 +13,11 @@ class Course_Controller extends CI_Controller
 		$this->load->library(['form_validation']);
 		$this->load->model('Course_Model');
 	}
-    public function course($data ='course')
+    public function index()
     {
-    	$this->load->view($data);
+    	$data['result'] = $this->Course_Model->get_all();
+			$this->load->view('admin/view_course',$data);
+    
     }
 
 
@@ -25,29 +27,39 @@ class Course_Controller extends CI_Controller
     	$this->form_validation->set_rules('course','Name','required');
     	$this->form_validation->set_rules('description','Description','required');
 
-    		if($this->form_validation->run() === FALSE)	
-    			{
-    				echo "string";
+    		if($this->form_validation->run() === FALSE){
+    				
     				$this->load->view('admin/view_department');
+
     			}
     		else
     			{
-    				$name = $this->input->post('name');
-	 		$description = $this->input->post('description');
+    				$id=$this->input->post('id');
 
-	 		$data = [
+    				
+    				$name = $this->input->post('course');
+	 				$description = $this->input->post('description');
+
+	 				$data = [
 	 					'name'=>$name,
-	 					'description'=>$description
-	 		];
+	 					'description'=>$description,
+	 					'department_id'=>$id
+	 			];
     				
     		  $query= $this->Course_Model->add($data);
 			  if($query != FALSE)
 			  {
-			 	 var_dump('success');
+			  	$data['id'] = $query;
+			 	 $data['message'] = '<script type="text/javascript">
+										alert("adding success");
+										window.location = "'.base_url().'Course_Controller/index"
+									</script>';
+				$this->load->view('admin/view_department',$data);
 			  }
 			  else
 			  {
-				 var_dump('fail');
+				 $data=['error' => 'insertion failed'];
+			    $this->load->view('view_department',$data);
 			  }	
      
    				}

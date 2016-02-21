@@ -28,6 +28,12 @@ class Course_Model extends CI_Model
 		
 	}
 
+
+	public function get_where($where)
+	{
+		
+	}
+
 	public function add($data)
 	{
 

@@ -10,6 +10,7 @@ class Department_Controller extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Department_Model');
+		$this->load->model('Course_Model');
 	}
 
 	public function index()
@@ -22,9 +23,14 @@ class Department_Controller extends CI_Controller
 	public function view($id)
 	{
 		$where = ['id' => $id];
+
+		$data['id'] =$id;
 		$data['result'] = $this->Department_Model->get($where);
+
+		$data['course']= $this->Course_Model->get_where(['department_id' => $id]);
 		
 		if ($data['result'] != FALSE) {
+			
 			$this->load->view('admin/view_department',$data);
 		}
 		else
