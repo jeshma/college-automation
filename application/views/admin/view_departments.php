@@ -14,7 +14,9 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php if(isset($result))
+			<?php 
+
+			if(isset($result) &&$result!=FALSE)
 
 			{ var_dump($result);
 				foreach ($result as $key => $value) 

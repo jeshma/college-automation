@@ -10,7 +10,7 @@ class Cource_Controller extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper(['url']);
-		$this->load->model('Cource_Model');
+		$this->load->model('Course_Model');
 	}
     
 
@@ -22,7 +22,7 @@ class Cource_Controller extends CI_Controller
 
     public function add()
     {
-    	# code...
+    	
     }
 }
  ?>
