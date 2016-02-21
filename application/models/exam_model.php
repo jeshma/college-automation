@@ -3,7 +3,7 @@
 /**
 * 
 */
-class User_Model extends CI_Model
+class Exam_Model extends CI_Model
 {
 	
 protected $table = 'applications';
