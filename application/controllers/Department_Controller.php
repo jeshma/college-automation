@@ -22,6 +22,7 @@ class Department_Controller extends CI_Controller
 	}
 
 
+		
 	public function view($id)
 	{
 		$where = ['id' => $id];
@@ -45,8 +46,7 @@ class Department_Controller extends CI_Controller
 	{
 		$this->form_validation->set_rules('name','name','required');	
 		$this->form_validation->set_rules('description','Description','required');	
-	
-	if($this->form_validation->run() === FALSE)		
+		if($this->form_validation->run() === FALSE)		
 		{
 
 			$this->load->view('admin/add_department');

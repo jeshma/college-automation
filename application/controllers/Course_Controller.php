@@ -38,7 +38,9 @@ class Course_Controller extends CI_Controller
     				$this->load->view('admin/view_department');
 
     			}
+
     		else
+    			
     			{
     				$id=$this->input->post('id');
 
@@ -70,6 +72,9 @@ class Course_Controller extends CI_Controller
      
    			}
          }
+    
+         	
     }
+
 
     ?>

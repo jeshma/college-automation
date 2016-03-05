@@ -15,10 +15,8 @@ class Admin_Controller extends CI_Controller
 		$this->load->model('Application_Model');
 		$this->load->model('Staff_Model');
 		$this->load->model('Attendence_Model');
-		
-
-	}
-
+		}
+	
 	public function index()
 	
 	{
@@ -113,6 +111,8 @@ class Admin_Controller extends CI_Controller
 
 		$this->load->view('admin/add_staff');
 	}
+
+	
 	
 	public function add_department()
 	
@@ -129,17 +129,28 @@ class Admin_Controller extends CI_Controller
 
 	}
 
+
 	public function view_attendence()
-	
 	{
-		$result =$this->Attendence_Model->view_all();
 		var_dump($result);
+		$result =$this->Attendence_Model->view_all();
 		$data['result'] = $result;
 		$this->load->view('admin/view_attendence', $data);
 		
 
 		}
+
+	public function add_payroll()
+	
+	{ 	
+		$data['result'] = $this->Staff_Model->view();
+		$this->load->view('admin/add_payroll',$data);
 	}
+	
+	}
+	
+
+
 
 
 

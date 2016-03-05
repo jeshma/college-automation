@@ -20,6 +20,7 @@ class Staff_Controller extends CI_Controller
 	{
 		$this->load->view('admin/add_staff');
 	}*/
+	
 
 	public function add()
 	{
