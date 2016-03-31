@@ -33,8 +33,8 @@ class Course_Model extends CI_Model
 	{
 		$this->db->where($where);
 		$query = $this->db->get('courses');
-		
-		if ($query->num_rows() > 0) 
+		if ($query->num_rows()>0)
+
 		{
 			return $query->result();
 		}
@@ -42,6 +42,7 @@ class Course_Model extends CI_Model
 		{
 			return FALSE;
 		}
+
 	}
 
 	public function add($data)
@@ -51,6 +52,19 @@ class Course_Model extends CI_Model
 		if($this->db->insert('courses',$data) === true)
 		{
 			return $this->db->insert_id();
+		}
+		else
+		{
+			return FALSE;
+		}
+    }
+
+     public function delete($id)
+	 {
+	    $this->db->where('id',$id);
+		if($this->db->delete('courses') === TRUE)
+		{
+			return TRUE;
 		}
 		else
 		{

@@ -5,7 +5,8 @@
 /**
 * 
 */
-class Staff_Controller extends CI_Controller
+require_once(APPPATH.'controllers/Check_Logged.php');
+class Staff_Controller extends Check_Logged
 {
 	
 	public function __construct()

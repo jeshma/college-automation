@@ -11,6 +11,6 @@
 	NAME:<input type="text"name="uname" id="abc"><br/>
 	PASSWORD:<input type="text"name="pwd" id="def"><br/>
 	<input type="submit" name="submit" id="submit">
-</form>>
+</form>
 </body>
-</html>>
+</html>

@@ -23,10 +23,14 @@ class User_Model extends CI_Model
 		$this->db->where($where);
         $query = $this->db->get($this->table);
         if ($query->num_rows() > 0)
+        {
             return TRUE;
+        }
 
         else
+        {
             return FALSE;
+        }
 	}
 }
 

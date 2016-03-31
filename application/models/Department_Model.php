@@ -3,6 +3,7 @@
 /**
 * 
 */
+
 class Department_Model extends CI_Model
 {
 	protected $table = 'departments';
@@ -38,6 +39,7 @@ class Department_Model extends CI_Model
 
 	public function add($data)
 	{
+		$this->db->query("SET FOREIGN_KEY_CHECKS = 0");
 		if ($this->db->insert($this->table,$data) === true)
 		{ 
 			return $this->db->insert_id();
@@ -46,9 +48,21 @@ class Department_Model extends CI_Model
 		{
 			return FALSE;
 	    }
+	 }
+
+    public function delete($id)
+	 {
+	    $this->db->where('id',$id);
+		if($this->db->delete($this->table) === TRUE)
+		{
+			return TRUE;
+		}
+		else
+		{
+			return FALSE;
+		}
+    }
+}	
 
 
-	}	
-
-}
  ?>

@@ -2,11 +2,12 @@
 <html>
 <head>
 	<title>course</title>
+	<link rel="stylesheet" href="../../../css/style.css">
 </head>
 <body>
 
 
-<h2>COURCES</h2>
+<h1>COURSES</h1>
 <?php 
   if(isset($result)){
    ?>
@@ -16,7 +17,7 @@
 
 	<th>name</th>
 	<th>description</th>
-</tr>
+
 <?php 
 
  foreach ($result as $key => $value)
@@ -26,8 +27,10 @@
  			<td><?php echo $value->name ?></td>
  			<td><?php echo $value->description ?></td>
  	</tr>	
+ 	
  <?php 
-        }}?>	
+        }}?>
+
   </table>
  
 </body>
