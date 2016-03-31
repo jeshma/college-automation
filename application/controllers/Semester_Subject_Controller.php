@@ -24,7 +24,7 @@ class Semester_Subject_Controller extends CI_Controller
 			if($this->form_validation->run()===FALSE)
 			{
 				$where = ['id' => $id];
-				// $result = $this->Semester_Model->get_where($where);
+				$result = $this->Semester_Model->get_where($where);
 				$subjects = $this->Subject_Model->get_all();
 				$data['id'] = $id;
 				$data['result'] = $result;
