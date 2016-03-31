@@ -58,6 +58,7 @@ class Course_Model extends CI_Model
 			return FALSE;
 		}
     }
+<<<<<<< HEAD
 
      public function delete($id)
 	 {
@@ -72,6 +73,8 @@ class Course_Model extends CI_Model
 		}
     }
 
+=======
+>>>>>>> 13b9af121266e034536cd1eae6beb98a3a322f92
 }
 
  ?>

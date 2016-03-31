@@ -21,6 +21,7 @@ class Staff_Controller extends Check_Logged
 	{
 		$this->load->view('admin/add_staff');
 	}*/
+	
 
 	public function add()
 	{

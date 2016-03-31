@@ -31,13 +31,15 @@ class Staff_Model extends CI_Model
 		}
 	}
 
+
+ 
 	/**
 	* @param array $data
 	* @return mixed
 	*/
 	public function add($data)
 	{
-		// $this->db->query("SET FOREIGN_KEY_CHECKS = 0");
+		 $this->db->query("SET FOREIGN_KEY_CHECKS = 0");
 		if ($this->db->insert($this->table,$data) === true)
 		{ 
 			return $this->db->insert_id();

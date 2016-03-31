@@ -59,7 +59,9 @@ class Course_Controller extends Check_Logged
     				$this->load->view('admin/view_department');
 
     			}
+
     		else
+    			
     			{
     				$id=$this->input->post('id');
     				$name = $this->input->post('course');
@@ -89,6 +91,7 @@ class Course_Controller extends Check_Logged
      
    			}
          }
+<<<<<<< HEAD
 
          public function delete($id)
 		{
@@ -113,3 +116,11 @@ class Course_Controller extends Check_Logged
     }
 
     ?>
+=======
+    
+         	
+    }
+
+
+    ?>
+>>>>>>> 13b9af121266e034536cd1eae6beb98a3a322f92

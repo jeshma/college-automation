@@ -16,7 +16,9 @@
 		     <th>Attendence</th>
 		</tr> 
 		<?php 
-		 foreach ($result as $key => $value) {?>
+		if(isset($result) &&$result!=FALSE)
+		{
+		 foreach ($result as $key => $value) ?>
 		<tr>
 			<td><?php echo $value->staff_id ?></td>
 			<td><?php echo $value->attendance ?></td>

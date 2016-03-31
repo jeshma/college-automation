@@ -17,7 +17,7 @@
 	 -->	<label for="staff">Select Staff :</label> 
 	<select name="staff" id="staff">
 		<?php foreach ($staff as $value) {
-			echo '<option value="'.$value->id.'">'.$value->name.'</option>';
+			echo '<option value="1'.$value->id.'">'.$value->name.'</option>';
 		} ?>
 	</select><br>
 	<label for="attendence">Attendence :</label>	
