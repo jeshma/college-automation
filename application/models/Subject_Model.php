@@ -18,7 +18,7 @@ class Subject_Model extends CI_Model
 
 	public function get_all()
 	{
-		$query = $this->db->get($this->$table);
+		$query = $this->db->get($this->table);
 
 		if($query->num_rows() > 0)
 		{

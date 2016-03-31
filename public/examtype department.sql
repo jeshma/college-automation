@@ -59,18 +59,6 @@ CREATE TABLE IF NOT EXISTS `applications` (
 -- Dumping data for table `applications`
 --
 
-INSERT INTO `applications` (`id`, `name`, `address`, `dob`, `gender`, `guardian_name`, `pin`, `firstlang`, `secondlang`, `maths`, `english`, `chemistry`, `physics`, `electronics`, `zoology`, `botony`, `course`, `bussiness`, `accounting`, `economics`, `politics`, `statistics`, `status`) VALUES
-(16, 'nbv', 'sdfgh', NULL, NULL, 'wertyu', '56', 78, 6, 5, 4, 3, 2, 1, 0, 9, 'dfghj', 8, 7, 6, 5, 4, 'listed'),
-(17, 'sdf', 'ert', NULL, NULL, 'rt', '76', 7, 6, 5, 4, 3, 2, 1, 0, 9, '8', 8, 7, 6, 0, 0, 'listed'),
-(18, 'noufalck', 'ert', NULL, NULL, 'rt', '76', 7, 6, 5, 4, 3, 2, 1, 0, 10, '8', 8, 7, 6, 0, 0, 'listed'),
-(19, 'shameem', 'bjom', NULL, NULL, 'bbb', '7654', 99, 88, 77, 66, 55, 44, 33, 22, 11, 'vvvv', 2, 33, 44, 55, 66, 'listed'),
-(20, 'noufal', 'asdfghjk', NULL, NULL, 'qwertyu', '652136', 3, 4, 5, 6, 7, 8, 9, 7, 56, 'bba', 5, 4, 3, 2, 1, 'listed'),
-(21, 'noufal', 'asdfghjk', NULL, NULL, 'qwertyu', '652136', 3, 4, 5, 6, 7, 8, 9, 7, 56, 'bba', 5, 4, 3, 2, 1, 'listed'),
-(22, 'xxx', 'bbb', NULL, NULL, 'nnn', '786543', 67, 88, 99, 0, 77, 66, 55, 44, 33, 'bbv', 22, 22, 11, 77, 88, 'listed'),
-(26, 'murshid', 'hbbb', NULL, NULL, 'ghh', '786543', 5, 4, 3, 2, 6, 7, 8, 9, 7, 'gh', 5, 4, 4, 3, 2, 'listed'),
-(27, 'panth', 'rhbbb', NULL, NULL, 'r', 'r', 9, 6, 6, 5, 4, 3, 2, 1, 3, 'gh', 344, 5, 77, 88, 99, 'listed'),
-(28, 'jeshma', 'chettiyarammal', NULL, NULL, 'afsal', '12345', 32, 55, 66, 88, 66, 55, 44, 33, 22, 'bca', 111, 22, 333, 44, 55, 'listed');
-
 -- --------------------------------------------------------
 
 --

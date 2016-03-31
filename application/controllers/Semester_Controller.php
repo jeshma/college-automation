@@ -11,9 +11,11 @@ class Semester_Controller extends Check_Logged
 	{
 		parent::__construct();
 		$this->load->helper(['url','form']);
-		$this->load->library('form_validation');
+		$this->load->library(['form_validation', 'table']);
 		$this->load->Model('Semester_Model');
 		$this->load->Model('Course_Model');
+		$this->load->Model('Semester_Subject_Model');
+		$this->load->Model('Subject_Model');
 	}
 
 	public function index()
@@ -27,9 +29,21 @@ class Semester_Controller extends Check_Logged
 		$where = ['id' => $id];
 
 		$data['id'] =$id;
-		$data['result'] = $this->Semester_Model->get($where);
-		$data['course']= $this->Course_Model->get_where(['cources_id' => $id]);
-		$this->load->view('admin/add_semester',$data);
+		$result = $this->Semester_Model->get_where($where);
+		$new_subjects = $this->Subject_Model->get_all();
+
+		$where = ['semester_id' => $id];
+		$subjects = $this->Semester_Subject_Model->get_join($where);
+
+		// $this->table->set_heading('id','name','subjects');
+		// foreach ($result as $key => $value) {
+		// 			$this->table->add_row($value->id, $value->name);
+		// 		}		
+		// $data['result'] = $this->table->generate();
+		$data['result'] = $result;
+		$data['subjects'] = $new_subjects;
+		$data['current_subject'] = $subjects;
+		$this->load->view('admin/view_semester',$data);
 	}
 
 	public function add()
