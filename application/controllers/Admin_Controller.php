@@ -21,7 +21,19 @@ class Admin_Controller extends Check_Logged
 	public function index()
 	
 	{
-		echo 'welcome to admin';
+		if ($this->logged == true) {
+		$this->load->view('admin/dashboard');	
+		}
+		else
+		{
+			redirect(base_url('dashboard/login'));
+		}
+	}
+
+
+	public function login()
+	{
+		$this->load->view('admin/login');
 	}
 
 	public function view_application()
@@ -172,10 +184,6 @@ class Admin_Controller extends Check_Logged
 		$this->load->view('admin/add_subject');
 	}
 
-	public function login()
-	{
-		$this->load->view('admin/login');
-	}
 
 
 }
