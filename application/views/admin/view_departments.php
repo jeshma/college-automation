@@ -37,9 +37,9 @@
         </ul>
       </div>
     </nav>
-   <table id="depart">
+   <table id="depart" class="table">
   <caption><h1>departments</h1></caption>
-    <thead>
+    <thead class="header">
       <tr>
         <th>id</th>
         <th>name</th>
@@ -48,15 +48,10 @@
       </tr>
     </thead>
     <tbody>
-
       <?php 
-
       if(isset($result) &&$result!=FALSE){
-
         foreach ($result as $key => $value){
           ?>
-
-
         <tr>
             <td class="width-80">
                <?php echo $value->id ?>
