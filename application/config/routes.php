@@ -58,6 +58,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['dashboard/login'] = 'Admin_Controller/login';
 $route['dashboard'] = 'Admin_Controller';
 
+/*departments*/
+$route['dashboard/department'] = 'Department_Controller';
+
+
+
 /////////////////////
 /*application routes*/
 $route['default_controller'] = 'Home_Controller/index';
