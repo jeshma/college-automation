@@ -51,10 +51,10 @@ class User_controller extends Check_Logged
 			$password = $this->input->post('password');
 
 			$password = md5($password);
-			if($this->User_Model->login($username, $password, 'admin') === TRUE)
+			if($this->User_Model->login($username, $password) === TRUE)
 			{
 				$userdata = [
-					'username' => $username,
+					'user_name' => $username,
 					'logged_in' => TRUE
 				];
 				$this->session->set_userdata($userdata);

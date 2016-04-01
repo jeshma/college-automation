@@ -8,13 +8,13 @@
 <table border="1px">
 	<thead>
 		<th>name</th>
-		<th>subjects</th>
+		<th>description</th>
 	</thead>
 	<tbody>
 		<?php if (isset($semester) and $semester != FALSE): ?>
 			<?php foreach ($semester as $key => $value): ?>
 				<tr>
-					<td><?php echo $value->name; ?></td>
+					<td><a href="<?php echo base_url('Semester_Controller/view/'.$value->id) ?>"><?php echo $value->name ?></a></td>
 					<td></td>
 				</tr>
 			<?php endforeach ?>

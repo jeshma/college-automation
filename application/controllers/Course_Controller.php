@@ -34,16 +34,14 @@ class Course_Controller extends Check_Logged
     	$data['id'] = $id;
     	
     	if ($data['semester']!=FALSE)
-    	 {
-    	
-    	foreach ($data['semester'] as $key => $value) 
     	{
-    		$where = ['semester_id' => $value->id];
- 		   	$data['subjects'] = $this->Semester_Subject_Model->view_where($where);
-    	}
+	    	foreach ($data['semester'] as $key => $value) 
+	    	{
+	    		$where = ['semester_id' => $value->id];
+	 		   	$data['subjects'] = $this->Semester_Subject_Model->view_where($where);
+	    	}
         }
-        
-     $this->load->view('admin/add_semester',$data);
+	    $this->load->view('admin/add_semester',$data);
     }
 
    public function add()
@@ -91,7 +89,10 @@ class Course_Controller extends Check_Logged
      
    			}
          }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 020fc3a8d01636a54bbe95d03ddd8bf3d3b9b135
 
          public function delete($id)
 		{
@@ -113,6 +114,7 @@ class Course_Controller extends Check_Logged
 	    	$data['subject'] = $this->Staff_Model->view();
 	    	$this->load->view('admin/add_semester_subject');
 	    }
+<<<<<<< HEAD
   
     
          	
@@ -121,3 +123,8 @@ class Course_Controller extends Check_Logged
 
     ?>
 
+=======
+    }
+
+    ?>
+>>>>>>> 020fc3a8d01636a54bbe95d03ddd8bf3d3b9b135

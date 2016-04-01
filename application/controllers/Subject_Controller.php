@@ -24,8 +24,6 @@
  	public function add()
 	{
 		$this->form_validation->set_rules('name','Name','required');
-	
-
 
 		if($this->form_validation->run() === FALSE)
 		{
