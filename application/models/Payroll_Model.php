@@ -57,6 +57,6 @@ class Payroll_Model extends CI_Model
 	}
  }
 	
-}
+
 
  ?>

@@ -1,9 +1,10 @@
 <?php 
-defined('BASEPATH') OR exit('no direct script access allowed');
+
 /**
 * login class
 */
-class User_controller extends CI_Controller
+require_once(APPPATH.'controllers/Check_Logged.php');
+class User_controller extends Check_Logged
 {
 	/*construtor method*/
 	public function __construct()
@@ -14,14 +15,20 @@ class User_controller extends CI_Controller
 		$this->load->helper('url');	
 		$this->load->library('form_validation');
 		$this->load->library('session');
-
-		$this->load->model('User_Model');	
+        $this->load->model('User_Model');	
 	}
 
 
 	public function index($page = 'login')
 	{
 		$this->load->view('admin/'.$page);
+	}
+
+	public function generate()
+	{
+		var_dump(APPPATH);
+		var_dump(md5('admin'));
+		var_dump(hash('sha512','admin'));
 	}
 
 	public function login()
@@ -42,10 +49,12 @@ class User_controller extends CI_Controller
 		{
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
+
+			$password = md5($password);
 			if($this->User_Model->login($username, $password) === TRUE)
 			{
 				$userdata = [
-					'username' => $username,
+					'user_name' => $username,
 					'logged_in' => TRUE
 				];
 				$this->session->set_userdata($userdata);

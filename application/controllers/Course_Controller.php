@@ -3,7 +3,8 @@
 /**
 * 
 */
-class Course_Controller extends CI_Controller
+require_once(APPPATH.'controllers/Check_Logged.php');
+class Course_Controller extends Check_Logged
 {
 			
 	public function __construct()
@@ -12,6 +13,8 @@ class Course_Controller extends CI_Controller
 		$this->load->helper(['url' , 'form']);
 		$this->load->library(['form_validation']);
 		$this->load->model('Course_Model');
+		$this->load->model('Semester_Model');
+		$this->load->model('Semester_Subject_Model');
 		
 		
 	
@@ -24,13 +27,29 @@ class Course_Controller extends CI_Controller
     
     }
 
+    public function view($id)
+    {
+
+    	$data['semester'] = $this->Semester_Model->get_where(['cources_id' => $id]);
+    	$data['id'] = $id;
+    	
+    	if ($data['semester']!=FALSE)
+    	{
+	    	foreach ($data['semester'] as $key => $value) 
+	    	{
+	    		$where = ['semester_id' => $value->id];
+	 		   	$data['subjects'] = $this->Semester_Subject_Model->view_where($where);
+	    	}
+        }
+	    $this->load->view('admin/add_semester',$data);
+    }
 
    public function add()
 
          {
 
     	$this->form_validation->set_rules('course','Name','required');
-    	$this->form_validation->set_rules('description','Description','required');
+    	$this->form_validation->set_rules('description','Description','');
 
     		if($this->form_validation->run() === FALSE)
     		{
@@ -43,8 +62,6 @@ class Course_Controller extends CI_Controller
     			
     			{
     				$id=$this->input->post('id');
-
-    				
     				$name = $this->input->post('course');
 	 				$description = $this->input->post('description');
 
@@ -53,14 +70,14 @@ class Course_Controller extends CI_Controller
 	 					'description'=>$description,
 	 					'department_id'=>$id
 	 			];
-    				
+
     		  $query= $this->Course_Model->add($data);
 			  if($query != FALSE)
 			  {
 			  	$data['id'] = $query;
 			 	 $data['message'] = '<script type="text/javascript">
 										alert("adding success");
-										window.location = "'.base_url().'Course_Controller/index"
+										window.location = "'.$_SERVER["HTTP_REFERER"].'"
 									</script>';
 				$this->load->view('admin/view_department',$data);
 			  }
@@ -72,9 +89,42 @@ class Course_Controller extends CI_Controller
      
    			}
          }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 020fc3a8d01636a54bbe95d03ddd8bf3d3b9b135
+
+         public function delete($id)
+		{
+
+		   if($this->Course_Model->delete($id))
+		      {
+
+			    redirect($_SERVER['HTTP_REFERER']);
+	       	  }
+		   else
+		      {
+			    var_dump('fail');
+		      }
+
+	    }
+	    public function add_semester_subject()
+	    {
+	    	$data['semester'] = $this->Staff_Model->view();
+	    	$data['subject'] = $this->Staff_Model->view();
+	    	$this->load->view('admin/add_semester_subject');
+	    }
+<<<<<<< HEAD
+  
     
          	
     }
 
 
     ?>
+
+=======
+    }
+
+    ?>
+>>>>>>> 020fc3a8d01636a54bbe95d03ddd8bf3d3b9b135

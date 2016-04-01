@@ -3,6 +3,7 @@
 /**
 * 
 */
+
 class Department_Model extends CI_Model
 {
 	protected $table = 'departments';

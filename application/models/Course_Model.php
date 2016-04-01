@@ -31,10 +31,10 @@ class Course_Model extends CI_Model
 
 	public function get_where($where)
 	{
-		
 		$this->db->where($where);
 		$query = $this->db->get('courses');
 		if ($query->num_rows()>0)
+
 		{
 			return $query->result();
 		}
@@ -42,7 +42,6 @@ class Course_Model extends CI_Model
 		{
 			return FALSE;
 		}
-
 
 	}
 
@@ -59,6 +58,23 @@ class Course_Model extends CI_Model
 			return FALSE;
 		}
     }
-}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 020fc3a8d01636a54bbe95d03ddd8bf3d3b9b135
+
+     public function delete($id)
+	 {
+	    $this->db->where('id',$id);
+		if($this->db->delete('courses') === TRUE)
+		{
+			return TRUE;
+		}
+		else
+		{
+			return FALSE;
+		}
+    }
+
+}
  ?>

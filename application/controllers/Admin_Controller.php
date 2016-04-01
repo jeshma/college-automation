@@ -3,7 +3,8 @@ defined('BASEPATH') OR exit('no direct script access allowed');
 /**
 * home class
 */
-class Admin_Controller extends CI_Controller
+require_once(APPPATH.'controllers/Check_Logged.php');
+class Admin_Controller extends Check_Logged
 
 {
 	/*construtor method*/
@@ -20,7 +21,19 @@ class Admin_Controller extends CI_Controller
 	public function index()
 	
 	{
-		echo 'welcome to admin';
+		if ($this->logged == true) {
+		$this->load->view('admin/dashboard');	
+		}
+		else
+		{
+			redirect(base_url('dashboard/login'));
+		}
+	}
+
+
+	public function login()
+	{
+		$this->load->view('admin/login');
 	}
 
 	public function view_application()
@@ -56,15 +69,18 @@ class Admin_Controller extends CI_Controller
 		$data = ['status' => 'listed'];
 
 
+
 		if ($this->Application_Model->edit($where, $data)) 
+
 		{
 
-			redirect($_SERVER['HTTP_REFERER']);
+				redirect($_SERVER['HTTP_REFERER']);
 		}
 		else
 		{
 			var_dump('fail');
 		}
+	
 	}
 
 
@@ -91,16 +107,26 @@ class Admin_Controller extends CI_Controller
 		else
 		{
 			var_dump('fail');
-		
-			}
 
-		
+		}
+
 	}
+
 
 	public function add_exam()
 	
 	{
 		$this->load->view('admin/add_exam');
+	}
+
+	public function view_exam()
+
+	{
+		$result =$this->Exam_Model->view_all();
+		var_dump($result);
+		$data['result'] = $result;
+		$this->load->view('admin/view_exam', $data);
+			
 	}
 
 
@@ -138,6 +164,11 @@ class Admin_Controller extends CI_Controller
 		$this->load->view('admin/view_attendence', $data);
 		
 
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 020fc3a8d01636a54bbe95d03ddd8bf3d3b9b135
 		}
 
 	public function add_payroll()
@@ -146,12 +177,33 @@ class Admin_Controller extends CI_Controller
 		$data['result'] = $this->Staff_Model->view();
 		$this->load->view('admin/add_payroll',$data);
 	}
+<<<<<<< HEAD
 	
+<<<<<<< HEAD
 
 }
+=======
+	
+=======
+>>>>>>> ce253a056aaf74455ef780f77fc93c642c4e02e1
 	
 
+>>>>>>> 020fc3a8d01636a54bbe95d03ddd8bf3d3b9b135
+	public function add_semester()
+	{
+		$this->load->view('admin/add_semester');
+	}
 
+	public function add_subject()
+	{
+		$this->load->view('admin/add_subject');
+	}
+
+
+
+}
+?>
+	
 
 
 

@@ -6,7 +6,7 @@
 class Exam_Model extends CI_Model
 {
 	
-protected $table = 'applications';
+protected $table = 'examtypes';
 
 	public function __construct()
 	{

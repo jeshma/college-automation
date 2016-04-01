@@ -3,7 +3,8 @@
 /**
 * 
 */
-class Department_Controller extends CI_Controller
+require_once(APPPATH.'controllers/Check_Logged.php');
+class Department_Controller extends Check_Logged
 {
 	
 	public function __construct()
@@ -30,9 +31,8 @@ class Department_Controller extends CI_Controller
 		$data['id'] =$id;
 		$data['result'] = $this->Department_Model->get($where);
 		$data['course']= $this->Course_Model->get_where(['department_id' => $id]);
-		
+
 		if ($data['result'] != FALSE) {
-			
 			$this->load->view('admin/view_department',$data);
 		}
 		else
@@ -63,7 +63,7 @@ class Department_Controller extends CI_Controller
 
 				$data['message'] = '<script type="text/javascript">
 										alert("adding success");
-										window.location = "'.base_url().'Admin_Controller/add_department"
+										window.location = "'.base_url().'Department_Controller"
 									</script>';
 				$this->load->view('admin/add_department',$data);
 			}
@@ -96,3 +96,4 @@ class Department_Controller extends CI_Controller
 
 	
 ?>
+						
