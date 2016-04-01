@@ -56,7 +56,7 @@ class Staff_Controller extends Check_Logged
 				$data=['error' => 'insertion failed'];
 			    $this->load->view('admin/add_staff',$data);
 			}
-			
+		
 			
 		}
 	}

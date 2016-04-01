@@ -17,7 +17,7 @@ class Staff_Model extends CI_Model
 	/**
 	*@return mixed
 	*/
-	public function view()
+	public function view_all()
 	{
 		$query = $this->db->get($this->table);
 		
@@ -48,5 +48,6 @@ class Staff_Model extends CI_Model
 		{
 			return FALSE;
 		}
+		
 	}
 }
