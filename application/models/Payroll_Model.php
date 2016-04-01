@@ -39,6 +39,23 @@ class Payroll_Model extends CI_Model
 
 		
 	 }
+
+	 public function view_all()
+	 
+	 {
+
+		$query = $this->db->get($this->table);
+		
+		if($query->num_rows() >= 1)
+		{
+			return $query->result();	
+		}
+		else
+		{
+			return FALSE;
+		}
+	}
+ }
 	
 }
 

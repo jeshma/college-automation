@@ -81,10 +81,10 @@ class payroll_Controller extends CI_Controller
 		}
 
 	}
-		public function delete($id)
+		public function view_all($id)
 		{
 
-		if($this->Payroll_Model->delete($id))
+		if($this->Payroll_Model->view_all($id))
 		{
 
 			redirect($_SERVER['HTTP_REFERER']);
