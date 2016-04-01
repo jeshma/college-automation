@@ -194,7 +194,6 @@ class Admin_Controller extends Check_Logged
 
 
 
-}
 public function add_semester()
 	{
 		$this->load->view('admin/add_semester');
