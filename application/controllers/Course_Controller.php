@@ -91,7 +91,7 @@ class Course_Controller extends Check_Logged
      
    			}
          }
-<<<<<<< HEAD
+
 
          public function delete($id)
 		{
@@ -113,14 +113,11 @@ class Course_Controller extends Check_Logged
 	    	$data['subject'] = $this->Staff_Model->view();
 	    	$this->load->view('admin/add_semester_subject');
 	    }
-    }
-
-    ?>
-=======
+  
     
          	
     }
 
 
     ?>
->>>>>>> 13b9af121266e034536cd1eae6beb98a3a322f92
+

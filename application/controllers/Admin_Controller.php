@@ -152,8 +152,8 @@ class Admin_Controller extends Check_Logged
 		$this->load->view('admin/view_attendence', $data);
 		
 
-<<<<<<< HEAD
-=======
+
+
 		}
 
 	public function add_payroll()
@@ -161,14 +161,9 @@ class Admin_Controller extends Check_Logged
 	{ 	
 		$data['result'] = $this->Staff_Model->view();
 		$this->load->view('admin/add_payroll',$data);
->>>>>>> 13b9af121266e034536cd1eae6beb98a3a322f92
 	}
 	
-	}
 	
-
-
-
 	public function add_semester()
 	{
 		$this->load->view('admin/add_semester');
