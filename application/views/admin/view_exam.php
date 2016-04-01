@@ -8,7 +8,7 @@
 
 	<h2>EXAM</h2>
 	<?php 
-		if($result != null)
+		if($result)
 			
 		{?>
 			<table border="2px">
