@@ -33,7 +33,7 @@ class Exam_Model extends CI_Model
 	public function view_where($where)
 	{
 		$this->db->where($where);
-		$result = $this->db->get($this->table);
+		$result = $this->db->get('examtypes');
 		if($result->num_rows() >= 1)
 		{
 			return $result->result();

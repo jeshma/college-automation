@@ -12,7 +12,7 @@ class Exam_Controller extends Check_Logged
 		parent::__construct();
 		$this->load->helper(['url', 'form']);
 		$this->load->library('form_validation');
-		$this->load->model('exam_Model');
+		$this->load->model('Exam_Model');
 		
 	}
 
@@ -27,13 +27,14 @@ class Exam_Controller extends Check_Logged
 		if($this->form_validation->run() === FALSE)
 		{
 		$this->form_validation->set_rules('name','name','required');
-		$this->form_validation->set_rules('departemnt','departemnt','required');
-		$this->form_validation->set_rules('Date','Date','required');
+		$this->form_validation->set_rules('department','departemnt','required');
+		$this->form_validation->set_rules('date','Date','required');
 		$this->form_validation->set_rules('time','time','required');
 
 
 		     if($this->form_validation->run() === FALSE)
 				{
+					var_dump('fghkjl');
 
                   $this->load->view('admin/add_exam');
 
