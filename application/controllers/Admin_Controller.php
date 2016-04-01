@@ -122,11 +122,14 @@ class Admin_Controller extends Check_Logged
 	public function view_exam()
 
 	{
-		$result =$this->Exam_Model->view_all();
-		var_dump($result);
-		$data['result'] = $result;
+		$data['result'] = $this->Exam_Model->view_all();
+		if($data['result']!= FALSE)
+		{
+		
 		$this->load->view('admin/view_exam', $data);
-			
+
+		}
+
 	}
 
 
@@ -138,6 +141,20 @@ class Admin_Controller extends Check_Logged
 		$this->load->view('admin/add_staff');
 	}
 
+
+    public function view_staffs()
+    
+	{
+
+		$data['result'] =$this->Staff_Model->view_all();
+	
+		if( $data['result']!= FALSE)
+		{
+			$this->load->view('admin/view_staffs', $data);
+
+		}
+		
+	}
 	
 	
 	public function add_department()
@@ -158,22 +175,26 @@ class Admin_Controller extends Check_Logged
 
 	public function view_attendence()
 	{
-		var_dump($result);
+		
 		$result =$this->Attendence_Model->view_all();
 		$data['result'] = $result;
 		$this->load->view('admin/view_attendence', $data);
 		
 
-}
+	}
+
+
 
 	public function add_payroll()
 	
 	{ 	
 		$data['result'] = $this->Staff_Model->view();
-		$this->load->view('admin/add_payroll',$data);
+		$this->load->view('admin/Add_payroll',$data);
 	}
 
 
+
+}
 public function add_semester()
 	{
 		$this->load->view('admin/add_semester');
@@ -183,8 +204,6 @@ public function add_semester()
 	{
 		$this->load->view('admin/add_subject');
 	}
-
-
 
 }
 ?>

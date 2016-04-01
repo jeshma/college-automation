@@ -17,17 +17,18 @@ class Staff_Controller extends Check_Logged
 		$this->load->library('form_validation');
 		$this->load->model('Staff_Model');
 	}
-	/*public function index()
+	public function index()
 	{
 		$this->load->view('admin/add_staff');
-	}*/
+
+	}
 	
 
 	public function add()
 	{
+		$this->form_validation->set_rules('department','Department','required');
 		$this->form_validation->set_rules('name','Name','required');		
 		$this->form_validation->set_rules('address','Address','required');		
-		$this->form_validation->set_rules('department','Department','required');
 
 		if($this->form_validation->run() === FALSE)		
 		{
@@ -42,6 +43,7 @@ class Staff_Controller extends Check_Logged
 				'address' => $this->input->post('address') ,
 				'departments_id' => $this->input->post('department')
 			];
+
 			if ($this->Staff_Model->add($data) != FALSE) 
 			{
 
@@ -58,6 +60,19 @@ class Staff_Controller extends Check_Logged
 			}
 		
 			
+		}
+	}
+
+	public function delete($id)
+	
+	{
+		if($this->Staff_Model->delete($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
 		}
 	}
 }

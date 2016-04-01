@@ -110,15 +110,4 @@ class Course_Controller extends Check_Logged
 	    	$data['subject'] = $this->Staff_Model->view();
 	    	$this->load->view('admin/add_semester_subject');
 	    }
-  
-    
-         	
-    }
-
-
-    ?>
-
-
-    }
-
-    ?>
+}

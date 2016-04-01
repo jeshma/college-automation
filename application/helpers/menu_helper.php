@@ -100,7 +100,7 @@ function dashboard_menu($current)
             'icon' => 'fa-tachometer',
             'link' => ''
         ],
-        'department' => [
+        'departments' => [
             'title' => 'department',
             'icon' => 'fa-folder',
             'link' => 'department'

@@ -5,7 +5,7 @@
 	<title>add payroll</title>
 </head>
 <body>
-<form action="<?php echo base_url('payroll_Controller/add') ?>" name="addform" id="addform" method="post" >
+<form action="<?php echo base_url('Payroll_Controller/add') ?>" name="addform" id="addform" method="post" >
 
 	staffs:<select name="staffs" id="staffs">
 	<?php 

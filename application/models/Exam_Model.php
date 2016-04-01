@@ -6,7 +6,6 @@
 class Exam_Model extends CI_Model
 {
 	
-protected $table = 'examtypes';
 
 	public function __construct()
 	{
@@ -18,7 +17,7 @@ protected $table = 'examtypes';
 
 	public function view_all()
 	{
-		$result = $this->db->get($this->table);
+		$result = $this->db->get('examtypes');
 		if($result->num_rows() >= 1)
 		{
 			return $result->result();
@@ -48,7 +47,7 @@ protected $table = 'examtypes';
 
 	public function add($data)
 	{
-		if($this->db->insert($this->table,$data))
+		if($this->db->insert('examtypes',$data)===TRUE)
 			 {
 
 				return $this->db->insert_id();
@@ -59,7 +58,7 @@ protected $table = 'examtypes';
 	public function edit($where, $data)
 	{
 		$this->db->where($where);
-		$update=$this->db->update($this->table, $data);
+		$update=$this->db->update('examtypes', $data);
 		if($update)
 		{
 			return TRUE;
@@ -73,7 +72,7 @@ protected $table = 'examtypes';
 		public function delete($id)
 	{
 		$this->db->where('id',$id);
-		if($this->db->delete($this->table) === TRUE)
+		if($this->db->delete('examtypes') === TRUE)
 		{
 			return TRUE;
 		}

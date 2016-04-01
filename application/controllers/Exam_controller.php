@@ -11,15 +11,14 @@ class Exam_Controller extends Check_Logged
 	{
 		parent::__construct();
 		$this->load->helper(['url', 'form']);
-		$this->load->library(['form_validation']);
-		$this->load->model('exam_Model');
 		$this->load->library('form_validation');
-
+		$this->load->model('exam_Model');
+		
 	}
 
 	public function index()
 	{
-		echo 'welcome to exam';
+		$this->load->view('admin/view_exam');
 	}
 
 	public function add()
@@ -36,9 +35,9 @@ class Exam_Controller extends Check_Logged
 		     if($this->form_validation->run() === FALSE)
 				{
 
+                  $this->load->view('admin/add_exam');
 
-			$this->load->view('admin/add_exam');
-		        }
+                }
 		     else
 		        {
 
@@ -48,23 +47,23 @@ class Exam_Controller extends Check_Logged
 				     'date' => $this->input->post('date'),
 				     'time' => $this->input->post('time')
 			         ];
-			    if ($this->Exam_Model->add($data) != FALSE) 
-			      {
+			        if ($this->Exam_Model->add($data) != FALSE) 
+			         {
 
-				$data['message'] = '<script type="text/javascript">
+				       $data['message'] = '<script type="text/javascript">
 										alert("adding success");
 										window.location = "'.base_url().'Admin_Controller/add_exam"
 									</script>';
-				$this->load->view('admin/add_exam',$data);
-			}
-			else
-			{
-				$data=['error' => 'insertion failed'];
-			    $this->load->view('admin/add_exam',$data);
-			}
+				       $this->load->view('admin/add_exam',$data);
+			         }
+			         else
+			          {
+				          $data=['error' => 'insertion failed'];
+			              $this->load->view('admin/add_exam',$data);
+			          }
 			
-		}
-	}
+		        }
+	    }
 
 	}
 }
