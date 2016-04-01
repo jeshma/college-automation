@@ -64,7 +64,7 @@ class Semester_Controller extends Check_Logged
 	 		$data = [
 	 					'name'=>$name,
 	 					'cources_id'=>$id
-	 					];
+	 				];
 	 					
 	 		$query= $this->Semester_Model->add($data);
 			
