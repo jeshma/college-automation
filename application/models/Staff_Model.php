@@ -69,6 +69,7 @@ class Staff_Model extends CI_Model
 		{
 			return FALSE;
 		}
+		
 	}
 	
 	public function edit($where, $data)

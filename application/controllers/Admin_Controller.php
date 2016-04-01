@@ -192,8 +192,14 @@ class Admin_Controller extends Check_Logged
 		$this->load->view('admin/Add_payroll',$data);
 	}
 
+<<<<<<< HEAD
 	
 	public function add_semester()
+=======
+
+
+public function add_semester()
+>>>>>>> d5c8ad0b28e3e45d56698a2d224cf71c3fbe259d
 	{
 		$this->load->view('admin/add_semester');
 	}
