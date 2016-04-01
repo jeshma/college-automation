@@ -21,11 +21,29 @@ class Exam_Controller extends Check_Logged
 		$this->load->view('admin/view_exam');
 	}
 
+	public function view($id)
+		{
+			$where = ['id' => $id];
+
+		      $data['id'] =$id;
+		      $data['result'] = $this->Exam_Model->get($where);
+		      $data['departments']= $this->Department_Model->get_where(['exam_id' => $id]);
+
+		if ($data['result'] != FALSE)
+		 {
+			$this->load->view('admin/view_exam',$data);
+		 }
+		else
+		  {
+			$data['message'] = 'No record found';
+			$this->load->view('admin/view_exam',$data);
+		  }
+	
+		}
 	public function add()
 	{
 		
-		if($this->form_validation->run() === FALSE)
-		{
+		
 		$this->form_validation->set_rules('name','name','required');
 		$this->form_validation->set_rules('department','departemnt','required');
 		$this->form_validation->set_rules('date','Date','required');
@@ -34,7 +52,7 @@ class Exam_Controller extends Check_Logged
 
 		     if($this->form_validation->run() === FALSE)
 				{
-					var_dump('fghkjl');
+					
 
                   $this->load->view('admin/add_exam');
 
@@ -44,7 +62,6 @@ class Exam_Controller extends Check_Logged
 
 			       $data=[
 				     'name' => $this->input->post('name'),
-				     'department' => $this->input->post('department') ,
 				     'date' => $this->input->post('date'),
 				     'time' => $this->input->post('time')
 			         ];
@@ -63,7 +80,7 @@ class Exam_Controller extends Check_Logged
 			              $this->load->view('admin/add_exam',$data);
 			          }
 			
-		        }
+		        
 	    }
 
 	}

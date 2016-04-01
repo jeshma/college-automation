@@ -16,6 +16,7 @@ class Admin_Controller extends Check_Logged
 		$this->load->model('Application_Model');
 		$this->load->model('Staff_Model');
 		$this->load->model('Attendence_Model');
+		$this->load->model('Department_Model');
 		}
 	
 	public function index()
@@ -114,9 +115,9 @@ class Admin_Controller extends Check_Logged
 
 
 	public function add_exam()
-	
 	{
-		$this->load->view('admin/add_exam');
+		$data['departments']= $this->Department_Model->get_all();
+		$this->load->view('admin/add_exam',$data);
 	}
 
 	public function view_exam()
@@ -192,14 +193,11 @@ class Admin_Controller extends Check_Logged
 		$this->load->view('admin/Add_payroll',$data);
 	}
 
-<<<<<<< HEAD
-	
-	public function add_semester()
-=======
+
 
 
 public function add_semester()
->>>>>>> d5c8ad0b28e3e45d56698a2d224cf71c3fbe259d
+
 	{
 		$this->load->view('admin/add_semester');
 	}
