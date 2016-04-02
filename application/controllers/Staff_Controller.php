@@ -64,6 +64,7 @@ class Staff_Controller extends Check_Logged
 	}
 
 	public function delete($id)
+
 	
 	{
 		if($this->Staff_Model->delete($id))

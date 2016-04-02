@@ -16,7 +16,7 @@
 		</select><br>
 		date : <input type="text" name="date"><br>
 		time : <input type="text" name="time"><br>
-		<button type="submit">add</button>
+		<button type="submit">Add</button>
 	</form>
 </body>
 </html>

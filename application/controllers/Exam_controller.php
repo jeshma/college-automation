@@ -64,9 +64,7 @@ class Exam_Controller extends Check_Logged
 			          }
 			
 		        }
-	    }
-
+			}
 	}
-}
 ?>
 	

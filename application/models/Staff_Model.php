@@ -86,10 +86,10 @@ class Staff_Model extends CI_Model
 		}
 	}
 
-	public function delete($id)
-	{
-		
-		$this->db->where('id',$id);
+	 public function delete($id)
+	 {
+	 	$this->db->query("SET FOREIGN_KEY_CHECKS = 0");
+	    $this->db->where('id',$id);
 		if($this->db->delete('staffs') === TRUE)
 		{
 			return TRUE;
@@ -98,6 +98,6 @@ class Staff_Model extends CI_Model
 		{
 			return FALSE;
 		}
-	}
+    }
 
 }
