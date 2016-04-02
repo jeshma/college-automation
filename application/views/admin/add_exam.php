@@ -18,6 +18,14 @@
 		date : <input type="text" name="date"><br>
 		time : <input type="text" name="time"><br>
 		<button type="submit">add</button>
-	</form>
+		</form>
+		<?php if (isset($error)) {
+	echo $error;
+}
+if (isset($message)) {
+	echo $message;
+}
+
+ ?>
 </body>
 </html>

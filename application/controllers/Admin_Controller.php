@@ -40,12 +40,18 @@ class Admin_Controller extends Check_Logged
 	public function view_application()
 	
 	{
-		$data['result'] =$this->Application_Model->view_all();
-	
+		$where = ['status' => 'request'];
+		$data['result'] =$this->Application_Model->view_where($where);
+
 		if( $data['result']!= FALSE)
 		{
 			$this->load->view('admin/view_applications', $data);
 
+		}
+		else
+		{
+			$data['message'] = 'No data available';
+			$this->load->view('admin/view_applications', $data);
 		}
 	}
 
@@ -57,19 +63,13 @@ class Admin_Controller extends Check_Logged
 		$result =$this->Application_Model->view_where($where);
 		$data['result'] = $result;
 		$this->load->view('admin/view_selected', $data);
-		
-	
 	}
-
-
 
 	public function accept($id)
 	
 	{
 		$where = ['id' => $id];
 		$data = ['status' => 'listed'];
-
-
 
 		if ($this->Application_Model->edit($where, $data)) 
 
@@ -84,6 +84,28 @@ class Admin_Controller extends Check_Logged
 	
 	}
 
+	public function approve($id)
+	{
+		$where = ['id' => $id];
+		$data = ['status' => 'approve'];
+
+		if ($this->Application_Model->edit($where, $data)) 
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}			
+	}
+
+	public function view_approved()
+	{
+		$where =['status' => 'approved'];
+		$result = $this->Application_Model->view_where($where);
+		$data['result'] =$result;
+		$this->load->view('admin/view_approved',$data); 
+	}
 
 	public function delete($id)
 	
@@ -124,6 +146,7 @@ class Admin_Controller extends Check_Logged
 
 	{
 		$data['result'] = $this->Exam_Model->view_all();
+		var_dump($data);
 		if($data['result']!= FALSE)
 		{
 		

@@ -82,7 +82,23 @@ class Application_Model extends CI_Model
 			return FALSE;
 		}
 	}
+public function view_approved()
+{
 
-	
+$this->db->$where($where);
+$result = $this->db->get($this->table);
+		if($result->num_rows() >= 1)
+		{
+			return $result->result();
+			
+		}
+		else
+		{
+			return FALSE;
+		}
+	}
+
 }
+
+
 

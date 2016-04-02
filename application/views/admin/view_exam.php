@@ -8,7 +8,7 @@
 
 	<h2>EXAM</h2>
 	<?php 
-		if($result != null)
+		if(isset($result))
 			
 		{?>
 			<table border="2px">
@@ -33,8 +33,8 @@
 			<td><?php echo $value->status ?></td>
 			
 
-			<td><a href="<?php echo base_url('index.php/exam_Controller/accept/'.$value->id) ?>">Select</a></td>
-			<td><a href="<?php echo base_url('index.php/exam_Controller/delete/'.$value->id) ?>">Remove</a></td>
+			<td><a href="<?php echo base_url('index.php/Exam_Controller/accept/'.$value->id) ?>">Select</a></td>
+			<td><a href="<?php echo base_url('index.php/Exam_Controller/delete/'.$value->id) ?>">Remove</a></td>
 			
 		</tr>		
 		<?php }
