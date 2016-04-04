@@ -161,8 +161,8 @@ class Admin_Controller extends Check_Logged
 	
 	{
 		// get all department and pass to the view file
-
-		$this->load->view('admin/add_staff');
+		$data['departments'] = $this->Department_Model->get_all();
+		$this->load->view('admin/add_staff',$data);
 	}
 
 

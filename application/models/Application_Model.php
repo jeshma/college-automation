@@ -85,8 +85,8 @@ class Application_Model extends CI_Model
 public function view_approved()
 {
 
-$this->db->$where($where);
-$result = $this->db->get($this->table);
+		$this->db->$where($where);
+		$result = $this->db->get($this->table);
 		if($result->num_rows() >= 1)
 		{
 			return $result->result();

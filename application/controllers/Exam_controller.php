@@ -47,7 +47,7 @@ class Exam_Controller extends Check_Logged
 		
 		
 		$this->form_validation->set_rules('name','name','required');
-		$this->form_validation->set_rules('departments','departemnt','required');
+		$this->form_validation->set_rules('departments','department','required');
 		$this->form_validation->set_rules('date','Date','required');
 		$this->form_validation->set_rules('time','time','required');
 
@@ -55,7 +55,7 @@ class Exam_Controller extends Check_Logged
 		     if($this->form_validation->run() === FALSE)
 				{
 					
-					echo "string";
+				
                   $this->load->view('admin/view_exam');
 
                 }
