@@ -83,10 +83,14 @@ class Exam_Controller extends Check_Logged
 			              $this->load->view('admin/add_exam',$data);
 			          }
 			
+<<<<<<< HEAD
 		        
 	    }
 
+=======
+		        }
+			}
+>>>>>>> aa74633954a2f7a586d2a59b5974ac839c8f9512
 	}
-}
 ?>
 	

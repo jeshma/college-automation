@@ -25,7 +25,11 @@
                               <td><?php echo $value->name ?></td>
                               <td><?php echo $value->address  ?></td>
      					<td><?php echo $value->departments_id ?></td>
+<<<<<<< HEAD
                               <td><a href="<?php echo base_url('Admin_Controller/delete/'.$value->id) ?>">Remove</a></td>
+=======
+                              <td><a href="<?php echo base_url('Admin_Controller/staffsdele/'.$value->id) ?>">Remove</a></td>
+>>>>>>> aa74633954a2f7a586d2a59b5974ac839c8f9512
      				</tr>
                          </thead>
 

@@ -78,7 +78,12 @@ class Staff_Controller extends Check_Logged
 		}
 	}
 
+<<<<<<< HEAD
 	//public function delete($id)
+=======
+	public function delete($id)
+
+>>>>>>> aa74633954a2f7a586d2a59b5974ac839c8f9512
 	
 	//{
 	//	if($this->Staff_Model->delete($id))

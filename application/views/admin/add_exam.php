@@ -17,6 +17,7 @@
 		</select><br>
 		date : <input type="text" name="date"><br>
 		time : <input type="text" name="time"><br>
+<<<<<<< HEAD
 		<button type="submit">add</button>
 		</form>
 		<?php if (isset($error)) {
@@ -27,5 +28,9 @@ if (isset($message)) {
 }
 
  ?>
+=======
+		<button type="submit">Add</button>
+	</form>
+>>>>>>> aa74633954a2f7a586d2a59b5974ac839c8f9512
 </body>
 </html>

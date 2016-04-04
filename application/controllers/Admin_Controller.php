@@ -179,7 +179,18 @@ class Admin_Controller extends Check_Logged
 		}
 		
 	}
+	public function staffdele($id)
 	
+	{
+		if($this->Staff_Model->delete($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
+	}
 	
 	public function add_department()
 	
@@ -212,15 +223,22 @@ class Admin_Controller extends Check_Logged
 	public function add_payroll()
 	
 	{ 	
-		$data['result'] = $this->Staff_Model->view();
+		$data['result'] = $this->Staff_Model->view_all();
 		$this->load->view('admin/Add_payroll',$data);
 	}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> aa74633954a2f7a586d2a59b5974ac839c8f9512
 
+	
 
 public function add_semester()
+<<<<<<< HEAD
 
+=======
+>>>>>>> aa74633954a2f7a586d2a59b5974ac839c8f9512
 	{
 		$this->load->view('admin/add_semester');
 	}
