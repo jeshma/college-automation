@@ -116,7 +116,7 @@ class Admin_Controller extends Check_Logged
 		}
 		else
 		{
-			var_dump('fail');
+			var_dump('fail');		
 		}
 	}
 
@@ -227,19 +227,11 @@ class Admin_Controller extends Check_Logged
 		$this->load->view('admin/Add_payroll',$data);
 	}
 
-<<<<<<< HEAD
-
-=======
->>>>>>> aa74633954a2f7a586d2a59b5974ac839c8f9512
 
 	
 
 public function add_semester()
-<<<<<<< HEAD
-
-=======
->>>>>>> aa74633954a2f7a586d2a59b5974ac839c8f9512
-	{
+{
 		$this->load->view('admin/add_semester');
 	}
 

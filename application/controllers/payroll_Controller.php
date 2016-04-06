@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('no direct script access allowed');
 /**
 * home class
 */
-class payroll_Controller extends CI_Controller
+class Payroll_Controller extends CI_Controller
 
 {
 	/*construtor method*/
@@ -52,7 +52,7 @@ class payroll_Controller extends CI_Controller
 		if($this->form_validation->run() === FALSE)		
 		{
 			
-			$this->load->view('admin/add_payroll');
+			$this->load->view('admin/Add_payroll');
 		}
 		else
 		{
@@ -70,21 +70,21 @@ class payroll_Controller extends CI_Controller
 										alert("adding success");
 										window.location = "'.base_url().'Admin_Controller/add_payroll"
 									</script>';
-				$this->load->view('admin/add_payroll',$data);
+				$this->load->view('admin/Add_payroll',$data);
 			}
 			else
 			{
 				$data=['error' => 'insertion failed'];
-			    $this->load->view('admin/add_payroll',$data);
+			    $this->load->view('admin/Add_payroll',$data);
 			}
 
 		}
 
 	}
-		public function view_all($id)
+		public function delete($id)
 		{
 
-		if($this->Payroll_Model->view_all($id))
+		if($this->Payroll_Model->delete($id))
 		{
 
 			redirect($_SERVER['HTTP_REFERER']);
