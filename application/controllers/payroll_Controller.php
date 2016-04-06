@@ -3,7 +3,8 @@ defined('BASEPATH') OR exit('no direct script access allowed');
 /**
 * home class
 */
-class Payroll_Controller extends CI_Controller
+require_once(APPPATH.'controllers/Check_Logged.php');
+class Payroll_Controller extends Check_Logged
 
 {
 	/*construtor method*/
@@ -27,60 +28,59 @@ class Payroll_Controller extends CI_Controller
 
 		public function view($id)
 		{
-
-		$where = ['id' => $id];
-
-		$data['id'] =$id;
-		$data['result'] = $this->payroll_Model->get($where);
-		$data['course']= $this->Staff_Model->get_where(['staff_id' => $id]);
-		if ($data['result'] != FALSE)
-		 {
-			$this->load->view('admin/view_payroll',$data);
-		}
-		else
-		{
-			$data['message'] = 'No record found';
-			$this->load->view('admin/view_payroll',$data);
-		}
-
-	}
-	public function add()
-	{
-		$this->form_validation->set_rules('staffs','staffs','required');	
-		$this->form_validation->set_rules('date','date','required');
-		$this->form_validation->set_rules('amount','amount','required');	
-		if($this->form_validation->run() === FALSE)		
-		{
-			
-			$this->load->view('admin/Add_payroll');
-		}
-		else
-		{
-
-			$data=[
-
-				'staff_id' => $this->input->post('staffs'),
-				'date' => $this->input->post('date'),
-				'amount' => $this->input->post('amount'), 
-			];
-		if ($this->Payroll_Model->add($data) != FALSE) 
-			{
-
-				$data['message'] = '<script type="text/javascript">
-										alert("adding success");
-										window.location = "'.base_url().'Admin_Controller/add_payroll"
-									</script>';
-				$this->load->view('admin/Add_payroll',$data);
+			$where = ['id' => $id];
+			$data['id'] = $id;
+			$data['result'] = $this->Payroll_Model->get_all($where);
+			if ($data['result'] != FALSE)
+			 {
+				$this->load->view('admin/view_payroll',$data);
 			}
 			else
 			{
-				$data=['error' => 'insertion failed'];
-			    $this->load->view('admin/Add_payroll',$data);
+				$data['message'] = 'No record found';
+				$this->load->view('admin/view_payroll',$data);
+			}
+			
+		}
+	
+		public function add()
+		{
+			$this->form_validation->set_rules('staffs','staffs','required');	
+			$this->form_validation->set_rules('date','date','required');
+			$this->form_validation->set_rules('amount','amount','required');	
+			if($this->form_validation->run() === FALSE)		
+			{
+				
+				$this->load->view('admin/Add_payroll');
+			}
+			else
+			{
+
+				$data=[
+
+					'staff_id' => $this->input->post('staffs'),
+					'date' => $this->input->post('date'),
+					'amount' => $this->input->post('amount'), 
+				];
+			if ($this->Payroll_Model->add($data) != FALSE) 
+				{
+					// redirect(base_url('dashboard/payroll'));
+
+					$data['message'] = '<script type="text/javascript">
+											alert("adding success");
+											window.location = "'.base_url('dashboard/payroll').'";
+										</script>';
+					$this->load->view('admin/Add_payroll',$data);
+				}
+				else
+				{
+					$data=['error' => 'insertion failed'];
+				    $this->load->view('admin/Add_payroll',$data);
+				}
+
 			}
 
 		}
-
-	}
 		public function delete($id)
 		{
 
@@ -97,9 +97,6 @@ class Payroll_Controller extends CI_Controller
 
 	    }
 
-		
-	
-
-	 }
+}
 
 	?>

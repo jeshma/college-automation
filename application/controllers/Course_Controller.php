@@ -56,11 +56,11 @@ class Course_Controller extends Check_Logged
     				
     				$this->load->view('admin/view_department');
 
-    			}
+    		}
 
     		else
     			
-    			{
+    		{
     				$id=$this->input->post('id');
     				$name = $this->input->post('course');
 	 				$description = $this->input->post('description');
@@ -70,6 +70,7 @@ class Course_Controller extends Check_Logged
 	 					'description'=>$description,
 	 					'department_id'=>$id
 	 			];
+	 			
 
     		  $query= $this->Course_Model->add($data);
 			  if($query != FALSE)

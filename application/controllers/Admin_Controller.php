@@ -17,6 +17,7 @@ class Admin_Controller extends Check_Logged
 		$this->load->model('Staff_Model');
 		$this->load->model('Attendence_Model');
 		$this->load->model('Department_Model');
+		$this->load->model('Payroll_Model');
 		}
 	
 	public function index()
@@ -101,7 +102,7 @@ class Admin_Controller extends Check_Logged
 
 	public function view_approved()
 	{
-		$where =['status' => 'approved'];
+		$where =['status' => 'approve'];
 		$result = $this->Application_Model->view_where($where);
 		$data['result'] =$result;
 		$this->load->view('admin/view_approved',$data); 
@@ -160,7 +161,7 @@ class Admin_Controller extends Check_Logged
 	public function add_staff()
 	
 	{
-		// get all department and pass to the view file
+		// get all department and pass to the view
 		$data['departments'] = $this->Department_Model->get_all();
 		$this->load->view('admin/add_staff',$data);
 	}
@@ -201,7 +202,7 @@ class Admin_Controller extends Check_Logged
 	public function add_attendence()
 	
 	{
-		$data['staffs'] = $this->Staff_Model->view();
+		$data['staffs'] = $this->Staff_Model->view_all();
 		$this->load->view('admin/add_attendence',$data);
 
 
@@ -227,11 +228,9 @@ class Admin_Controller extends Check_Logged
 		$this->load->view('admin/Add_payroll',$data);
 	}
 
-
-	
-
 public function add_semester()
-{
+
+	{
 		$this->load->view('admin/add_semester');
 	}
 
