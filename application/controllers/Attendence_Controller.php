@@ -12,6 +12,7 @@ defined('BASEPATH') OR exit('no direct script access allowed');
 		$this->load->helper(['url', 'form']);
 		$this->load->library(['form_validation']);
 		$this->load->model('Attendence_Model');
+		$this->load->model('Staff_Model');
  	}
  	public function attendence($data = 'attendence')
 	{

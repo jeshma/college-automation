@@ -77,6 +77,7 @@ class User_controller extends Check_Logged
     	redirect(base_url('User_controller/login'));
 	
 	}
+
 	
 
 }

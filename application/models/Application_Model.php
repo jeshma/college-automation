@@ -82,6 +82,20 @@ class Application_Model extends CI_Model
 			return FALSE;
 		}
 	}
+
+	public function reject($id)
+	{
+		
+		$this->db->where('id',$id);
+		if($this->db->delete($this->table) === TRUE)
+		{
+			return TRUE;
+		}
+		else
+		{
+			return FALSE;
+		}
+	}
 public function view_approved()
 {
 

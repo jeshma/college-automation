@@ -17,19 +17,43 @@ class Staff_Controller extends Check_Logged
 		$this->load->library('form_validation');
 		$this->load->model('Staff_Model');
 	}
-	public function index()
+	 public function index()
 	{
-		$this->load->view('admin/add_staff');
+	 	$data['result'] = $this->Staff_Model->view_all();
+	 	$this->load->view('admin/add_staff');
 
-	}
+	 }
+
+	 public function view_all()
+	 {
+	 	$result = $this->db->get('staffs');
+		if ($result != FALSE) 
+		
+		{
+		if($result->num_rows() >=1)
+		{
+			return $result->result();	
+		}
+		else
+		{
+			return FALSE;
+		}
+	}	   
+	   else
+	   {
+	   	  return FALSE;
+	   }	
+	 }
+
+
 	public function view($id)
 	{
 		$where = [$id => 'id'];
 		$data['id'] =$id;
-		$data['result']=$this->Staff_Model->get_where(['staffs_id' =>$id]);
+		$data['result']=$this->Staff_Model->view_where(['departments_id' =>$id]);
 		if ($data['result']!=FALSE)
 	    {
-			$this->load->view('admin/add_staff');
+			$this->load->view('admin/view_staffs',$data);
 		}
 		else
 		{
@@ -64,7 +88,7 @@ class Staff_Controller extends Check_Logged
 
 				$data['message'] = '<script type="text/javascript">
 										alert("adding success");
-										window.location = "'.base_url().'Admin_Controller/add_staff"
+										window.location = "'.base_url().('Admin_Controller/view_staffs').'"
 									</script>';
 				$this->load->view('admin/add_staff',$data);
 			}
@@ -77,24 +101,25 @@ class Staff_Controller extends Check_Logged
 			
 		}
 	}
-
-<<<<<<< HEAD
-	//public function delete($id)
-=======
 	public function delete($id)
+		{
 
->>>>>>> aa74633954a2f7a586d2a59b5974ac839c8f9512
+		if($this->Staff_Model->delete($id))
+		{
+
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
 	
-	//{
-	//	if($this->Staff_Model->delete($id))
-	//	{
-	//		redirect($_SERVER['HTTP_REFERER']);
-	//	}
-	//	else
-	//	{
-	//		var_dump('fail');
-	//	}
-	//}
-}
+
+	    }
+
+	}
+
+
+
 
 ?>

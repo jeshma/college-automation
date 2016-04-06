@@ -63,7 +63,10 @@ $route['dashboard/department'] = 'Department_Controller';
 $route['dashboard/add department'] = 'Admin_Controller/add_department';
 
 /*staff*/
-$route['dashboard/staff'] = 'Staff_Controller';
+//$route['dashboard/view_staff/(:num)'] = 'Staff_Controller/view/$1';
+$route['dashboard/add_staff']='Admin_Controller/add_staff';
+$route['dashboard/staff']='Admin_Controller/view_staffs';
+
 
 /*exam*/
 $route['dashboard/exam'] = 'Admin_Controller/add_exam';
@@ -76,6 +79,11 @@ $route['dashboard/semester'] = 'Admin_Controller/add_semester';
 
 /*subject*/
 $route['dashboard/subject'] = 'Admin_Controller/add_subject';
+
+/*payroll*/
+$route['dashboard/payroll'] = 'Admin_Controller/Add_payroll';
+//$route['dashboard/payroll/add/submit'] = 'Payroll_Controller/add';
+//$route['dashboard/payroll'] = 'Payroll_Controller/view';
 
 
 /*application routes*/

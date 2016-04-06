@@ -91,6 +91,7 @@ class Staff_Model extends CI_Model
 	 	$this->db->query("SET FOREIGN_KEY_CHECKS = 0");
 	    $this->db->where('id',$id);
 		if($this->db->delete('staffs') === TRUE)
+			
 		{
 			return TRUE;
 		}
