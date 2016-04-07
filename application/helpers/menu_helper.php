@@ -105,12 +105,7 @@ function dashboard_menu($current)
             'icon' => 'fa-folder',
             'link' => 'department'
         ],
-        'semester' => [
-            'title' => 'semester',
-            'icon' => 'fa-picture-o',
-            'link' => 'semester'
-        ],
-        'staff' => [
+       'staff' => [
             'title' => 'staff',
             'icon' => 'fa-folder',
             'link' => 'staff'

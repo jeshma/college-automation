@@ -61,7 +61,7 @@
                <?php echo $value->id ?>
             </td>
             <td class="width-33">
-               <a href="<?php echo base_url('Staff_Controller/view/'.$value->id); ?>"><?php echo $value->name ?></a>
+               <a href="<?php echo base_url('Staff_Controller/view_staff_details/'.$value->id); ?>"><?php echo $value->name ?></a>
             </td>
             <td class="width-20">
                <a class="remove" href="<?php echo base_url('Staff_Controller/delete/'.$value->id) ?>">Remove</a>

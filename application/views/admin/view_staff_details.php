@@ -19,7 +19,7 @@
 <body>
   <div class="page-wrapper">
     <div class="left-wrapper">
-      <?php echo dashboard_menu('departments');?>
+      <?php echo dashboard_menu('staffs');?>
     </div>
   
     <nav class="top-wrapper">
@@ -37,35 +37,20 @@
         </ul>
       </div>
     </nav>
-   <table id="depart" class="table">
-  <caption><h1>departments</h1></caption>
-    <thead class="header">
-      <tr>
-        <th>id</th>
-        <th>name</th>
-        <th></th>
-        <th><a class="width-80" href="<?php echo base_url('dashboard/department/add') ?>">add</a></th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php 
-      if(isset($result) &&$result!=FALSE){
-        foreach ($result as $key => $value){
-          ?>
-        <tr>
-            <td class="width-80">
-               <?php echo $value->id ?>
-            </td>
-            <td class="width-33">
-               <a href="<?php echo base_url('Department_Controller/view/'.$value->id); ?>"><?php echo $value->name ?></a>
-            </td>
-            <td class="width-20">
-               <a class="remove" href="<?php echo base_url('Department_Controller/delete/'.$value->id) ?>">Remove</a>
-            </td>
-          </tr>
-      <?php } }?>
-    </tbody>
-  </table>
-  </div>
+    <?php echo form_open(base_url('Staff_Controller/view_staff_details'),['name' => 'addform', 'id' => 'addform']); ?>
+<h2>STAFF DETAILS</h2>
+<?php 
+		if(isset($result) and $result != false)
+		{?>
+			
+			Id:<?php echo $result['0']->staff_id?><br>
+			Name:<?php echo $result['0']->name?><br>
+			Address:<?php echo $result['0']->address ?><br>
+			Salary:<?php echo $result['0']->ammount?><br>
+			Attendence:<?php echo $result['0']->attendence?><br>
+		<?php
+		}?>
+</div>
+
 </body>
 </html>

@@ -117,6 +117,20 @@ class Staff_Controller extends Check_Logged
 
 	    }
 
+	    public function view_staff_details($id)
+	    {
+	    	$where=['id'=>$id];
+	    	$result=$this->Staff_Model->view($where);
+	    	$result=$this->Payroll_Model->view($where);
+	    	$result=$this->Attendence_Model->view($where);
+	    	var_dump($result);
+	    	if($result != FALSE)
+	    	{
+	    		$data['result'] =$result;
+	    		$this->load->view('admin/view_staff_details',$data);
+	    	}
+	    }
+
 	}
 
 

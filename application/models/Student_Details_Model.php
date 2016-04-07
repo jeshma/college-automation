@@ -3,19 +3,16 @@
 /**
 * 
 */
-class Attendence_Model extends CI_Model
+class Student_Details extends CI_Model
 {
-	protected $table = 'staffattend';
-
+	protected $table = 'student';
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->helper(['url', 'form']);
 		$this->load->database();
 	}
-
-
-	public function view_all()
+		public function view_all()
 	{
 		$result = $this->db->get($this->table);
 		if($result->num_rows() >= 1)
@@ -68,19 +65,6 @@ class Attendence_Model extends CI_Model
 			return FALSE;
 		}
 	}
+}
 
-	 public function view($where)
-    {
-    	$this->db->where($where);
-		$result = $this->db->get('staffattend');
-		if($result->num_rows() >= 1)
-		{
-			return $result->result();
-			
-		}
-		else
-		{
-			return FALSE;
-		}
-    }
-}	
+ ?>

@@ -99,6 +99,23 @@ class Staff_Model extends CI_Model
 		{
 			return FALSE;
 		}
+
+
+    }
+
+    public function view($where)
+    {
+    	$this->db->where($where);
+		$result = $this->db->get('staffs');
+		if($result->num_rows() >= 1)
+		{
+			return $result->result();
+			
+		}
+		else
+		{
+			return FALSE;
+		}
     }
 
 }

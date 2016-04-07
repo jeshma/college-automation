@@ -60,7 +60,10 @@ $route['dashboard'] = 'Admin_Controller';
 /*department*/
 
 $route['dashboard/department'] = 'Department_Controller';
-$route['dashboard/add department'] = 'Admin_Controller/add_department';
+$route['dashboard/department/add'] = 'Admin_Controller/add_department';
+
+/*course*/
+$route['dashboard/department/course/add'] = 'Department_Controller/view';
 
 /*staff*/
 //$route['dashboard/view_staff/(:num)'] = 'Staff_Controller/view/$1';

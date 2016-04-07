@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
+<form action="<?php echo base_url('Student_Details_Controller/add') ?>" name="addform" id="addform" method="post">
 	Name:<input type="text" name="name" id="name"><br>
 	DOB:<select name="day" >
 		<option value="1">1</option>
@@ -44,9 +45,20 @@
     Spouse name address :  <input type="text" name="spouse" id="spouse"><br>
     Institution last attend :<input type="text" name="institute" id="institute"><br>
     Physically_handicapped <input type="text" name="physical" id="physical"><br>
-    Course: <select name="" multiple>
-    	<option value="course"></option>
-    	    </select>       
+    Course: <select name="course" id="course">
+    		<?php foreach ($course as $value) {
+			echo '<option value="'.$value->id.'">'.$value->name.'</option>';
+		} ?>
+		</select>
+    	    <button>submit</button>   
+    	    <?php if (isset($error)) {
+	echo $error;
+}
+if (isset($message)) {
+	echo $message;
+}
+
+ ?>
 
 
 

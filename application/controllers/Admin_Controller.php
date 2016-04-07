@@ -230,7 +230,7 @@ class Admin_Controller extends Check_Logged
 
 	
 
-public function add_semester()
+   public function add_semester()
 
 	{
 		$this->load->view('admin/add_semester');
@@ -240,6 +240,20 @@ public function add_semester()
 	{
 		$this->load->view('admin/add_subject');
 	}
+    
+
+    public function view_student_details()
+    {
+    	$data['result'] =$this->Student_Details_Model->view_all();
+	
+		if( $data['result']!= FALSE)
+		{
+			$this->load->view('student_details', $data);
+
+		}
+    }
+
+
 
 }
 ?>
