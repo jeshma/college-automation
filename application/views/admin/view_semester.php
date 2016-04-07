@@ -51,6 +51,7 @@
 		</select>
 		<?php echo form_hidden('semester_id', $id); ?>
 		<button name="addsubject" id="addsubject">Add subjects</button>
+    
 	</form>
 	<?php if ($current_subject != false): ?>
 		<?php foreach ($current_subject as $key => $value): ?>
@@ -60,6 +61,9 @@
 	<?php if (isset($message)): ?>
 		<?php echo $message; ?>
 	<?php endif ?>
+  <td class="width-20">
+          <a class="remove" href="<?php echo base_url('Semester_Controller/delete/'.$value->id) ?>">Remove</a>
+        </td>
 	</body>
 
 </html>

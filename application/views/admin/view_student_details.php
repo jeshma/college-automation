@@ -29,7 +29,7 @@
 	<th>panchayath</th>
 	<th>taluk</th>
 	<th>district</th>
-	<th>mertia</th>
+	<th>mertial</th>
 	<th>spouse</th>
 	<th>institute</th>
 	<th>course</th>

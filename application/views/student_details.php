@@ -12,8 +12,8 @@
 	DOB:<select name="day" >
 		<option value="1">1</option>
 		<option value="2">2</option>
-		<option value="1">1</option>
-		<option value="1">1</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
 	</select>
 	<select name="month" >
 		<option value="1">1</option>
@@ -45,11 +45,7 @@
     Spouse name address :  <input type="text" name="spouse" id="spouse"><br>
     Institution last attend :<input type="text" name="institute" id="institute"><br>
     Physically_handicapped <input type="text" name="physical" id="physical"><br>
-    Course: <select name="course" id="course">
-    		<?php foreach ($course as $value) {
-			echo '<option value="'.$value->id.'">'.$value->name.'</option>';
-		} ?>
-		</select>
+   
     	    <button>submit</button>   
     	    <?php if (isset($error)) {
 	echo $error;

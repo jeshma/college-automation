@@ -18,6 +18,8 @@ class Admin_Controller extends Check_Logged
 		$this->load->model('Attendence_Model');
 		$this->load->model('Department_Model');
 		$this->load->model('Payroll_Model');
+		$this->load->model('Exam_Model');
+		$this->load->model('Student_Details_Model');
 		}
 	
 	public function index()
@@ -143,16 +145,33 @@ class Admin_Controller extends Check_Logged
 		$this->load->view('admin/add_exam',$data);
 	}
 
+	public function examdele($id)
+	
+	{
+		if($this->Exam_Model->delete($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
+	}
 	public function view_exam()
 
 	{
 		$data['result'] = $this->Exam_Model->view_all();
-		var_dump($data);
+		//var_dump($data);
 		if($data['result']!= FALSE)
 		{
 		
 		$this->load->view('admin/view_exam', $data);
 
+		}
+		else
+		{
+			$data['message'] = 'No data available';
+			$this->load->view('admin/view_exam', $data);
 		}
 
 	}
@@ -228,19 +247,17 @@ class Admin_Controller extends Check_Logged
 		$this->load->view('admin/Add_payroll',$data);
 	}
 
-<<<<<<< HEAD
+
 	
 
-   public function add_semester()
-=======
+ 
 public function add_semester()
->>>>>>> 61db147d467c29871aece26b8e6ccb25ec94d519
 
 	{
 		$this->load->view('admin/add_semester');
 	}
 
-	public function semedelete($id)
+	public function semdelete($id)
 	
 	{
 		if($this->Semester_Model->delete($id))

@@ -70,7 +70,8 @@ class Exam_Model extends CI_Model
 	}
 
 		public function delete($id)
-	{
+		
+	   {
 		$this->db->where('id',$id);
 		if($this->db->delete('examtypes') === TRUE)
 		{

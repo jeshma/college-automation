@@ -38,7 +38,7 @@
       </div>
     </nav>
 <form action="<?php echo base_url('Payroll_Controller/add') ?>" name="addform" id="addform" method="post" >
-
+<br>
 	staffs:<select name="staffs" id="staffs">
 	<?php 
 
@@ -48,8 +48,8 @@
 	    <?php } ?>
 	</select> 
 <br/>
-date: <input type="text" name="date" id="date"><br/>
-Amount: <input type="text" name="amount" id="amount"><br/>
+date: <input type="text" name="date" id="date" placeholder="yyyy-mm-dd"><br/>
+Amount: <input type="text" name="amount" id="amount" ><br/>
 <button name="submit">submit</button>
 </form>
 <?php if (isset($error))

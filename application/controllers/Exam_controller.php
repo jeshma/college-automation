@@ -73,7 +73,7 @@ class Exam_Controller extends Check_Logged
 
 				       $data['message'] = '<script type="text/javascript">
 										alert("adding success");
-										window.location = "'.base_url().'Admin_Controller/add_exam"
+										window.location = "'.base_url().'Admin_Controller/view_exam"
 									</script>';
 				       $this->load->view('admin/add_exam',$data);
 			         }
@@ -89,8 +89,25 @@ class Exam_Controller extends Check_Logged
 
 
 		        }
+
+		 public function delete($id)
+		
+		 {
+
+		if($this->Exam_Model->delete($id))
+		{
+
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
+	
+}
+	    }
 			
 
-	}
+	
 ?>
 	

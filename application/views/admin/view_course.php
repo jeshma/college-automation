@@ -26,6 +26,9 @@
     <tr>
  			<td><?php echo $value->name ?></td>
  			<td><?php echo $value->description ?></td>
+ 			<td class="width-20">
+          <a class="remove" href="<?php echo base_url('Semester_Controller/semedele/'.$value->id) ?>">remove</a>
+        </td>
  	</tr>	
  	
  <?php 

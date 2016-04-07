@@ -71,7 +71,7 @@ class Attendence_Model extends CI_Model
 
 	 public function view($where)
     {
-    	$this->db->where($where);
+    	$this->db->where(['staff_id'=>$where]);
 		$result = $this->db->get('staffattend');
 		if($result->num_rows() >= 1)
 		{

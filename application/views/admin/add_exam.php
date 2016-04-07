@@ -42,8 +42,8 @@
 	 ?>
 	 <br>
 		name : <input type="text" name="name" id="name"><br>
-		date : <input type="text" name="date"><br>
-		time : <input type="text" name="time"><br>
+		date : <input type="text" name="date" placeholder="yyyy-mm-dd"><br>
+		time : <input type="text" name="time" placeholder="00:00:00"><br>
 
 		departments : <select name="departments" id="departments">
 		<?php foreach ($departments as $value) {

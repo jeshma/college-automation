@@ -48,7 +48,24 @@ class Semester_Subject_Controller extends CI_Controller
 				}
 			}
 		}
+
+		public function delete($id)
+		{
+
+		if($this->Semester_Subject_Model->delete($id))
+		{
+
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
+	
+
+	    }
 	}
+	
 
  ?>
 

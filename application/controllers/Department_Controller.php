@@ -63,7 +63,7 @@ class Department_Controller extends Check_Logged
 
 				$data['message'] = '<script type="text/javascript">
 										alert("adding success");
-										window.location = "'.base_url().'Admin_Controller/add_department"
+										window.location = "'.base_url().'dashboard/department"
 									</script>';
 				$this->load->view('admin/add_department',$data);
 			}

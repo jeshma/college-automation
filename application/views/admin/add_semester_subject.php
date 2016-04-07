@@ -19,6 +19,10 @@
 		}
         ?>
 		</select>
+
+		 <td class="width-20">
+          <a class="remove" href="<?php echo base_url('Semester_Subject_Controller/delete/'.$value->id) ?>">remove</a>
+        </td>
 </form>
 </body>
 </html>

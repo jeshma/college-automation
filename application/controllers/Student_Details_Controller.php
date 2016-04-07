@@ -66,22 +66,29 @@ class Student_Details_Controller extends CI_Controller
 
 				];
 				$query= $this->Student_Details_Model->add($data);
-			
 			if($query != FALSE)
-			{			
-				$data['message'] = '<script type="text/javascript">
-										alert("adding success");
-										window.location = "'.base_url().'Admin_Controller/view_student_details"
-									</script>';
-				$this->load->view('student_details',$data);
+			{
+				var_dump('success');
 			}
 			else
 			{
-				$data=['error' => 'insertion failed'];
-			    $this->load->view('student_details',$data);
-			}
-			}
+				var_dump('fail');
+			}		
+				// {			
+			// 	$data['message'] = '<script type="text/javascript">
+			// 							alert("adding success");
+			// 							window.location = "'.base_url().'Admin_Controller/view_student_details"
+			// 						</script>';
+			// 	$this->load->view('student_details',$data);
+			// }
+			// else
+			// {
+			// 	$data=['error' => 'insertion failed'];
+			//     $this->load->view('student_details',$data);
+			// }
+			// }
 	}
 
+}
 }
 ?>							

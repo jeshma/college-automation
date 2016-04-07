@@ -40,14 +40,14 @@
     <?php echo form_open(base_url('Staff_Controller/view_staff_details'),['name' => 'addform', 'id' => 'addform']); ?>
 <h2>STAFF DETAILS</h2>
 <?php 
-		if(isset($result) and $result != false)
+		if(isset($staffs) and $staffs != false)
 		{?>
-			
-			Id:<?php echo $result['0']->staff_id?><br>
-			Name:<?php echo $result['0']->name?><br>
-			Address:<?php echo $result['0']->address ?><br>
-			Salary:<?php echo $result['0']->ammount?><br>
-			Attendence:<?php echo $result['0']->attendence?><br>
+
+			Id:<?php echo $staffs['0']->id?><br>
+			Name:<?php echo $staffs['0']->name?><br>
+			Address:<?php echo $staffs['0']->address ?><br>
+			Salary:<?php echo $payroll['0']->amount?><br>
+			Attendence:<?php echo $attendence['0']->attendance?><br>
 		<?php
 		}?>
 </div>

@@ -57,6 +57,9 @@
 				<tr>
 					<td><a href="<?php echo base_url('Semester_Controller/view/'.$value->id) ?>"><?php echo $value->name ?></a></td>
 					<td></td>
+              <td class="width-20">
+          <a class="remove" href="<?php echo base_url('Semester_Controller/delete/'.$value->id) ?>">Remove</a>
+        </td>
 				</tr>
 			<?php endforeach ?>
 		<?php endif ?>

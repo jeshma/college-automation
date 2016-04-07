@@ -16,6 +16,8 @@ class Staff_Controller extends Check_Logged
 		$this->load->helper('url');	
 		$this->load->library('form_validation');
 		$this->load->model('Staff_Model');
+		$this->load->model('Payroll_Model');
+		$this->load->model('Attendence_Model');
 	}
 	 public function index()
 	{
@@ -120,14 +122,13 @@ class Staff_Controller extends Check_Logged
 	    public function view_staff_details($id)
 	    {
 	    	$where=['id'=>$id];
-	    	$result=$this->Staff_Model->view($where);
-	    	$result=$this->Payroll_Model->view($where);
-	    	$result=$this->Attendence_Model->view($where);
-	    	var_dump($result);
+	    	$result['staffs']=$this->Staff_Model->view($where);
+	    	$result['payroll']=$this->Payroll_Model->view($id);
+	    	$result['attendence']=$this->Attendence_Model->view($id);
 	    	if($result != FALSE)
 	    	{
-	    		$data['result'] =$result;
-	    		$this->load->view('admin/view_staff_details',$data);
+	    		
+	    		$this->load->view('admin/view_staff_details',$result);
 	    	}
 	    }
 

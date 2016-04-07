@@ -58,7 +58,7 @@ class Payroll_Model extends CI_Model
 
 	 public function view($where)
     {
-    	$this->db->where($where);
+    	$this->db->where(['staff_id'=>$where]);
 		$result = $this->db->get('payroll');
 		if($result->num_rows() >= 1)
 		{

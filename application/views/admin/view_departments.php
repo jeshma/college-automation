@@ -38,7 +38,7 @@
       </div>
     </nav>
    <table id="depart" class="table">
-  <caption><h1>departments</h1></caption>
+  <caption><h1>DEPARTMENTS</h1></caption>
     <thead class="header">
       <tr>
         <th>id</th>
