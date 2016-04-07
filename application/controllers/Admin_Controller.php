@@ -234,10 +234,37 @@ public function add_semester()
 		$this->load->view('admin/add_semester');
 	}
 
+	public function semedelete($id)
+	
+	{
+		if($this->Semester_Model->delete($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
+	}
+
 	public function add_subject()
 	{
 		$this->load->view('admin/add_subject');
 	}
+
+	public function subdelete($id)
+	
+	{
+		if($this->Subject_Model->delete($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
+	}
+
 
 }
 ?>
