@@ -4,7 +4,7 @@
 	<title>Approved</title>
 </head>
 <body>
-<h2>APPROVED APPLICATION</h2>
+<h2>APPROVED APPLICATIONS</h2>
 <?php
 if ($result != null) {?>
 

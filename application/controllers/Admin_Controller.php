@@ -117,7 +117,7 @@ class Admin_Controller extends Check_Logged
 		}
 		else
 		{
-			var_dump('fail');
+			var_dump('fail');		
 		}
 	}
 
@@ -228,12 +228,29 @@ class Admin_Controller extends Check_Logged
 		$this->load->view('admin/Add_payroll',$data);
 	}
 
+<<<<<<< HEAD
 	
 
    public function add_semester()
+=======
+public function add_semester()
+>>>>>>> 61db147d467c29871aece26b8e6ccb25ec94d519
 
 	{
 		$this->load->view('admin/add_semester');
+	}
+
+	public function semedelete($id)
+	
+	{
+		if($this->Semester_Model->delete($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
 	}
 
 	public function add_subject()
@@ -253,6 +270,20 @@ class Admin_Controller extends Check_Logged
 		}
     }
 
+
+
+	public function subdelete($id)
+	
+	{
+		if($this->Subject_Model->delete($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
+	}
 
 
 }
