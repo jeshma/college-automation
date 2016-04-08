@@ -124,7 +124,13 @@ function dashboard_menu($current)
             'title' => 'attendence',
             'icon' => 'fa-folder',
             'link' => 'attendence'
-        ]
+        ],
+         'students' => [
+            'title' => 'students',
+            'icon' => 'fa-folder',
+            'link' => 'students'
+        ],
+
     ];
 
     $html = '';

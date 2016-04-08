@@ -45,7 +45,7 @@
 
 			Id:<?php echo $staffs['0']->id?><br>
 			Name:<?php echo $staffs['0']->name?><br>
-			Address:<?php echo $staffs['0']->address ?><br>
+			Address:<?php echo $staffs['0']->address?><br>
 			Salary:<?php echo $payroll['0']->amount?><br>
 			Attendence:<?php echo $attendence['0']->attendance?><br>
 		<?php

@@ -1,20 +1,23 @@
-<?php 
+<?php
 
 /**
 * 
 */
-class Student_Details_Model extends CI_Model
+class Mark_Model extends CI_Model
 {
-	protected $table = 'student';
-	public function __construct()
+	
+public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper(['url', 'form']);
 		$this->load->database();
 	}
-		public function view_all()
+
+	
+	
+
+	public function view_all()
 	{
-		$result = $this->db->get($this->table);
+		$result = $this->db->get('examresults');
 		if($result->num_rows() >= 1)
 		{
 			return $result->result();
@@ -30,7 +33,7 @@ class Student_Details_Model extends CI_Model
 	public function view_where($where)
 	{
 		$this->db->where($where);
-		$result = $this->db->get($this->table);
+		$result = $this->db->get('examresults');
 		if($result->num_rows() >= 1)
 		{
 			return $result->result();
@@ -44,7 +47,7 @@ class Student_Details_Model extends CI_Model
 
 	public function add($data)
 	{
-		if($this->db->insert($this->table,$data))
+		if($this->db->insert('examresults',$data)===TRUE)
 			 {
 
 				return $this->db->insert_id();
@@ -55,7 +58,7 @@ class Student_Details_Model extends CI_Model
 	public function edit($where, $data)
 	{
 		$this->db->where($where);
-		$update=$this->db->update($this->table, $data);
+		$update=$this->db->update('examresults', $data);
 		if($update)
 		{
 			return TRUE;
@@ -65,6 +68,22 @@ class Student_Details_Model extends CI_Model
 			return FALSE;
 		}
 	}
+
+		public function delete($id)
+		
+	   {
+		$this->db->where('id',$id);
+		if($this->db->delete('examresults') === TRUE)
+		{
+			return TRUE;
+		}
+		else
+		{
+			return FALSE;
+		}
+		
+	}
 }
 
- ?>
+
+?>
