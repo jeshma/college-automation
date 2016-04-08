@@ -28,8 +28,8 @@
     <!-- Slick slider css file -->
     <link href="<?php echo base_url('home/css/slick.css')?>" rel="stylesheet">
     <!-- Circle counter cdn css file -->
-    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>
-<!--    <link rel='stylesheet prefetch' href='--><?php //echo base_url('home/css/themes/circliful.css')?><!--'>-->
+<!--    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>-->
+    <link rel='stylesheet prefetch' href='<?php echo base_url('home/css/themes/circliful.css')?>'>
     <!-- smooth animate css file -->
     <link rel="stylesheet" href="<?php echo base_url('home/css/animate.css')?>">
     <!-- preloader -->
@@ -48,10 +48,10 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     [if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<!--      <script src="--><?php //echo base_url('home/js/html5shiv.js') ?><!--"></script>-->
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<!--      <script src="--><?php //echo base_url('home/js/respond.js') ?><!--"></script>-->
+<!--      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>-->
+      <script src="<?php echo base_url('home/js/html5shiv.js') ?>"></script>
+<!--      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
+      <script src="<?php echo base_url('home/js/respond.js') ?>"></script>
     <![endif]-->
  
   </head>
@@ -83,7 +83,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
-                <li class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href="<?php echo base_url('index')?>">Home</a></li>
                 <li><a href="<?php echo base_url('scholarship') ?>">Scholarship</a></li>
                 <li><a href="<?php echo base_url('login') ?>">Login</a></li>             
                 <li><a href="<?php echo base_url('contact') ?>">Contact</a></li>
@@ -495,7 +495,7 @@
                 <li>
                   <div class="single_course">
                     <div class="singCourse_imgarea">
-                      <img src="<?php echo base_url('home/') ?>" />
+                      <img src="<?php echo base_url('home/img/course-2.jpg') ?>" />
                       <div class="mask">                         
                         <a href="#" class="course_more">View Course</a>
                       </div>

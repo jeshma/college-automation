@@ -3,7 +3,7 @@
 /**
 * 
 */
-class Student_Details extends CI_Model
+class Student_Details_Model extends CI_Model
 {
 	protected $table = 'student';
 	public function __construct()

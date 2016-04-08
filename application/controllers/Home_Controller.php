@@ -19,6 +19,10 @@ class Home_Controller extends CI_Controller
 	{
 		$this->load->view($page);
 	}
+    public function home($page = 'index')
+    {
+        $this->load->view($page);
+    }
 
 	public function about($page = 'about')
 	{
@@ -35,6 +39,11 @@ class Home_Controller extends CI_Controller
 	}
 
     public function scholarship($page = 'scholarship')
+    {
+        $this->load->view($page);
+    }
+
+    public function contact($page = 'contact')
     {
         $this->load->view($page);
     }
