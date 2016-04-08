@@ -15,7 +15,7 @@ class Home_Controller extends CI_Controller
 	}
 
 
-	public function index($page = 'home')
+	public function index($page = 'index')
 	{
 		$this->load->view($page);
 	}
@@ -24,7 +24,7 @@ class Home_Controller extends CI_Controller
 	{
 		$this->load->view($page);
 	}
-	public function regist($page = 'regist')
+	public function registration($page = 'regist')
 	{
 		$this->load->view($page);
 	}
@@ -33,6 +33,11 @@ class Home_Controller extends CI_Controller
 		$this->load->view($page);
 
 	}
+
+    public function scholarship($page = 'scholarship')
+    {
+        $this->load->view($page);
+    }
 	
 
 
