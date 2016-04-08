@@ -84,7 +84,23 @@ class Semester_Controller extends Check_Logged
 		
 	}	}
 
-}
+
+		public function delete($id)
+		{
+
+		if($this->Semester_Model->delete($id))
+		{
+
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
+	
+
+	    }
+	}
 
 
  ?>

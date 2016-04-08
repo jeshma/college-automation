@@ -16,6 +16,10 @@ class Admin_Controller extends Check_Logged
 		$this->load->model('Application_Model');
 		$this->load->model('Staff_Model');
 		$this->load->model('Attendence_Model');
+		$this->load->model('Department_Model');
+		$this->load->model('Payroll_Model');
+		$this->load->model('Exam_Model');
+		$this->load->model('Student_Details_Model');
 		}
 	
 	public function index()
@@ -39,12 +43,18 @@ class Admin_Controller extends Check_Logged
 	public function view_application()
 	
 	{
-		$data['result'] =$this->Application_Model->view_all();
-	
+		$where = ['status' => 'request'];
+		$data['result'] =$this->Application_Model->view_where($where);
+
 		if( $data['result']!= FALSE)
 		{
 			$this->load->view('admin/view_applications', $data);
 
+		}
+		else
+		{
+			$data['message'] = 'No data available';
+			$this->load->view('admin/view_applications', $data);
 		}
 	}
 
@@ -56,19 +66,13 @@ class Admin_Controller extends Check_Logged
 		$result =$this->Application_Model->view_where($where);
 		$data['result'] = $result;
 		$this->load->view('admin/view_selected', $data);
-		
-	
 	}
-
-
 
 	public function accept($id)
 	
 	{
 		$where = ['id' => $id];
 		$data = ['status' => 'listed'];
-
-
 
 		if ($this->Application_Model->edit($where, $data)) 
 
@@ -83,6 +87,28 @@ class Admin_Controller extends Check_Logged
 	
 	}
 
+	public function approve($id)
+	{
+		$where = ['id' => $id];
+		$data = ['status' => 'approve'];
+
+		if ($this->Application_Model->edit($where, $data)) 
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}			
+	}
+
+	public function view_approved()
+	{
+		$where =['status' => 'approve'];
+		$result = $this->Application_Model->view_where($where);
+		$data['result'] =$result;
+		$this->load->view('admin/view_approved',$data); 
+	}
 
 	public function delete($id)
 	
@@ -93,7 +119,7 @@ class Admin_Controller extends Check_Logged
 		}
 		else
 		{
-			var_dump('fail');
+			var_dump('fail');		
 		}
 	}
 
@@ -114,31 +140,77 @@ class Admin_Controller extends Check_Logged
 
 
 	public function add_exam()
-	
 	{
-		$this->load->view('admin/add_exam');
+		$data['departments']= $this->Department_Model->get_all();
+		$this->load->view('admin/add_exam',$data);
 	}
 
+	public function examdele($id)
+	
+	{
+		if($this->Exam_Model->delete($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
+	}
 	public function view_exam()
 
 	{
-		$result =$this->Exam_Model->view_all();
-		var_dump($result);
-		$data['result'] = $result;
+		$data['result'] = $this->Exam_Model->view_all();
+		//var_dump($data);
+		if($data['result']!= FALSE)
+		{
+		
 		$this->load->view('admin/view_exam', $data);
-			
+
+		}
+		else
+		{
+			$data['message'] = 'No data available';
+			$this->load->view('admin/view_exam', $data);
+		}
+
 	}
 
 
 	public function add_staff()
 	
 	{
-		// get all department and pass to the view file
-
-		$this->load->view('admin/add_staff');
+		// get all department and pass to the view
+		$data['departments'] = $this->Department_Model->get_all();
+		$this->load->view('admin/add_staff',$data);
 	}
 
+
+    public function view_staffs()
+    
+	{
+
+		$data['result'] =$this->Staff_Model->view_all();
 	
+		if( $data['result']!= FALSE)
+		{
+			$this->load->view('admin/view_staffs', $data);
+
+		}
+		
+	}
+	public function staffdele($id)
+	
+	{
+		if($this->Staff_Model->delete($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
+	}
 	
 	public function add_department()
 	
@@ -149,7 +221,7 @@ class Admin_Controller extends Check_Logged
 	public function add_attendence()
 	
 	{
-		$data['staffs'] = $this->Staff_Model->view();
+		$data['staffs'] = $this->Staff_Model->view_all();
 		$this->load->view('admin/add_attendence',$data);
 
 
@@ -158,47 +230,77 @@ class Admin_Controller extends Check_Logged
 
 	public function view_attendence()
 	{
-		var_dump($result);
+		
 		$result =$this->Attendence_Model->view_all();
 		$data['result'] = $result;
 		$this->load->view('admin/view_attendence', $data);
 		
 
-<<<<<<< HEAD
+	}
 
 
-=======
->>>>>>> 020fc3a8d01636a54bbe95d03ddd8bf3d3b9b135
-		}
 
 	public function add_payroll()
 	
 	{ 	
-		$data['result'] = $this->Staff_Model->view();
-		$this->load->view('admin/add_payroll',$data);
+		$data['result'] = $this->Staff_Model->view_all();
+		$this->load->view('admin/Add_payroll',$data);
 	}
-<<<<<<< HEAD
-	
-<<<<<<< HEAD
 
-}
-=======
-	
-=======
->>>>>>> ce253a056aaf74455ef780f77fc93c642c4e02e1
+
 	
 
->>>>>>> 020fc3a8d01636a54bbe95d03ddd8bf3d3b9b135
-	public function add_semester()
+ 
+public function add_semester()
+
 	{
 		$this->load->view('admin/add_semester');
+	}
+
+	public function semdelete($id)
+	
+	{
+		if($this->Semester_Model->delete($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
 	}
 
 	public function add_subject()
 	{
 		$this->load->view('admin/add_subject');
 	}
+    
 
+    public function view_student_details()
+    {
+    	$data['result'] =$this->Student_Details_Model->view_all();
+	
+		if( $data['result']!= FALSE)
+		{
+			$this->load->view('student_details', $data);
+
+		}
+    }
+
+
+
+	public function subdelete($id)
+	
+	{
+		if($this->Subject_Model->delete($id))
+		{
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+		else
+		{
+			var_dump('fail');
+		}
+	}
 
 
 }

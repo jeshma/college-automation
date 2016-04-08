@@ -100,20 +100,30 @@ function dashboard_menu($current)
             'icon' => 'fa-tachometer',
             'link' => ''
         ],
-        'department' => [
+        'departments' => [
             'title' => 'department',
             'icon' => 'fa-folder',
             'link' => 'department'
         ],
-        'semester' => [
-            'title' => 'semester',
-            'icon' => 'fa-picture-o',
-            'link' => 'semester'
+       'staff' => [
+            'title' => 'staff',
+            'icon' => 'fa-folder',
+            'link' => 'staff'
         ],
-        'staffs' => [
-            'title' => 'staffs',
-            'icon' => 'fa-trophy',
-            'link' => 'staffs'
+        'exam' => [
+            'title' => 'exam',
+            'icon' => 'fa-folder',
+            'link' => 'exam'
+        ],
+        'payroll' => [
+            'title' => 'payroll',
+            'icon' => 'fa-folder',
+            'link' => 'payroll'
+        ],
+         'attendence' => [
+            'title' => 'attendence',
+            'icon' => 'fa-folder',
+            'link' => 'attendence'
         ]
     ];
 

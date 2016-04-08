@@ -111,7 +111,7 @@ class Home_Controller extends CI_Controller
 				'economics'=> $economics,
 				'politics'=> $politics,
 				'statistics'=> $statistics,
-
+				'status' => 'request'
 			];
 			$query= $this->Application_Model->add($data);
 			if($query != FALSE)

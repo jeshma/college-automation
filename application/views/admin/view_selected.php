@@ -62,7 +62,7 @@
 			<td><?php echo $value->statistics ?></td>
 			<td><?php echo $value->status ?></td>
 
-			<td><a href="<?php echo base_url('Admin_Controller/accept/'.$value->id) ?>">Approve</a></td>
+			<td><a href="<?php echo base_url('Admin_Controller/approve/'.$value->id) ?>">Approve</a></td>
 			<td><a href="<?php echo base_url('	Admin_Controller/reject/'.$value->id) ?>">Reject</a></td>
 		
 		</tr>		

@@ -10,9 +10,7 @@
 
 	<h2>Applications</h2>
 	<?php 
-	
-		if($result)
-			
+		if(isset($result) and $result != false)
 		{?>
 			<table border="2px">
 			<head>
@@ -70,8 +68,12 @@
 			
 		</tr>		
 		<?php }
+	 	echo '</table>';
+		}
+		if (isset($message)) {
+			echo $message;
 		}
 	 ?>
-	 </table>
+	
 </body>
 </html>

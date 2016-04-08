@@ -6,7 +6,7 @@
   <meta name="description" content="Psybo technologies is a small web design &amp; development agency based in Manjeri, Malappuram, INDIA. We've made a reputation for building websites that look great and are easy-to-use.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="<?php echo base_url('img/ico.png');?>" type="image/png" sizes="47x54">
-  <title><?php echo ucfirst($currentPage); ?> - Psybo Technologies</title>
+  <title>Jamia Collage</title>
   <link rel="stylesheet" href="<?php echo base_url('css/styleapp.css');?>">
   <script type="text/javascript" src="<?php echo base_url('js/appjs.js');?>"></script>
   <style>
@@ -19,7 +19,7 @@
 <body>
   <div class="page-wrapper">
     <div class="left-wrapper">
-      <?php echo dashboard_menu('portfolios');?>
+      <?php echo dashboard_menu('departments');?>
     </div>
   
     <nav class="top-wrapper">
@@ -38,13 +38,13 @@
       </div>
     </nav>
    <table id="depart" class="table">
-  <caption><h1>departments</h1></caption>
+  <caption><h1>DEPARTMENTS</h1></caption>
     <thead class="header">
       <tr>
         <th>id</th>
         <th>name</th>
         <th></th>
-        <th><a class="width-80" href="<?php echo base_url('Admin_Controller/add_department') ?>">add</a></th>
+        <th><a class="width-80" href="<?php echo base_url('dashboard/department/add') ?>">add</a></th>
       </tr>
     </thead>
     <tbody>

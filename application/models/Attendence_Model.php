@@ -18,7 +18,6 @@ class Attendence_Model extends CI_Model
 	public function view_all()
 	{
 		$result = $this->db->get($this->table);
-		var_dump($result);
 		if($result->num_rows() >= 1)
 		{
 			return $result->result();
@@ -69,4 +68,19 @@ class Attendence_Model extends CI_Model
 			return FALSE;
 		}
 	}
+
+	 public function view($where)
+    {
+    	$this->db->where(['staff_id'=>$where]);
+		$result = $this->db->get('staffattend');
+		if($result->num_rows() >= 1)
+		{
+			return $result->result();
+			
+		}
+		else
+		{
+			return FALSE;
+		}
+    }
 }	

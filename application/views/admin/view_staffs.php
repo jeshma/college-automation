@@ -19,7 +19,7 @@
 <body>
   <div class="page-wrapper">
     <div class="left-wrapper">
-      <?php echo dashboard_menu('exam');?>
+      <?php echo dashboard_menu('staff');?>
     </div>
   
     <nav class="top-wrapper">
@@ -37,30 +37,42 @@
         </ul>
       </div>
     </nav>
-	<?php echo form_open('Exam_controller/add',['name' => 'addform', 'id' => 'addform']);
-		echo validation_errors();
-	 ?>
-	 <br>
-		name : <input type="text" name="name" id="name"><br>
-		date : <input type="text" name="date" placeholder="yyyy-mm-dd"><br>
-		time : <input type="text" name="time" placeholder="00:00:00"><br>
+<h2>Staffs</h2>
+<?php
+     if($result)
+     	{?>
+     <table class="table">
+     	
+     	
+     		<tr>
+               <thead>
+     			<th>id</th>
+     			<th>name</th>
+                    <th><a class="width-80" href="<?php echo base_url('Admin_Controller/add_staff') ?>">add</a></th>
+     		  </tr>
+    </thead>
+    <tbody>
+      <?php 
+      if(isset($result) &&$result!=FALSE){
+        foreach ($result as $key => $value){
+          ?>
+        <tr>
+            <td class="width-80">
+               <?php echo $value->id ?>
+            </td>
+            <td class="width-33">
+               <a href="<?php echo base_url('Staff_Controller/view_staff_details/'.$value->id); ?>"><?php echo $value->name ?></a>
+            </td>
+            <td class="width-20">
+               <a class="remove" href="<?php echo base_url('Staff_Controller/delete/'.$value->id) ?>">Remove</a>
+            </td>
+          </tr>
+          </thead>
 
-		departments : <select name="departments" id="departments">
-		<?php foreach ($departments as $value) {
-			echo '<option value="'.$value->id.'">'.$value->name.'</option>';
-		} ?>
-		</select><br>
-		<button>add</button>
-		
-		
-		<?php if (isset($error)) {
-	echo $error;
-}
-if (isset($message)) {
-	echo $message;
-}
+     			<?php
+               }}}?>
+               </tr>
 
- ?>
- </div>
- </body>
+      </table>
+</body>
 </html>

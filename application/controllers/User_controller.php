@@ -32,7 +32,7 @@ class User_controller extends Check_Logged
 	}
 
 	public function login()
-	{
+	{	
 		$this->load->view('admin/login');
 	}
 
@@ -50,6 +50,7 @@ class User_controller extends Check_Logged
 			$username = $this->input->post('username');
 			$password = $this->input->post('password');
 
+			
 			$password = md5($password);
 			if($this->User_Model->login($username, $password) === TRUE)
 			{
@@ -76,6 +77,7 @@ class User_controller extends Check_Logged
     	redirect(base_url('User_controller/login'));
 	
 	}
+
 	
 
 }

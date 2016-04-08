@@ -19,7 +19,7 @@
 <body>
   <div class="page-wrapper">
     <div class="left-wrapper">
-      <?php echo dashboard_menu('exam');?>
+      <?php echo dashboard_menu('staffs');?>
     </div>
   
     <nav class="top-wrapper">
@@ -37,30 +37,20 @@
         </ul>
       </div>
     </nav>
-	<?php echo form_open('Exam_controller/add',['name' => 'addform', 'id' => 'addform']);
-		echo validation_errors();
-	 ?>
-	 <br>
-		name : <input type="text" name="name" id="name"><br>
-		date : <input type="text" name="date" placeholder="yyyy-mm-dd"><br>
-		time : <input type="text" name="time" placeholder="00:00:00"><br>
+    <?php echo form_open(base_url('Staff_Controller/view_staff_details'),['name' => 'addform', 'id' => 'addform']); ?>
+<h2>STAFF DETAILS</h2>
+<?php 
+		if(isset($staffs) and $staffs != false)
+		{?>
 
-		departments : <select name="departments" id="departments">
-		<?php foreach ($departments as $value) {
-			echo '<option value="'.$value->id.'">'.$value->name.'</option>';
-		} ?>
-		</select><br>
-		<button>add</button>
-		
-		
-		<?php if (isset($error)) {
-	echo $error;
-}
-if (isset($message)) {
-	echo $message;
-}
+			Id:<?php echo $staffs['0']->id?><br>
+			Name:<?php echo $staffs['0']->name?><br>
+			Address:<?php echo $staffs['0']->address ?><br>
+			Salary:<?php echo $payroll['0']->amount?><br>
+			Attendence:<?php echo $attendence['0']->attendance?><br>
+		<?php
+		}?>
+</div>
 
- ?>
- </div>
- </body>
+</body>
 </html>

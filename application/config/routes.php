@@ -1,3 +1,4 @@
+
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -49,23 +50,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-/*public routes*/
 
-
-///////////////////
-/*admin routes*/
-
-$route['dashboard/login'] = 'Admin_Controller/login';
+///////Admin//////////
+//user//
+$route['login'] = 'User_Controller/verify_login';
 $route['dashboard'] = 'Admin_Controller';
 
-/*departments*/
+
+/*department*/
+
 $route['dashboard/department'] = 'Department_Controller';
+$route['dashboard/department/add'] = 'Admin_Controller/add_department';
+
+/*course*/
+$route['dashboard/department/course/add'] = 'Department_Controller/view';
+
+/*staff*/
+//$route['dashboard/view_staff/(:num)'] = 'Staff_Controller/view/$1';
+$route['dashboard/add_staff']='Admin_Controller/add_staff';
+$route['dashboard/staff']='Admin_Controller/view_staffs';
 
 
+/*exam*/
+$route['dashboard/exam'] = 'Admin_Controller/add_exam';
 
-/////////////////////
+/*attendence*/
+$route['dashboard/attendence'] = 'Admin_Controller/add_attendence';
+
+/*semester*/
+$route['dashboard/semester'] = 'Admin_Controller/add_semester';
+
+/*subject*/
+$route['dashboard/subject'] = 'Admin_Controller/add_subject';
+
+/*payroll*/
+$route['dashboard/payroll'] = 'Admin_Controller/Add_payroll';
+//$route['dashboard/payroll/add/submit'] = 'Payroll_Controller/add';
+//$route['dashboard/payroll'] = 'Payroll_Controller/view';
+
+
 /*application routes*/
-$route['default_controller'] = 'Home_Controller/index';
-
+$route['default_controller'] = 'Home_Controller';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+
+?>
+
+
