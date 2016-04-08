@@ -51,9 +51,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+/////PUBLIC ROUTE///////////
+
+$route['index'] = 'Home_Controller/index';
+$route['scholarship'] = 'Home_Controller/scholarship';
+$route['contact'] = 'Home_Controller/contact';
+
+
 ///////Admin//////////
 //user//
 $route['dashboard/login'] = 'User_Controller/verify_login';
+$route['login'] = 'Admin_Controller/login';
 $route['dashboard'] = 'Admin_Controller';
 
 
@@ -101,7 +109,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 
-
-?>
 
 
