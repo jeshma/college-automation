@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6017ed5f-6005-469b-997f-6b7206343e04" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Home_Controller.php" afterPath="$PROJECT_DIR$/application/controllers/Home_Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/index.php" afterPath="$PROJECT_DIR$/application/views/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/scholarship.php" afterPath="$PROJECT_DIR$/application/views/scholarship.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/login.php" afterPath="$PROJECT_DIR$/application/views/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="college-automation.iws" />
@@ -36,7 +33,7 @@
           <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/config/routes.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-8.555555" vertical-offset="759" max-vertical-offset="2016">
+                <state vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="2016">
                   <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
                   <folding />
                 </state>
@@ -46,71 +43,9 @@
           <file leaf-file-name="scholarship.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/views/scholarship.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-18.74074" vertical-offset="1906" max-vertical-offset="7020">
+                <state vertical-scroll-proportion="0.0" vertical-offset="1906" max-vertical-offset="7020">
                   <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
-                  <folding>
-                    <marker date="1460113697431" expanded="true" signature="6964:7006" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="7178:8493" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="7208:8493" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="7234:8493" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="7325:8493" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="7373:8493" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="7448:8493" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="7548:8493" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="7592:8493" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="7644:7809" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="7696:7782" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="7982:8231" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="8905:9163" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="10172:10759" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="11160:14938" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="11208:14921" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="11295:13268" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="11420:13247" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="11443:12005" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="11483:11981" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="11530:11724" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="11584:11695" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="11771:11954" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="12028:12606" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="12068:12582" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="12115:12309" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="12169:12280" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="12356:12555" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="12629:13207" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="12669:13183" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="12716:12910" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="12770:12881" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="12957:13156" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="13397:13796" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="13499:13775" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="13925:14538" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="14040:14517" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="14667:14860" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="15186:15579" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="15254:15579" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="15286:15579" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="15314:15579" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="15368:15579" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="15417:15579" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="15814:16278" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="15863:16259" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="15945:16238" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="16332:16772" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="16381:16753" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="16460:16732" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="16826:17790" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="16875:17771" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="16956:17750" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="17945:18492" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="17977:18479" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="18005:18464" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="18058:18205" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="18104:18186" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="18258:18447" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="18305:18428" placeholder="..." />
-                    <marker date="1460113697431" expanded="true" signature="18619:18692" placeholder="..." />
-                  </folding>
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -118,8 +53,8 @@
           <file leaf-file-name="contact.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/views/contact.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4752">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.60277134" vertical-offset="0" max-vertical-offset="5436">
+                  <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -132,7 +67,7 @@
           <file leaf-file-name="Home_Controller.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/controllers/Home_Controller.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="2664">
+                <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2664">
                   <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
                   <folding />
                 </state>
@@ -163,10 +98,10 @@
         <option value="$PROJECT_DIR$/public/home/css/themes/circliful.css" />
         <option value="$PROJECT_DIR$/public/home/js/html5shiv.js" />
         <option value="$PROJECT_DIR$/public/home/js/respond.js" />
-        <option value="$PROJECT_DIR$/application/views/index.php" />
         <option value="$PROJECT_DIR$/application/controllers/Home_Controller.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/application/views/scholarship.php" />
+        <option value="$PROJECT_DIR$/application/views/index.php" />
       </list>
     </option>
   </component>
@@ -190,7 +125,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -201,143 +136,14 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="college-automation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../EMS" />
     <property name="SearchEverywhereHistoryKey" value="contact&#9;FILE&#9;file:///home/noushi/projects/collage projects/college-automation/application/views/contact.php&#10;index&#9;FILE&#9;file:///home/noushi/projects/collage projects/college-automation/application/views/index.php&#10;scholar&#9;FILE&#9;file:///home/noushi/projects/collage projects/college-automation/application/views/scholarship.php&#10;route&#9;FILE&#9;file:///home/noushi/projects/collage projects/college-automation/application/config/routes.php&#10;INDEX.PHP&#9;FILE&#9;file:///home/noushi/projects/collage projects/college-automation/application/views/index.php" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -354,10 +160,16 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -379,22 +191,22 @@
     <frame x="1280" y="0" width="1920" height="1055" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20299146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -421,51 +233,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/home/css/themes/circliful.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.397351" vertical-offset="0" max-vertical-offset="906">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/home/js/html5shiv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.060470324" vertical-offset="0" max-vertical-offset="893">
-          <caret line="3" column="2545" selection-start-line="3" selection-start-column="2545" selection-end-line="3" selection-end-column="2545" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/home/js/respond.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0806271" vertical-offset="0" max-vertical-offset="893">
-          <caret line="4" column="4204" selection-start-line="4" selection-start-column="4204" selection-end-line="4" selection-end-column="4204" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2662116" vertical-offset="216" max-vertical-offset="9342">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Home_Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.0" vertical-offset="0" max-vertical-offset="2664">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.555555" vertical-offset="759" max-vertical-offset="2016">
+        <state vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="2016">
           <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
           <folding />
         </state>
@@ -473,78 +243,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/scholarship.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.74074" vertical-offset="1906" max-vertical-offset="7020">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1906" max-vertical-offset="7020">
           <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
-          <folding>
-            <marker date="1460113697431" expanded="true" signature="6964:7006" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="7178:8493" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="7208:8493" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="7234:8493" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="7325:8493" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="7373:8493" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="7448:8493" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="7548:8493" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="7592:8493" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="7644:7809" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="7696:7782" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="7982:8231" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="8905:9163" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="10172:10759" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="11160:14938" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="11208:14921" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="11295:13268" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="11420:13247" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="11443:12005" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="11483:11981" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="11530:11724" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="11584:11695" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="11771:11954" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="12028:12606" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="12068:12582" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="12115:12309" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="12169:12280" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="12356:12555" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="12629:13207" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="12669:13183" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="12716:12910" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="12770:12881" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="12957:13156" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="13397:13796" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="13499:13775" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="13925:14538" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="14040:14517" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="14667:14860" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="15186:15579" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="15254:15579" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="15286:15579" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="15314:15579" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="15368:15579" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="15417:15579" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="15814:16278" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="15863:16259" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="15945:16238" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="16332:16772" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="16381:16753" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="16460:16732" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="16826:17790" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="16875:17771" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="16956:17750" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="17945:18492" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="17977:18479" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="18005:18464" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="18058:18205" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="18104:18186" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="18258:18447" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="18305:18428" placeholder="..." />
-            <marker date="1460113697431" expanded="true" signature="18619:18692" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/contact.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4752">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5436">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Home_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2664">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="16794">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/home/css/themes/circliful.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.397351" vertical-offset="0" max-vertical-offset="906">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/home/js/html5shiv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.060470324" vertical-offset="0" max-vertical-offset="893">
+          <caret line="3" column="2545" selection-start-line="3" selection-start-column="2545" selection-end-line="3" selection-end-column="2545" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/home/js/respond.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0806271" vertical-offset="0" max-vertical-offset="893">
+          <caret line="4" column="4204" selection-start-line="4" selection-start-column="4204" selection-end-line="4" selection-end-column="4204" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2662116" vertical-offset="216" max-vertical-offset="9342">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Home_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="2664">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="759" max-vertical-offset="2016">
+          <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scholarship.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1906" max-vertical-offset="7020">
+          <caret line="134" column="28" selection-start-line="134" selection-start-column="28" selection-end-line="134" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -553,6 +329,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.852194" vertical-offset="252" max-vertical-offset="16794">
           <caret line="55" column="1" selection-start-line="19" selection-start-column="4" selection-end-line="55" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60277134" vertical-offset="0" max-vertical-offset="5436">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
           <folding />
         </state>
       </provider>

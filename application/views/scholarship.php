@@ -15,42 +15,6 @@
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-
-
-<!--    <!-- CSS-->
-<!--    ================================================== -->       -->
-<!--    <!-- Bootstrap css file-->-->
-<!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
-<!--    <!-- Font awesome css file-->-->
-<!--    <link href="css/font-awesome.min.css" rel="stylesheet">-->
-<!--    <!-- Superslide css file-->-->
-<!--    <link rel="stylesheet" href="css/superslides.css">-->
-<!--    <!-- Slick slider css file -->-->
-<!--    <link href="css/slick.css" rel="stylesheet"> -->
-<!--    <!-- Circle counter cdn css file -->-->
-<!--    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/css/jquery.circliful.css'>  -->
-<!--    <!-- smooth animate css file -->-->
-<!--    <link rel="stylesheet" href="css/animate.css"> -->
-<!--    <!-- preloader -->-->
-<!--    <link rel="stylesheet" href="css/queryLoader.css" type="text/css" />-->
-<!--    <!-- gallery slider css -->-->
-<!--    <link type="text/css" media="all" rel="stylesheet" href="css/jquery.tosrus.all.css" />    -->
-<!--    <!-- Default Theme css file -->-->
-<!--    <link id="switcher" href="css/themes/default-theme.css" rel="stylesheet">-->
-<!--    <!-- Main structure css file -->-->
-<!--    <link href="style.css" rel="stylesheet">-->
-<!--   -->
-<!--    <!-- Google fonts -->-->
-<!--    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   -->
-<!--    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    -->
-<!---->
-<!--    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->-->
-<!--    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->-->
-<!--    <!--[if lt IE 9]>-->
-<!--      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>-->
-<!--      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
-<!--    <![endif]-->
-
       <!-- CSS
     ================================================== -->
       <!-- Bootstrap css file-->
@@ -78,15 +42,6 @@
       <!-- Google fonts -->
       <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
       <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
-
-      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-      [if lt IE 9]>
-      <!--      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>-->
-      <script src="<?php echo base_url('home/js/html5shiv.js') ?>"></script>
-      <!--      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
-      <script src="<?php echo base_url('home/js/respond.js') ?>"></script>
-      <![endif]-->
 
   </head>
   <body>    
@@ -121,7 +76,6 @@
                  <li><a href="<?php echo base_url('index')?>">Home</a></li>
                 <li class="active"><a href="<?php echo base_url('scholarship')?>">Scholarship</a></li>
                 <li><a href="<?php echo base_url('login')?>">Login</a></li>
-                <li ><a href="<?php echo base_url('contact')?>">Contact</a></li>
               </ul>           
             </div><!--/.nav-collapse -->
           </div>     
@@ -149,36 +103,26 @@
                 <!-- start single blog -->
                 <div class="col-lg-12 col-12 col-sm-12">
                   <div class="single_blog">
-                    <div class="blogimg_container">
-                      <a href="#" class="blog_img">
-                        <img alt="img" src="img/blog.jpg">
-                      </a>
-                    </div>
-                    <h2 class="blog_title"><a href="blog-single.html"> Curabitur ac dictum nisl eu hendrerit ante</a></h2>
+
+                    <h2 class="blog_title">Scholarships are gift aid, money you do not have to repay.</h2>
                     <div class="blog_commentbox">
                       <p><i class="fa fa-user"></i>Richard Remus</p>
                       <p><i class="fa fa-calendar"></i>15 March 2015</p>
                       <a href="#"><i class="fa fa-comments"></i>20 Comments</a>
                     </div>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                    <p>One of the major activities of the ICCR is its scholarship programme. The ICCR annually offers about 3365 scholarships under 24 scholarship schemes. Of these scholarships, 1000 are exclusively for the students of Afghanistan and 900 for students from African countries. There are students in India under these schemes from about 135 countries. Most of the scholarship holders come from developing countries in Asia, Africa, South and Central America. However, there are quite a few students from the developed countries as well. Around 4750 foreign students are currently studying in India under the various scholarship schemes.</p>
                     <blockquote>
                       <span class="fa fa-quote-left"></span>
-                      Duis erat purus, tincidunt vel ullamcorper ut, consequat tempus nibh. Proin condimentum risus ligula, dignissim mollis tortor hendrerit vel.
+                      There's always someone out there training for your spot. For my scholarship at the University of Florida, for my job with the Denver Broncos, for my position with the New York Jets. And that's the reason to get up earlier or stay up later.
                     </blockquote>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-
-                    <h3>This is example of H3</h3>
-                    <h4>This is example of H4</h4>
-                    <h5>This is example of H5</h5>
-                    <h6>This is example of H6</h6>
-
-                    <ul>
+                    <p>The students are in under graduate, post graduate and doctoral programmes as well as in professional courses such as engineering, pharmacy, accountancy, business administration and management. Scholarships are also given for learning Indian dance, music, painting, sculpture, etc.</p>
+                   <!--  <ul>
                       <li><span class="fa fa-angle-double-right"></span>There are many variations of passages</li>
                       <li><span class="fa fa-angle-double-right"></span>Lorem Ipsum generators</li>
                       <li><span class="fa fa-angle-double-right"></span>There are many variations of passages</li>
                       <li><span class="fa fa-angle-double-right"></span>The uses a dictionary of over 200 Latin words</li>
                       <li><span class="fa fa-angle-double-right"></span>Proin condimentum risus ligula</li>
-                    </ul>                    
+                    </ul>    -->                 
                   </div>                 
                 </div>
                 <!-- End single blog -->                
@@ -193,81 +137,37 @@
             <div class="courseArchive_sidebar">
               <!-- start single sidebar -->
               <div class="single_sidebar">
-                <h2>Popular Events <span class="fa fa-angle-double-right"></span></h2>
+                <h2>Popular links <span class="fa fa-angle-double-right"></span></h2>
                 <ul class="news_tab">
                   <li>
                     <div class="media">
-                      <div class="media-left">
+                     <!--  <div class="media-left">
                         <a href="#" class="news_img">
-                          <img alt="img" src="img/news.jpg" class="media-object">
+                          <img alt="img" src="<?php echo base_url('images/news.jpg') ?>" class="media-object">
                         </a>
-                      </div>
+                      </div> -->
                       <div class="media-body">
-                       <a href="#">Dummy text of the printing and typesetting industry</a>
-                       <span class="feed_date">27.02.15</span>
+                       <a href="https://oxford-policy-fellowship.php">Special Scholarship Scheme for Mauritian Nationals (TC Division)</a>
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="media">
-                      <div class="media-left">
-                        <a href="#" class="news_img">
-                          <img alt="img" src="img/news.jpg" class="media-object">
-                        </a>
-                      </div>
                       <div class="media-body">
-                       <a href="#">Dummy text of the printing and typesetting industry</a>
-                       <span class="feed_date">28.02.15</span>                
+                       <a href="http://bhu-set.php">BHU SET 2016 for School Admission</a>
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="media">
-                      <div class="media-left">
-                        <a href="#" class="news_img">
-                          <img alt="img" src="img/news.jpg" class="media-object">
-                        </a>
-                      </div>
                       <div class="media-body">
-                       <a href="#">Dummy text of the printing and typesetting industry</a>
+                       <a href="http://ajmal-national-talent-search-exam-antse.php">Ajmal National Talent Search Exam (ANTSE) 2016</a>
                        <span class="feed_date">28.02.15</span>                
                       </div>
                     </div>
                   </li>                  
                 </ul>
               </div>
-              <!-- End single sidebar -->
-              <!-- start single sidebar -->
-              <div class="single_sidebar">
-                <h2>Category <span class="fa fa-angle-double-right"></span></h2>
-                <ul>
-                  <li><a href="#">Food</a></li>
-                  <li><a href="#">Technology</a></li>
-                  <li><a href="#">Fashion</a></li>
-                  <li><a href="#">Business</a></li>
-                  <li><a href="#">Games</a></li>
-                </ul>
-              </div>
-              <!-- End single sidebar -->
-              <!-- start single sidebar -->
-              <div class="single_sidebar">
-                <h2>Tags <span class="fa fa-angle-double-right"></span></h2>
-                <ul class="tags_nav">
-                  <li><a href="#"><i class="fa fa-tags"></i>Creative</a></li>
-                  <li><a href="#"><i class="fa fa-tags"></i>News</a></li>
-                  <li><a href="#"><i class="fa fa-tags"></i>Technology</a></li>
-                  <li><a href="#"><i class="fa fa-tags"></i>Art</a></li>
-                  <li><a href="#"><i class="fa fa-tags"></i>Audio</a></li>
-                  <li><a href="#"><i class="fa fa-tags"></i>video</a></li>
-                </ul>
-              </div>
-              <!-- End single sidebar -->
-              <!-- start single sidebar -->
-              <div class="single_sidebar">
-                <h2>Sponsor Add <span class="fa fa-angle-double-right"></span></h2>
-                <a class="side_add" href="#"><img src="img/side-add.jpg" alt="img"></a>
-              </div>
-              <!-- End single sidebar -->
             </div>
           </div>
           <!-- start course archive sidebar -->
@@ -285,7 +185,7 @@
             <div class="col-ld-3  col-md-3 col-sm-3">
               <div class="single_footer_widget">
                 <h3>About Us</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>amia Nadwiyya Edavanna was established in 1964 by Kerala Nadvathul Mujahideen (KNM), a registered society for the religious and socio-cultural development of the muslims in Kerala. With a student strength of 2500 during the academic year 2007-’08, JNE has grown into a large campus spread over 27 acres of land and sufficient infrastructural facilities. A rich blend of qualified and experienced academicians and researchers drawn from various disciplines handle the sessions for the students undergoing the undergraduate and postgraduate programmes at JNE</p>
               </div>
             </div>
             <div class="col-ld-3  col-md-3 col-sm-3">
