@@ -150,7 +150,14 @@
         <div class="col-lg-6 col-md-6 col-sm-6">
           <div class="aboutus_area wow fadeInLeft">
             <h2 class="titile">About Us</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>JAMIA NADWIYYA was established in 1964 by kerala nadvathul mujahideen,a registered society for religious and socio-cultural
+     development of the muslims in kerala. With student strength of 2500 during the academic year 2007-'08, JNC has grown into a 
+     large campus spread over 27 acres of land and sufficient infrastructural facilities.a rich blend qualified and experienced 
+     academicians and researchers drawn from various disciplines handle the session for the student under going the undergraduate 
+     and postgraduate programmeat JNC. The programme equip the students withthrough knowledge of qurAn, hadith, litrature and 
+     historyand culture of muslims. Excellence innovation of are the key concern while designing the curriculim. In addition to
+     import to knowledge,develop,specialized skill and foster attitudes essential forthe gorwth of students, Life at JNC moulds
+     its student as good muslims who pracice the islamic way of life..</p>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -482,9 +489,9 @@
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="#">Introduction To Matrix</a></h3>
-                    <p class="singCourse_price"><span>$20</span> Per One Month</p>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <h3 class="singCourse_title"><a href="#">BCA</a></h3>
+                    <p class="singCourse_price"><span>19000</span> Per Semster</p>
+                    <p>Bachelor of Computer Application is a 3 years under-graduate degree course in the field of Computer Application. Some students use online or distance education programs to earn this degree.</p>
                     </div>
                     <div class="singCourse_author">
                       <img src="<?php echo base_url('home/img/author.jpg') ?>" alt="img">
@@ -501,9 +508,9 @@
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="#">Introduction To Matrix</a></h3>
-                    <p class="singCourse_price"><span>$20</span> Per One Month</p>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <h3 class="singCourse_title"><a href="#">BCOM</a></h3>
+                    <p class="singCourse_price"><span>9000</span> Per Semester</p>
+                    <p>A Bachelor of Commerce is a 3 years under-graduate degree course in the field of Commerce. Some students use online or distance education programs to earn this degree..</p>
                     </div>
                     <div class="singCourse_author">
                       <img src="<?php echo base_url('home/img/author.jpg') ?>" alt="img">
@@ -520,9 +527,9 @@
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="#">Introduction To Matrix</a></h3>
-                    <p class="singCourse_price"><span>$20</span> Per One Month</p>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <h3 class="singCourse_title"><a href="#">BBA</a></h3>
+                    <p class="singCourse_price"><span>10000</span> Per Semester</p>
+                    <p>The Bachelor of Business Administration is a 3 years under-graduate degree course in the fieldcommerce and business administration.Some students use online or distance education programs to earn this degree..</p>
                     </div>
                     <div class="singCourse_author">
                       <img src="<?php echo base_url('home/img/author.jpg') ?>" alt="img">
@@ -539,9 +546,9 @@
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="#">Introduction To Matrix</a></h3>
-                    <p class="singCourse_price"><span>$20</span> Per One Month</p>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <h3 class="singCourse_title"><a href="#">BA</a></h3>
+                    <p class="singCourse_price"><span>9000</span> Per Semester</p>
+                    <p>B.A. Communicative English - Stands for Bachelor of Arts in Communicative English. Typically, a B.A. is a three year course,English is the study of literature, linguistics and philosophy of the English language.</p>
                     </div>
                     <div class="singCourse_author">
                       <img src="<?php echo base_url('home/img/author.jpg') ?>" alt="img">
@@ -558,9 +565,9 @@
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="#">Introduction To Matrix</a></h3>
-                    <p class="singCourse_price"><span>$20</span> Per One Month</p>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <h3 class="singCourse_title"><a href="#">MSC</a></h3>
+                    <p class="singCourse_price"><span>18000</span> Per Semster</p>
+                    <p>A Master of Science degree is a type of master's degree.The degree is usually contrasted with the Master of Arts degree. The Master of Science degree is typically granted for studies in sciences, engineering, and medicine, and is usually for programs that are more focused on scientific and mathematical subjects.</p>
                     </div>
                     <div class="singCourse_author">
                       <img src="<?php echo base_url('home/img/author.jpg') ?>" alt="img">
@@ -577,9 +584,9 @@
                       </div>
                     </div>
                     <div class="singCourse_content">
-                    <h3 class="singCourse_title"><a href="#">Introduction To Matrix</a></h3>
-                    <p class="singCourse_price"><span>$20</span> Per One Month</p>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <h3 class="singCourse_title"><a href="#">MCOM</a></h3>
+                    <p class="singCourse_price"><span>15000</span> Per Semster</p>
+                    <p>Master of Commerce is a postgraduate Masters Degree focusing on commerce-, accounting-, management- and economics-related subjects. Like the undergraduate Bachelor of Commerce, the degree is offered in Commonwealths nations.</p>
                     </div>
                     <div class="singCourse_author">
                       <img src="<?php echo base_url('home/img/author.jpg') ?>" alt="img">
