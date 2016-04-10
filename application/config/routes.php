@@ -64,6 +64,9 @@ $route['dashboard/login'] = 'User_Controller/verify_login';
 $route['login'] = 'Admin_Controller/login';
 $route['dashboard'] = 'Admin_Controller';
 
+$route['dashboard/logout'] = 'User_Controller/logout';
+$route['dashboard/test'] = 'User_Controller/test';
+
 
 /*department*/
 

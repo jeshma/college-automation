@@ -74,10 +74,13 @@ class User_controller extends Check_Logged
     	$this->session->set_userdata('logged_in', FALSE);
     	$this->session->sess_destroy();
     	
-    	redirect(base_url('User_controller/login'));
+    	redirect(base_url('login'));
 	
 	}
-
+public function test()
+{
+	var_dump('kbjh');
+}
 	
 
 }

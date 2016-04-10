@@ -74,17 +74,6 @@
     <!-- Google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
     <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    [if lt IE 9]>
-<!--      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>-->
-      <script src="<?php echo base_url('home/js/html5shiv.js') ?>"></script>
-<!--      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
-      <script src="<?php echo base_url('home/js/respond.js') ?>"></script>
-    <![endif]-->
- 
-
   
   </head>
   <body>

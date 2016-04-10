@@ -9,7 +9,6 @@
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <title>College Automation System : Home</title>
 
     <!-- Mobile Specific Metas
@@ -42,17 +41,8 @@
     <link href="<?php echo base_url('home/style.css')?>" rel="stylesheet">
    
     <!-- Google fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
-    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>    
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    [if lt IE 9]>
-<!--      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>-->
-      <script src="<?php echo base_url('home/js/html5shiv.js') ?>"></script>
-<!--      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
-      <script src="<?php echo base_url('home/js/respond.js') ?>"></script>
-    <![endif]-->
+   <!--  <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>   
+   <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>     -->
  
   </head>
   <body>    
@@ -86,7 +76,6 @@
                 <li class="active"><a href="<?php echo base_url('index')?>">Home</a></li>
                 <li><a href="<?php echo base_url('scholarship') ?>">Scholarship</a></li>
                 <li><a href="<?php echo base_url('login') ?>">Login</a></li>             
-                <li><a href="<?php echo base_url('contact') ?>">Contact</a></li>
               </ul>           
             </div><!--/.nav-collapse -->
           </div>     
@@ -158,6 +147,7 @@
      historyand culture of muslims. Excellence innovation of are the key concern while designing the curriculim. In addition to
      import to knowledge,develop,specialized skill and foster attitudes essential forthe gorwth of students, Life at JNC moulds
      its student as good muslims who pracice the islamic way of life..</p>
+
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -181,7 +171,7 @@
                         </a>
                       </div>
                       <div class="media-body">
-                       <a href="#">Dummy text of the printing and typesetting industry</a>
+                       <a href="#">Jamia Nadwiyya Edavanna was established in 1964 by Kerala Nadvathul Mujahideen (KNM)</a>
                        <span class="feed_date">27.02.15</span>
                       </div>
                     </div>                    
@@ -194,7 +184,7 @@
                         </a>
                       </div>
                       <div class="media-body">
-                       <a href="#">Dummy text of the printing and typesetting industry</a>
+                       <a href="#">VISION To evolve into a premier Arabic university</a>
                        <span class="feed_date">28.02.15</span>
                       </div>
                     </div>
@@ -207,7 +197,7 @@
                         </a>
                       </div>
                       <div class="media-body">
-                       <a href="#">Dummy text of the printing and typesetting industry</a>
+                       <a href="#">Development of innovative teaching methods of Arabic</a>
                        <span class="feed_date">28.02.15</span>
                       </div>
                     </div>
@@ -227,7 +217,7 @@
                           </a>
                         </div>
                         <div class="media-body">
-                         <a href="#">Dummy text of the printing and typesetting industry</a>
+                         <a href="#">DUse of modern technology in the development of teaching and research</a>
                          <span class="feed_date">27.02.15</span>
                         </div>
                       </div>                   
@@ -240,7 +230,7 @@
                           </a>
                         </div>
                         <div class="media-body">
-                         <a href="#">Dummy text of the printing and typesetting industry</a>
+                         <a href="#">Organizing seminars, conferences and workshops for development of Arabic language and literature</a>
                          <span class="feed_date">28.02.15</span>             
                         </div>
                       </div>
@@ -253,7 +243,7 @@
                           </a>
                         </div>
                         <div class="media-body">
-                         <a href="#">Dummy text of the printing and typesetting industry</a>
+                         <a href="#">Popularization of the great classical works in Arabic through the Internet</a>
                          <span class="feed_date">28.02.15</span>             
                         </div>
                       </div>
@@ -268,7 +258,7 @@
                           </a>
                         </div>
                         <div class="media-body">
-                         <a href="#">Contrary to popular belief, Lorem Ipsum is not simply random text</a>
+                         <a href="#">Development of modern research methodology in Arabic</a>
                          <span class="feed_date">27.02.15</span>
                         </div>
                       </div>
@@ -281,7 +271,7 @@
                           </a>
                         </div>
                         <div class="media-body">
-                         <a href="#">Dummy text of the printing and typesetting industry</a>
+                         <a href="#">Conducting of processing and frontiers of Arabic extensive survey,</a>
                          <span class="feed_date">28.02.15</span>          
                         </div>
                       </div>
@@ -294,7 +284,7 @@
                           </a>
                         </div>
                         <div class="media-body">
-                         <a href="#">Contrary to popular belief, Lorem Ipsum is not simply random text</a>
+                         <a href="#">Use of modern technology in the development of teaching and research</a>
                          <span class="feed_date">28.02.15</span>
                         </div>
                       </div>
@@ -313,7 +303,7 @@
                         </a>
                       </div>
                       <div class="media-body">
-                       <a href="#">Dummy text of the printing and typesetting industry</a>
+                       <a href="#">Development of innovative teaching methods of Arabic</a>
                        <span class="feed_date">27.02.15</span>
                       </div>
                     </div>
@@ -326,7 +316,7 @@
                         </a>
                       </div>
                       <div class="media-body">
-                       <a href="#">Dummy text of the printing and typesetting industry</a>
+                       <a href="#">Development of modern research methodology in Arabic</a>
                        <span class="feed_date">28.02.15</span>                
                       </div>
                     </div>
@@ -339,7 +329,7 @@
                         </a>
                       </div>
                       <div class="media-body">
-                       <a href="#">Dummy text of the printing and typesetting industry</a>
+                       <a href="#">Conducting international level training camps and seminars</a>
                        <span class="feed_date">28.02.15</span>                
                       </div>
                     </div>
@@ -380,7 +370,7 @@
                       <span class="fa fa-desktop"></span>
                     </div>
                     <h3>Technology</h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <p>Development of modern research methodology in Arabic</p>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -389,7 +379,7 @@
                       <span class="fa fa-users"></span>
                     </div>
                     <h3>Best Tutor</h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <p>To undertake research studies, consultancy and training programs related to theological and secular subjects.</p>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -398,7 +388,7 @@
                       <span class="fa fa-flask"></span>
                     </div>
                     <h3>Practical Training</h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <p>To collaborate with other institutions for education, evaluation, research and extension work.</p>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -407,7 +397,7 @@
                       <span class="fa fa-support"></span>
                     </div>
                     <h3>Support</h3>
-                    <p>when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
+                    <p>Popularization of the great classical works in Arabic through the Internet</p>
                   </div>
                 </div>
               </div>
@@ -449,7 +439,7 @@
                 <!-- START SINGLE SKILL-->
                 <div class="col-lg-3 col-md-3 col-sm-3">                 
                   <div class="single_skill wow fadeInUp">
-                    <div id="myStat3" data-dimension="150" data-text="65%" data-info="" data-width="10" data-fontsize="25" data-percent="65" data-fgcolor="#999" data-bgcolor="#fff"  data-icon="fa-task"></div>
+                    <div id="myStat3" data-dimension="150" data-text="85%" data-info="" data-width="10" data-fontsize="25" data-percent="65" data-fgcolor="#999" data-bgcolor="#fff"  data-icon="fa-task"></div>
                     <h4>Certified Courses</h4>
                   </div>
                 </div>
@@ -484,18 +474,19 @@
                   <div class="single_course">
                     <div class="singCourse_imgarea">
                       <img src="<?php echo base_url('home/img/course-1.jpg') ?>" />
-                      <div class="mask">                         
-                        <a href="#" class="course_more">View Course</a>
-                      </div>
                     </div>
                     <div class="singCourse_content">
                     <h3 class="singCourse_title"><a href="#">BCA</a></h3>
+
                     <p class="singCourse_price"><span>19000</span> Per Semster</p>
                     <p>Bachelor of Computer Application is a 3 years under-graduate degree course in the field of Computer Application. Some students use online or distance education programs to earn this degree.</p>
                     </div>
                     <div class="singCourse_author">
                       <img src="<?php echo base_url('home/img/author.jpg') ?>" alt="img">
                       <p>Richard Remus, Teacher</p>
+
+                    <p> the Department of Computer Science offers under graduate and post-graduate programmes in Computer Science. </p>
+
                     </div>
                   </div>
                 </li>
@@ -503,9 +494,6 @@
                   <div class="single_course">
                     <div class="singCourse_imgarea">
                       <img src="<?php echo base_url('home/img/course-2.jpg') ?>" />
-                      <div class="mask">                         
-                        <a href="#" class="course_more">View Course</a>
-                      </div>
                     </div>
                     <div class="singCourse_content">
                     <h3 class="singCourse_title"><a href="#">BCOM</a></h3>
@@ -515,6 +503,9 @@
                     <div class="singCourse_author">
                       <img src="<?php echo base_url('home/img/author.jpg') ?>" alt="img">
                       <p>Richard Remus, Teacher</p>
+
+                    <h3 class="singCourse_title"><a href="#">Bsc physics</a></h3>
+                    <p>Cureently the department priovides facilities for academic instructions at the undergraduate and post-graduate levels</p>
                     </div>
                   </div>
                 </li> 
@@ -522,11 +513,9 @@
                   <div class="single_course">
                     <div class="singCourse_imgarea">
                       <img src="<?php echo base_url('home/img/course-1.jpg') ?>" />
-                      <div class="mask">                         
-                        <a href="#" class="course_more">View Course</a>
-                      </div>
                     </div>
                     <div class="singCourse_content">
+
                     <h3 class="singCourse_title"><a href="#">BBA</a></h3>
                     <p class="singCourse_price"><span>10000</span> Per Semester</p>
                     <p>The Bachelor of Business Administration is a 3 years under-graduate degree course in the fieldcommerce and business administration.Some students use online or distance education programs to earn this degree..</p>
@@ -594,6 +583,12 @@
                     </div>
                   </div>
                 </li>                
+
+                    <h3 class="singCourse_title"><a href="#">Ba arabic</a></h3>
+                    <p>The Arabic Department has a tradition as old as the College itself.</p>
+                    </div>
+                  </div>
+                </li>  
               </ul>
             </div>
           </div>
@@ -604,8 +599,8 @@
     <!--=========== END OUR COURSES SECTION ================-->  
 
     <!--=========== BEGIN OUR TUTORS SECTION ================-->
-    <section id="ourTutors">
-     <!--  <div class="container">
+    <!-- <section id="ourTutors">
+     <div class="container">
       Our courses titile
        <div class="row">
          <div class="col-lg-12 col-md-12"> 
@@ -748,14 +743,14 @@
          </div>
        </div>
        End Our courses content
-     </div> -->
-    </section>
+     </div>
+    </section> -->
     <!--=========== END OUR TUTORS SECTION ================-->
 
     <!--=========== BEGIN STUDENTS TESTIMONIAL SECTION ================-->
-    <section id="studentsTestimonial">
+    <!-- <section id="studentsTestimonial">
       <div class="container">
-       <!-- Our courses titile -->
+       Our courses titile
         <div class="row">
           <div class="col-lg-12 col-md-12"> 
             <div class="title_area">
@@ -764,14 +759,14 @@
             </div>
           </div>
         </div>
-        <!-- End Our courses titile -->
-
-        <!-- Start Our courses content -->
+        End Our courses titile
+    
+        Start Our courses content
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="studentsTestimonial_content">              
               <div class="row">
-                <!-- start single student testimonial -->
+                start single student testimonial
                 <div class="col-lg-4 col-md-4 col-sm-4">
                   <div class="single_stsTestimonial wow fadeInUp">
                     <div class="stsTestimonial_msgbox">
@@ -785,8 +780,8 @@
                     </div>
                   </div>
                 </div>
-                <!-- End single student testimonial -->
-                <!-- start single student testimonial -->
+                End single student testimonial
+                start single student testimonial
                 <div class="col-lg-4 col-md-4 col-sm-4">
                   <div class="single_stsTestimonial wow fadeInUp">
                     <div class="stsTestimonial_msgbox">
@@ -800,8 +795,8 @@
                     </div>
                   </div>
                 </div>
-                <!-- End single student testimonial -->
-                <!-- start single student testimonial -->
+                End single student testimonial
+                start single student testimonial
                 <div class="col-lg-4 col-md-4 col-sm-4">
                   <div class="single_stsTestimonial wow fadeInUp">
                     <div class="stsTestimonial_msgbox">
@@ -815,14 +810,14 @@
                     </div>
                   </div>
                 </div>
-                <!-- End single student testimonial -->
+                End single student testimonial
               </div>
             </div>
           </div>
         </div>
-        <!-- End Our courses content -->
+        End Our courses content
       </div>
-    </section>
+    </section> -->
     <!--=========== END STUDENTS TESTIMONIAL SECTION ================-->    
     
     <!--=========== BEGIN FOOTER SECTION ================-->
@@ -834,7 +829,7 @@
             <div class="col-ld-3  col-md-3 col-sm-3">
               <div class="single_footer_widget">
                 <h3>About Us</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Jamia Nadwiyya Edavanna was established in 1964 by Kerala Nadvathul Mujahideen (KNM), a registered society for the religious and socio-cultural development of the muslims in Kerala. With a student strength of 2500 during the academic year 2007-’08, </p>J
               </div>
             </div>
             <div class="col-ld-3  col-md-3 col-sm-3">
@@ -889,7 +884,7 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
               <div class="footer_bootomRight">
-                <p>Designed by <a href="http://wpfreeware.com/" rel="nofollow">Wpfreeware.com</a></p>
+                <p>Designed by students</p>
               </div>
             </div>
           </div>
@@ -905,7 +900,9 @@
     ================================================== -->
 
     <!-- initialize jQuery Library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <script src="<?php echo base_url('js/jquery-1.11.1.min.js') ?>"></script>
     <!-- Preloader js file -->
     <script src="<?php echo base_url('home/js/queryloader2.min.js') ?>" type="text/javascript"></script>
     <!-- For smooth animatin  -->
@@ -919,9 +916,10 @@
     <script src="<?php echo base_url('home/js/jquery.animate-enhanced.min.js')?>"></script>
     <script src="<?php echo base_url('home/js/jquery.superslides.min.js') ?>" type="text/javascript" charset="utf-8"></script>
     <!-- for circle counter -->
-    <script src='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.min.js'></script>
+    <!-- <script src='https://cdn.rawgit.com/pguso/jquery-plugin-circliful/master/js/jquery.circliful.min.js'></script>-->
     <!-- Gallery slider -->
-    <script type="text/javascript" language="javascript" src="js/jquery.tosrus.min.all.js"></script>   
+    <script type="text/javascript" language="javascript" src="<?php echo base_url('js/circle.js') ?>"></script>   
+    <script type="text/javascript" language="javascript" src="<?php echo base_url('js/jquery.tosrus.min.all.js') ?>"></script>   
    
     <!-- Custom js-->
     <script src="<?php echo base_url('home/js/custom.js') ?>"></script>
