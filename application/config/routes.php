@@ -60,6 +60,7 @@ $route['contact'] = 'Home_Controller/contact';
 
 ///////Admin//////////
 //user//
+$route['dashboard/login'] = 'User_Controller/verify_login';
 $route['login'] = 'Admin_Controller/login';
 $route['dashboard'] = 'Admin_Controller';
 
@@ -92,6 +93,12 @@ $route['dashboard/subject'] = 'Admin_Controller/add_subject';
 
 /*payroll*/
 $route['dashboard/payroll'] = 'Admin_Controller/Add_payroll';
+//$route['dashboard/payroll/add/submit'] = 'Payroll_Controller/add';
+//$route['dashboard/payroll'] = 'Payroll_Controller/view';
+
+/*student_details*/
+$route['dashboard/students/view'] = 'Admin_Controller/view_student_details';
+//$route['dashboard/students'] = 'Student_Details_Controller/student_details';
 //$route['dashboard/payroll/add/submit'] = 'Payroll_Controller/add';
 //$route['dashboard/payroll'] = 'Payroll_Controller/view';
 

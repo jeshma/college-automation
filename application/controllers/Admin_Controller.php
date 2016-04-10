@@ -161,7 +161,7 @@ class Admin_Controller extends Check_Logged
 
 	{
 		$data['result'] = $this->Exam_Model->view_all();
-		//var_dump($data);
+		var_dump($data);
 		if($data['result']!= FALSE)
 		{
 		
@@ -282,7 +282,7 @@ public function add_semester()
 	
 		if( $data['result']!= FALSE)
 		{
-			$this->load->view('student_details', $data);
+			$this->load->view('admin/view_student_details', $data);
 
 		}
     }
