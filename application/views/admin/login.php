@@ -29,8 +29,8 @@
       <h1>Login to admin</h1>
 	<?php echo validation_errors(); ?>
 	<?php echo form_open(base_url('User_Controller/verify_login'),['id' => 'loginform', 'name' => 'loginform']) ?>
-		<p><input type="text"name="username" id="username" ><br/></p>
-		<p><input type="password"name="password" id="password"><br/></p>
+		<p><input type="text"name="username" id="username" placeholder="username" ><br/></p>
+		<p><input type="password"name="password" id="password"  placeholder="password"><br/></p>
 		<input type="submit" name="submit" id="submit" value="login">
 	</form>
 	</div>

@@ -111,7 +111,7 @@
        <div class="row">
          <div class="col-sm-5">
            <form class="wow">
-                <input type="text" class="wp-form-control wpcf7-text" placeholder="Username ">
+                <input type="text" class="wp-form-control wpcf7-text" placeholder="Username">
                 <input type="mail" class="wp-form-control wpcf7-email" placeholder="Password">          
                 <input type="submit" value="Submit" class="col-md-4 wpcf7-submit">
               </form>

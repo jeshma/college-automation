@@ -9,14 +9,55 @@ class Student_Details_Controller extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper(['url','form']);
-		$this->load->library('form_validation');
+		$this->load->library(['form_validation','table']);
 		$this->load->model('Student_Details_Model');
 	}
 
 	public function index()
 	{
-		$this->load->view('admin/view_student_details');
-	}
+        $data = $this->Student_Details_Model->view_all();
+        if (isset($data)) {
+//            $this->table->set_heading(array('student_id', 'name'));
+//            foreach ($data as $key => $value)
+//            {
+//                $this->table->add_row(array($value->id, $value->name));
+//            }
+//            $template = array(
+//                'table_open'            => '<table class="table">',
+//
+//                'thead_open'            => '<thead class="header">',
+//                'thead_close'           => '</thead>',
+//
+//                'heading_row_start'     => '<tr>',
+//                'heading_row_end'       => '</tr>',
+//                'heading_cell_start'    => '<th>',
+//                'heading_cell_end'      => '</th>',
+//
+//                'tbody_open'            => '<tbody>',
+//                'tbody_close'           => '</tbody>',
+//
+//                'row_start'             => '<tr>',
+//                'row_end'               => '</tr>',
+//                'cell_start'            => '<td>',
+//                'cell_end'              => '</td>',
+//
+//                'row_alt_start'         => '<tr>',
+//                'row_alt_end'           => '</tr>',
+//                'cell_alt_start'        => '<td>',
+//                'cell_alt_end'          => '</td>',
+//
+//                'table_close'           => '</table>'
+//            );
+//
+//            $this->table->set_template($template);
+//            $data['students']= $this->table->generate();
+
+
+            $this->load->view('admin/view_student_details',$data);
+        }
+
+
+    }
 
 	   public function view($id)
     {

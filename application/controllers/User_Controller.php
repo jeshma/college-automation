@@ -76,9 +76,12 @@ class User_controller extends Check_Logged
     	$this->session->sess_destroy();
 
     	redirect(base_url());
-	
-	}
 
+	}
+public function test()
+{
+	var_dump('kbjh');
+}
 	
 
 }

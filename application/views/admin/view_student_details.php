@@ -42,7 +42,7 @@
 
 <h1>Student Details</h1>
 <?php 
-  if(isset($result)){
+  if(isset($students)){
    ?>
 
 
@@ -71,7 +71,7 @@
 
 <?php 
 
- foreach ($result as $key => $value)
+ foreach ($students as $key => $value)
  	{?>
   
     <tr>
