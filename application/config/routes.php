@@ -60,8 +60,14 @@ $route['contact'] = 'Home_Controller/contact';
 
 ///////Admin//////////
 //user//
-$route['dashboard/login'] = 'User_Controller/verify_login';
+
 $route['login'] = 'Admin_Controller/login';
+
+$route['dashboard/login'] = 'User_Controller/verify_login';
+
+$route['dashboard/logout'] = 'User_Controller/logout';
+
+$route['dashboard/login'] = 'Admin_Controller/login';
 $route['dashboard'] = 'Admin_Controller';
 
 

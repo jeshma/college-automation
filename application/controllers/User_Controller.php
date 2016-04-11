@@ -71,10 +71,11 @@ class User_controller extends Check_Logged
 
 	public function logout()
 	{
+
     	$this->session->set_userdata('logged_in', FALSE);
-    	$this->session->sess_destroy();
-    	
-    	redirect(base_url('User_controller/login'));
+    	$this->session->sess_destroy()
+
+    	redirect(base_url());
 	
 	}
 
