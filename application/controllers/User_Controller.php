@@ -73,7 +73,7 @@ class User_controller extends Check_Logged
 	{
 
     	$this->session->set_userdata('logged_in', FALSE);
-    	$this->session->sess_destroy()
+    	$this->session->sess_destroy();
 
     	redirect(base_url());
 	

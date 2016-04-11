@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - website@localhost" uuid="f9814bc1-5e7b-4002-8b71-14c645e1ead8">
+    <database-info product="MySQL" version="5.5.47-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="website"/>
+    <table name="applications" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="dob" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="gender" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="guardian_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pin" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="firstlang" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="secondlang" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="maths" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="english" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="chemistry" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="physics" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="electronics" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="zoology" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="botony" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="course" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="bussiness" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="accounting" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="economics" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="politics" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="statistics" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="status" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="courses" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="department_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_courses_department1" columns="department_id" ref-table="department" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="couse" table="registrations" schema="" catalog="website" columns="course_id"/>
+      <exported-key name="fk_semester_cources1" table="semester" schema="" catalog="website" columns="cources_id"/>
+      <index name="fk_courses_department1_idx" unique="false" columns="department_id"/>
+    </table>
+    <table name="department" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="discription" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_courses_department1" table="courses" schema="" catalog="website" columns="department_id"/>
+    </table>
+    <table name="departments" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="department_id" table="examtypes" schema="" catalog="website" columns="department_id"/>
+    </table>
+    <table name="examresults" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="student_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="exam_type_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="1st_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="2nd_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="3rd_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="4th_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="5th_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="6th_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="total" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="exam_type" columns="exam_type_id" ref-table="examtypes" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="student" columns="student_id" ref-table="registrations" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="exam_type" unique="false" columns="exam_type_id"/>
+      <index name="student" unique="false" columns="student_id"/>
+    </table>
+    <table name="examtypes" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="time" sqlType="TIME" precision="8" scale="0" nullable="true" jdbcType="92"/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="department_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="department_id" columns="department_id" ref-table="departments" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="exam_type" table="examresults" schema="" catalog="website" columns="exam_type_id"/>
+    </table>
+    <table name="marks" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="student_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="1st_lang" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="2nd_lang" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="1st_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="2nd_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="3rd_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="4th_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="5th_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="6th_sub" sqlType="VARBINARY" precision="50" scale="0" nullable="true" jdbcType="-3"/>
+      <column name="7th_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="8th_sub" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="total_marks" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="studentid" columns="student_id" ref-table="registrations" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="studentid" unique="false" columns="student_id"/>
+    </table>
+    <table name="parentlogin" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="username" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="student_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="parentstudents" columns="student_id" ref-table="registrations" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="parentstudents" unique="false" columns="student_id"/>
+    </table>
+    <table name="payroll" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="amount" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="staff_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="staff" columns="staff_id" ref-table="staffs" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="staff" unique="false" columns="staff_id"/>
+    </table>
+    <table name="registrations" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="dob" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="address" sqlType="VARCHAR" precision="150" scale="0" nullable="true" jdbcType="12"/>
+      <column name="gender" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="father" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="mother" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="pin" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="income" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="mail" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="religion_community" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="cast" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="panchayath" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="taluk" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="district" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="martia_status" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="spouse_name_address" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="institution_last_attend" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="physically_handicapped" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="course_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="couse" columns="course_id" ref-table="courses" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="student" table="examresults" schema="" catalog="website" columns="student_id"/>
+      <exported-key name="studentid" table="marks" schema="" catalog="website" columns="student_id"/>
+      <exported-key name="parentstudents" table="parentlogin" schema="" catalog="website" columns="student_id"/>
+      <index name="couse" unique="false" columns="course_id"/>
+    </table>
+    <table name="scholorships" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="type" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="semester" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="cources_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_semester_cources1" columns="cources_id" ref-table="courses" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="fk_semester_subject_semester1" table="semester_subject" schema="" catalog="website" columns="semester_id"/>
+      <index name="fk_semester_cources1_idx" unique="false" columns="cources_id"/>
+    </table>
+    <table name="semester_subject" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="subject_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="semester_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="fk_semester_subject_semester1" columns="semester_id" ref-table="semester" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_semester_subject_subject1" columns="subject_id" ref-table="subject" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="fk_semester_subject_semester1_idx" unique="false" columns="semester_id"/>
+      <index name="fk_semester_subject_subject1_idx" unique="false" columns="subject_id"/>
+    </table>
+    <table name="staffattend" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="staff_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="attendance" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="staffid" columns="staff_id" ref-table="staffs" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="staffid" unique="false" columns="staff_id"/>
+    </table>
+    <table name="staffs" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" precision="350" scale="0" nullable="true" jdbcType="12"/>
+      <column name="departments_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="staff" table="payroll" schema="" catalog="website" columns="staff_id"/>
+      <exported-key name="staffid" table="staffattend" schema="" catalog="website" columns="staff_id"/>
+    </table>
+    <table name="subject" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_semester_subject_subject1" table="semester_subject" schema="" catalog="website" columns="subject_id"/>
+    </table>
+    <table name="userlogin" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="student_id" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+  </data-source>
+</component>
