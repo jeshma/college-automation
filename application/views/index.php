@@ -74,6 +74,7 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                 <li class="active"><a href="<?php echo base_url('index')?>">Home</a></li>
+                <li><a href="<?php echo base_url('registration') ?>">Registration</a></li>
                 <li><a href="<?php echo base_url('scholarship') ?>">Scholarship</a></li>
                 <li><a href="<?php echo base_url('login') ?>">Login</a></li>
               </ul>

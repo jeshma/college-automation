@@ -56,6 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['index'] = 'Home_Controller/index';
 $route['scholarship'] = 'Home_Controller/scholarship';
 $route['contact'] = 'Home_Controller/contact';
+$route['registration'] = 'Home_Controller/registration';
 
 
 ///////Admin//////////

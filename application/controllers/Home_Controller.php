@@ -122,15 +122,21 @@ class Home_Controller extends CI_Controller
 				'statistics'=> $statistics,
 				'status' => 'request'
 			];
-			$query= $this->Application_Model->add($data);
-			if($query != FALSE)
-			{
-				var_dump('success');
-			}
-			else
-			{
-				var_dump('fail');
-			}
+				if ($this->Student_Model->add($data) != FALSE) 
+				{
+					// redirect(base_url('dashboard/payroll'));
+
+					$data['message'] = '<script type="text/javascript">
+											alert("adding success");
+											window.location = "'.base_url('Home_Controller/registration').'";
+										</script>';
+					$this->load->view('regist',$data);
+				}
+				else
+				{
+					$data=['error' => 'insertion failed'];
+				    $this->load->view('regist',$data);
+				}
 			 
 		}
 		

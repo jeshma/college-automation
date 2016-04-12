@@ -4,14 +4,14 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="<?php echo base_url('css/styleapp.css');?>">
 </head>
 <body>
 <form name="register"action="" method="post">
 	<h2>APPLICATION FORM</h2>
 	<BR/>
 	<br/>
-	
+	<div class="group">
 	NAME:<input type="text"name="NAME"ID="NAME"><br/><br/>
 	DOB:<select name="day">
 <option namevalue="1">1</option>
@@ -100,8 +100,20 @@ PHYSICALLY HANDICAPPED:<input type="radio" name="uhand"id="hand">Yes
 <input type="radio" name="phand"id="phand">No<br/><br/>
 COURSE ID:<input type="text"name="Ucourse"id="cours"><br/><br/>
 <input type="checkbox"name="agree"id="uagree">I agree to this<br/><br/>
-<input type="submit" name="usubmit" id="submit" value="next">
+<input type="submit" name="usubmit" id="submit" value="submit">
 <input type="submit" name="ucancel" id="cancel" value="cancel">
 </form>
+<?php if (isset($error))
+ {
+	echo $error;
+}
+
+if (isset($message)) 
+
+{
+	echo $message;
+}?>
+
+</div>
 </body>
 </html>
