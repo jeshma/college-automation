@@ -19,7 +19,7 @@ class Department_Controller extends Check_Logged
 	public function index()
 	{
 		$data['result'] = $this->Department_Model->get_all();
-		$this->load->view('admin/view_departments',$data);
+		$this->load->view('admin/dashboard',$data);
 	}
 
 
@@ -65,12 +65,15 @@ class Department_Controller extends Check_Logged
 										alert("adding success");
 										window.location = "'.base_url().'dashboard/department"
 									</script>';
-				$this->load->view('admin/add_department',$data);
+				$this->load->view('admin/dashboard',$data);
 			}
 			else
 			{
-				$data=['error' => 'insertion failed'];
-			    $this->load->view('admin/add_department',$data);
+                $data['message'] = '<script type="text/javascript">
+										alert("adding failed");
+										window.location = "'.base_url().'dashboard/department"
+									</script>';
+                $this->load->view('admin/dashboard',$data);
 			}
 
 		}
@@ -86,7 +89,10 @@ class Department_Controller extends Check_Logged
 		}
 		else
 		{
-			var_dump('fail');
+            echo '<script type="text/javascript">
+                    alert("delete failed,try again");
+                    window.location="'.$_SERVER['HTTP_REFERER'].'"
+                </script>';
 		}
 	
 

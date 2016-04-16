@@ -21,7 +21,12 @@ class Admin_Controller extends Check_Logged
 		$this->load->model('Exam_Model');
 		$this->load->model('Student_Details_Model');
 		}
-	
+
+    public function dashboardold()
+    {
+        $this->load->view('admin/dashboard1');
+    }
+
 	public function index()
 	
 	{

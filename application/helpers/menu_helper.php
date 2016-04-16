@@ -134,7 +134,7 @@ function dashboard_menu($current)
     ];
 
     $html = '';
-    $html .='<nav class="sidebar-left">
+    /*$html .='<nav class="sidebar-left">
         <div class="">
           <ul class="menu-left">
             <li>
@@ -154,7 +154,17 @@ function dashboard_menu($current)
     }
     $html .= '</ul>
         </div>
-      </nav>';
+      </nav>';*/
+
+    $html .= '<ul>';
+    foreach ($menu as $key => $value) {
+        if ($current == $key) {
+            $html .= '<li><a href="'.base_url('dashboard/'.$value['link']).'" class="active"><span>'.ucfirst($key).'</span></a></li>';
+        } else {
+            $html .= ' <li><a href="'.base_url('dashboard/'.$value['link']).'"><span>'.ucfirst($key).'</span></a></li>';
+        }
+    }
+    $html .= '</ul> ';
 
     return $html;
 

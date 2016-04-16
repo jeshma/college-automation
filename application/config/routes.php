@@ -69,7 +69,7 @@ $route['dashboard/login'] = 'User_Controller/verify_login';
 $route['dashboard/logout'] = 'User_Controller/logout';
 
 $route['dashboard/login'] = 'Admin_Controller/login';
-$route['dashboard'] = 'Admin_Controller';
+$route['dashboard'] = 'Department_Controller';
 
 $route['dashboard/logout'] = 'User_Controller/logout';
 $route['dashboard/test'] = 'User_Controller/test';
@@ -78,10 +78,14 @@ $route['dashboard/test'] = 'User_Controller/test';
 /*department*/
 
 $route['dashboard/department'] = 'Department_Controller';
-$route['dashboard/department/add'] = 'Admin_Controller/add_department';
+$route['dashboard/department/view/(:num)'] = 'Department_Controller/view/$1';
+$route['dashboard/department/delete/(:num)'] = 'Department_Controller/delete/$1';
+$route['dashboard/department/add'] = 'Department_Controller/add';
 
 /*course*/
-$route['dashboard/department/course/add'] = 'Department_Controller/view';
+$route['dashboard/department/view/(:num)/course/add'] = 'Course_Controller/add';
+$route['dashboard/department/course/(:num)'] = 'Course_Controller/view/$1';
+$route['dashboard/department/course/delete/(:num)'] = 'Course_Controller/delete/$1';
 
 /*staff*/
 //$route['dashboard/view_staff/(:num)'] = 'Staff_Controller/view/$1';
@@ -97,6 +101,9 @@ $route['dashboard/attendence'] = 'Admin_Controller/add_attendence';
 
 /*semester*/
 $route['dashboard/semester'] = 'Admin_Controller/add_semester';
+$route['dashboard/department/course/semester/add'] = 'Semester_Controller/add';
+$route['dashboard/department/course/semester/delete/(:num)'] = 'Semester_Controller/delete/$1';
+$route['dashboard/department/course/semester/view/(:num)'] = 'Semester_Controller/view/$1';
 
 /*subject*/
 $route['dashboard/subject'] = 'Admin_Controller/add_subject';

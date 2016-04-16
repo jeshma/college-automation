@@ -49,8 +49,6 @@ class Semester_Controller extends Check_Logged
 	public function add()
 	{
 		$this->form_validation->set_rules('name','Name','required');
-	
-
 
 		if($this->form_validation->run() === FALSE)
 		{
