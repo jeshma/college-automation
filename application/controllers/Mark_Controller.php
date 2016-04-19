@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('no direct script access allowed');
 * home class
 */
 require_once(APPPATH.'controllers/Check_Logged.php');
-class Exam_Controller extends Check_Logged
+class Mark_Controller extends Check_Logged
 {
 	/*construtor method*/
 	public function __construct()

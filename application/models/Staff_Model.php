@@ -6,7 +6,13 @@
 class Staff_Model extends CI_Model
 {
 	
-	
+	protected $fields = [
+        'staffs.id',
+        'staffs.name',
+        'staffs.address',
+        'departments.name as department_name'
+    ];
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -19,8 +25,10 @@ class Staff_Model extends CI_Model
 	*/
 	public function view_all()
 	{
+        $this->db->select($this->fields);
+        $this->db->join('departments','staffs.departments_id = departments.id');
 		$result = $this->db->get('staffs');
-		if ($result != FALSE) 
+		if ($result != FALSE)
 		
 		{
 		if($result->num_rows() >=1)

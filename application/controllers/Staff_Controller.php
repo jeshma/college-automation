@@ -68,13 +68,13 @@ class Staff_Controller extends Check_Logged
 	public function add()
 	{
 		$this->form_validation->set_rules('departments','Department','required');
-		$this->form_validation->set_rules('name','Name','required');		
-		$this->form_validation->set_rules('address','Address','required');		
+		$this->form_validation->set_rules('name','Name');
+		$this->form_validation->set_rules('address','Address');
 
 		if($this->form_validation->run() === FALSE)		
 		{
 
-			$this->load->view('admin/add_staff');
+			$this->load->view('admin/view_staffs');
 		}
 		else
 		{
@@ -85,19 +85,19 @@ class Staff_Controller extends Check_Logged
 				'departments_id' => $this->input->post('departments')
 			];
 
-			if ($this->Staff_Model->add($data) != FALSE) 
+			if ($this->Staff_Model->add($data) != FALSE)
 			{
 
 				$data['message'] = '<script type="text/javascript">
 										alert("adding success");
-										window.location = "'.base_url().('Admin_Controller/view_staffs').'"
+										window.location = "'.base_url().('dashboard/staff').'"
 									</script>';
-				$this->load->view('admin/add_staff',$data);
+				$this->load->view('admin/view_staffs',$data);
 			}
 			else
 			{
 				$data=['error' => 'insertion failed'];
-			    $this->load->view('admin/add_staff',$data);
+			    $this->load->view('admin/view_staffs',$data);
 			}
 		
 			

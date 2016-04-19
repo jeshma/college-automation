@@ -91,25 +91,29 @@ $route['dashboard/department/course/delete/(:num)'] = 'Course_Controller/delete/
 $route['dashboard/department/course/subject/add'] = 'Semester_Subject_Controller/add';
 $route['dashboard/department/course/semester/subject/delete/(:num)'] = 'Semester_Subject_Controller/delete/$1';
 
-
-
-/*staff*/
-//$route['dashboard/view_staff/(:num)'] = 'Staff_Controller/view/$1';
-$route['dashboard/add_staff']='Admin_Controller/add_staff';
-$route['dashboard/staff']='Admin_Controller/view_staffs';
-
-
-/*exam*/
-$route['dashboard/exam'] = 'Admin_Controller/add_exam';
-
-/*attendence*/
-$route['dashboard/attendence'] = 'Admin_Controller/add_attendence';
-
 /*semester*/
 $route['dashboard/semester'] = 'Admin_Controller/add_semester';
 $route['dashboard/department/course/semester/add'] = 'Semester_Controller/add';
 $route['dashboard/department/course/semester/delete/(:num)'] = 'Semester_Controller/delete/$1';
 $route['dashboard/department/course/semester/view/(:num)'] = 'Semester_Controller/view/$1';
+
+///////////////
+
+/*staff*/
+//$route['dashboard/view_staff/(:num)'] = 'Staff_Controller/view/$1';
+$route['dashboard/add_staff']='Admin_Controller/add_staff';
+$route['dashboard/staff']='Admin_Controller/view_staffs';
+$route['dashboard/staff/add']='Staff_Controller/add';
+$route['dashboard/staff/delete/(:num)']='Staff_Controller/delete/$1';
+
+
+/*exam*/
+$route['dashboard/exam'] = 'Admin_Controller/view_exam';
+
+/*attendence*/
+$route['dashboard/attendence'] = 'Admin_Controller/add_attendence';
+
+
 
 /*subject*/
 $route['dashboard/subject'] = 'Admin_Controller/add_subject';

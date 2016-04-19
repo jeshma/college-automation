@@ -18,6 +18,7 @@ class Exam_Controller extends Check_Logged
 
 	public function index()
 	{
+        $data['result'] = $this->Exam_Model->view_all();
 		$this->load->view('admin/view_exam');
 	}
 

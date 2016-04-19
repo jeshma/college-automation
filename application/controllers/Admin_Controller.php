@@ -166,10 +166,9 @@ class Admin_Controller extends Check_Logged
 
 	{
 		$data['result'] = $this->Exam_Model->view_all();
-		var_dump($data);
+
 		if($data['result']!= FALSE)
 		{
-		
 		$this->load->view('admin/view_exam', $data);
 
 		}
@@ -187,7 +186,7 @@ class Admin_Controller extends Check_Logged
 	{
 		// get all department and pass to the view
 		$data['departments'] = $this->Department_Model->get_all();
-		$this->load->view('admin/add_staff',$data);
+		$this->load->view('admin/view_staffs',$data);
 	}
 
 
@@ -195,15 +194,15 @@ class Admin_Controller extends Check_Logged
     
 	{
 
-		$data['result'] =$this->Staff_Model->view_all();
-	
-		if( $data['result']!= FALSE)
+        $data['departments'] = $this->Department_Model->get_all();
+		$result =$this->Staff_Model->view_all();
+		if( $result != FALSE)
 		{
-			$this->load->view('admin/view_staffs', $data);
+            $data['result'] = $result;
+        }
+        $this->load->view('admin/view_staffs', $data);
 
-		}
-		
-	}
+    }
 	public function staffdele($id)
 	
 	{
