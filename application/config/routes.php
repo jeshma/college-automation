@@ -87,6 +87,12 @@ $route['dashboard/department/view/(:num)/course/add'] = 'Course_Controller/add';
 $route['dashboard/department/course/(:num)'] = 'Course_Controller/view/$1';
 $route['dashboard/department/course/delete/(:num)'] = 'Course_Controller/delete/$1';
 
+/*subject*/
+$route['dashboard/department/course/subject/add'] = 'Semester_Subject_Controller/add';
+$route['dashboard/department/course/semester/subject/delete/(:num)'] = 'Semester_Subject_Controller/delete/$1';
+
+
+
 /*staff*/
 //$route['dashboard/view_staff/(:num)'] = 'Staff_Controller/view/$1';
 $route['dashboard/add_staff']='Admin_Controller/add_staff';

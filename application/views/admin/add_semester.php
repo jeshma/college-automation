@@ -24,7 +24,8 @@
         </div>
         <!-- End Main Nav -->
         <div class="msg msg-error">
-            <p><strong><?php echo $semester[0]->name?></strong></p>
+<!--            <p><strong>--><?php //echo $semester[0]->name?><!--</strong></p>-->
+            <p><strong><?php echo (isset($cource) && $cource != null ? $cource[0]->name : false)?> Course</strong></p>
             <a href="#" class="close">close</a>
         </div>
     </div>
@@ -53,7 +54,7 @@
                 <div class="box">
                     <!-- Box Head -->
                     <div class="box-head">
-                        <h2 class="left">Semester</h2>
+                        <h2 class="left">Semesters</h2>
                     </div>
                     <!-- End Box Head -->
                     <!-- Table -->
@@ -141,9 +142,9 @@
 <!-- Footer -->
 <div id="footer">
     <div class="shell">
-        <span class="left">&copy; 2010 - CompanyName</span>
+        <span class="left">&copy; 2016 - </span>
 		<span class="right">
-			Design by <a href="http://chocotemplates.com" target="_blank" title="The Sweetest CSS Templates WorldWide">Chocotemplates.com</a>
+			Design by <a href="" target="_blank" title="">me</a>
 		</span>
     </div>
 </div>

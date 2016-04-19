@@ -24,7 +24,7 @@
         </div>
         <!-- End Main Nav -->
         <div class="msg msg-error">
-            <p><strong><?php echo $result[0]->name?></strong></p>
+            <p><strong><?php echo $result[0]->name?> department</strong></p>
             <a href="#" class="close">close</a>
         </div>
     </div>

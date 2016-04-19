@@ -29,7 +29,7 @@ class Course_Controller extends Check_Logged
 
     public function view($id)
     {
-
+        $data['cource'] = $this->Course_Model->get_where(['id' => $id]);
     	$data['semester'] = $this->Semester_Model->get_where(['cources_id' => $id]);
     	$data['id'] = $id;
     	

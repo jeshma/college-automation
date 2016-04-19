@@ -42,7 +42,7 @@ class Semester_Subject_Controller extends CI_Controller
 				if ($this->Semester_Subject_Model->add($data)) {
 					$data['message'] = '<script>
  											alert("adding success.")
- 											window.location = "' . base_url("Semester_Controller/view/{$semester_id}") . '";
+ 											window.location = "' . base_url("dashboard/department/course/semester/view/{$semester_id}") . '";
  										</script>';
  					$this->load->view('admin/view_semester', $data);
 				}
