@@ -11,6 +11,7 @@ class Student_Details_Controller extends CI_Controller
 		$this->load->helper(['url','form']);
 		$this->load->library(['form_validation','table']);
 		$this->load->model('Student_Details_Model');
+		$this->load->model('Course_Model');
 	}
 
 	public function index()
@@ -75,11 +76,15 @@ class Student_Details_Controller extends CI_Controller
 		  }
 	
 		}
-    
 
 
+    public function add()
+    {
+        $data['course'] = $this->Course_Model->get_all();
+        $this->load->view('admin/add_student_details', $data);
+    }
 
-	public function add()
+	public function submit()
 	{
 		$this->form_validation->set_rules('name','name','required');
 		$this->form_validation->set_rules('day','dob','required');
@@ -105,7 +110,7 @@ class Student_Details_Controller extends CI_Controller
 			if ($this->form_validation->run()===FALSE)
 		    {
 		    	
-				$this->load->view('student_details');
+				$this->load->view('admin/add_student_details');
 			}
 			else
 			{
@@ -152,6 +157,26 @@ class Student_Details_Controller extends CI_Controller
 			}
 	}
 
+
+    public function search()
+    {
+        $name = $this->input->post('name');
+        $course = $this->input->post('cource');
+
+        $where = [
+            'name' => $name,
+            'cource_id' => $course
+        ];
+
+        $students = $this->Student_Details_Model->view_where($where);
+
+        $courses = $this->Course_Model->get_all();
+
+        $data['students'] = $students;
+        $data['course'] = $courses;
+
+        $this->load->view('admin/view_student_details', $data);
+    }
+
 }
 
-?>							

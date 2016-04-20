@@ -5,7 +5,7 @@
 */
 class Student_Details_Model extends CI_Model
 {
-	protected $table = 'student';
+	protected $table = 'students';
 	public function __construct()
 	{
 		parent::__construct();

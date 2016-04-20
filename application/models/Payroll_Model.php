@@ -6,6 +6,12 @@
 class Payroll_Model extends CI_Model
 {
 	protected $table = 'payroll';
+
+    protected $fields = [
+        'payroll.date',
+        'payroll.amount',
+        'staff.name'
+    ];
 	public function __construct()
 	{
 		parent::__construct();
@@ -71,8 +77,17 @@ class Payroll_Model extends CI_Model
 		}
 		
     }
+
+    public function get_last_month()
+    {
+        $result = $this->db->query("SELECT payroll.id, payroll.date, payroll.amount, staffs.name FROM payroll JOIN staffs ON staffs.id = payroll.staff_id WHERE year(date) = year(current_date) AND month(date) = month(current_date);");
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return false;
+        }
+    }
+
+
  }
 	
-
-
- ?>

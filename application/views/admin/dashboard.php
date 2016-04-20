@@ -114,7 +114,7 @@
                             <div class="sort form">
                                 <div>
                                     <label for="name">name </label>
-                                        <input type="text"name="name"id="name" required="" class="field size4">
+                                        <input type="text"name="name"id="name" required="" class="field size5">
                                 </div>
                                 <div>
                                     <label for="description">Description</label>

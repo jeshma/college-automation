@@ -5,7 +5,15 @@
 */
 class Exam_Model extends CI_Model
 {
-	
+
+    protected $fields = [
+        'examtypes.id',
+        'examtypes.name',
+        'examtypes.date',
+        'examtypes.time',
+        'examtypes.duration',
+        'departments.name as department_name'
+    ];
 
 	public function __construct()
 	{
@@ -17,6 +25,8 @@ class Exam_Model extends CI_Model
 
 	public function view_all()
 	{
+        $this->db->select($this->fields);
+        $this->db->join('departments', 'departments.id = examtypes.departments_id');;
 		$result = $this->db->get('examtypes');
 		if($result->num_rows() >= 1)
 		{

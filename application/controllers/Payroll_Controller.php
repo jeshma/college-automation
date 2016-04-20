@@ -26,6 +26,19 @@ class Payroll_Controller extends Check_Logged
 		$this->load->view('admin/view_payroll',$data);
 		}
 
+
+    public function view_last_month()
+    {
+        $data = $this->Payroll_Model->get_last_month();
+        if ($data != false) {
+            $data['payroll'] = $data;
+        }
+        $this->load->view('admin/view_payroll');
+
+    }
+
+
+
 		public function view($id)
 		{
 			$where = ['id' => $id];
@@ -45,12 +58,12 @@ class Payroll_Controller extends Check_Logged
 	
 		public function add()
 		{
-			$this->form_validation->set_rules('staffs','staffs','required');	
+			$this->form_validation->set_rules('staff','staff','required');
 			$this->form_validation->set_rules('date','date','required');
 			$this->form_validation->set_rules('amount','amount','required');	
 			if($this->form_validation->run() === FALSE)		
 			{
-				
+				var_dump('fail');
 				$this->load->view('admin/Add_payroll');
 			}
 			else
@@ -58,7 +71,7 @@ class Payroll_Controller extends Check_Logged
 
 				$data=[
 
-					'staff_id' => $this->input->post('staffs'),
+					'staff_id' => $this->input->post('staff'),
 					'date' => $this->input->post('date'),
 					'amount' => $this->input->post('amount'), 
 				];
@@ -75,7 +88,7 @@ class Payroll_Controller extends Check_Logged
 				else
 				{
 					$data=['error' => 'insertion failed'];
-				    $this->load->view('admin/Add_payroll',$data);
+				    $this->load->view('admin/view_payroll',$data);
 				}
 
 			}

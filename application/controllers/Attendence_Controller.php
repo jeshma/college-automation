@@ -23,20 +23,22 @@ defined('BASEPATH') OR exit('no direct script access allowed');
  	public function add_attendence()
  	{
  		$this->form_validation->set_rules('staff','Name','required');
- 		$this->form_validation->set_rules('attendence','Attendence','required');
- 	
+ 		$this->form_validation->set_rules('attendance','Attandence','required');
+
  		if($this->form_validation->run('attendence') === FALSE)
 		{
-			$this->load->view('admin/add_attendence');
+			$this->load->view('admin/view_attendence');
 		}
 		else
 		{
 	 		$name = $this->input->post('staff');
-	 		$attendence = $this->input->post('attendence');
+	 		$attendence = $this->input->post('attendance');
+	 		$date = $this->input->post('date');
 
 	 		$data = [
 	 					'staff_id'=>$name,
-	 					'attendance'=>$attendence
+	 					'attendance'=>$attendence,
+	 					'date'=> $date
 	 		];
 	 		$query= $this->Attendence_Model->add($data);
 			
@@ -44,14 +46,14 @@ defined('BASEPATH') OR exit('no direct script access allowed');
 			{			
 				$data['message'] = '<script type="text/javascript">
 										alert("adding success");
-										window.location = "'.base_url().'Admin_Controller/add_attendence"
+										window.location = "'.base_url('dashboard/attendance').'"
 									</script>';
-				$this->load->view('admin/add_attendence',$data);
+				$this->load->view('admin/view_attendence',$data);
 			}
 			else
 			{
 				$data=['error' => 'insertion failed'];
-			    $this->load->view('admin/add_attendence',$data);
+			    $this->load->view('admin/view_attendence',$data);
 			}
 		
 	}	}

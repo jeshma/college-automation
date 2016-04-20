@@ -51,6 +51,7 @@ class Exam_Controller extends Check_Logged
 		$this->form_validation->set_rules('departments','department','required');
 		$this->form_validation->set_rules('date','Date','required');
 		$this->form_validation->set_rules('time','time','required');
+		$this->form_validation->set_rules('duration','duration','required');
 
 
 		     if($this->form_validation->run() === FALSE)
@@ -67,6 +68,7 @@ class Exam_Controller extends Check_Logged
 				     'name' => $this->input->post('name'),
 				     'date' => $this->input->post('date'),
 				     'time' => $this->input->post('time'),
+				     'duration' => $this->input->post('duration'),
 				     'departments_id' => $this->input->post('departments')
 			         ];
 			        if ($this->Exam_Model->add($data) != FALSE) 
@@ -76,7 +78,7 @@ class Exam_Controller extends Check_Logged
 										alert("adding success");
 										window.location = "'.base_url().'Admin_Controller/view_exam"
 									</script>';
-				       $this->load->view('admin/add_exam',$data);
+				       $this->load->view('admin/view_exam',$data);
 			         }
 			         else
 			          {

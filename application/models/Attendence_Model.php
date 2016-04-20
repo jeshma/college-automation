@@ -30,6 +30,16 @@ class Attendence_Model extends CI_Model
 	}
 
 
+    public function get_last_month()
+    {
+        $result = $this->db->query("SELECT staffattend.id, staffattend.attendance, staffattend.date, staffs.name FROM staffattend JOIN staffs ON staffs.id = staffattend.staff_id WHERE year(date) = year(current_date) AND month(date) = month(current_date);");
+        if ($result->num_rows() > 0) {
+            return $result->result();
+        } else {
+            return false;
+        }
+    }
+
 	public function view_where($where)
 	{
 		$this->db->where($where);

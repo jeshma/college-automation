@@ -165,6 +165,8 @@ class Admin_Controller extends Check_Logged
 	public function view_exam()
 
 	{
+        $data['departments']= $this->Department_Model->get_all();
+
 		$data['result'] = $this->Exam_Model->view_all();
 
 		if($data['result']!= FALSE)
@@ -234,8 +236,8 @@ class Admin_Controller extends Check_Logged
 
 	public function view_attendence()
 	{
-		
-		$result =$this->Attendence_Model->view_all();
+        $data['staff'] = $this->Staff_Model->view_all();
+		$result =$this->Attendence_Model->get_last_month();
 		$data['result'] = $result;
 		$this->load->view('admin/view_attendence', $data);
 		
@@ -250,6 +252,20 @@ class Admin_Controller extends Check_Logged
 		$data['result'] = $this->Staff_Model->view_all();
 		$this->load->view('admin/Add_payroll',$data);
 	}
+
+
+    public function view_payroll()
+
+    {
+
+        $data = $this->Payroll_Model->get_last_month();
+        if ($data != false) {
+            $data['payroll'] = $data;
+        }
+
+        $data['staff'] = $this->Staff_Model->view_all();
+        $this->load->view('admin/view_payroll',$data);
+    }
 
 
 	

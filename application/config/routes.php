@@ -75,6 +75,20 @@ $route['dashboard/logout'] = 'User_Controller/logout';
 $route['dashboard/test'] = 'User_Controller/test';
 
 
+/*Applications*/
+
+$route['dashboard/applications'] = 'Admin_Controller/view_application';
+$route['dashboard/applications/accept/(:num)'] = 'Admin_Controller/accept/$1';
+$route['dashboard/applications/selected'] = 'Admin_Controller/view_selected';
+$route['dashboard/applications/delete/(:num)'] = 'Admin_Controller/delete/$1';
+
+$route['dashboard/applications/approve/(:num)'] = 'Admin_Controller/approve/$1';
+$route['dashboard/applications/reject/(:num)'] = 'Admin_Controller/reject/$1';
+
+$route['dashboard/applications/approved'] = 'Admin_Controller/view_approved';
+
+
+
 /*department*/
 
 $route['dashboard/department'] = 'Department_Controller';
@@ -109,9 +123,13 @@ $route['dashboard/staff/delete/(:num)']='Staff_Controller/delete/$1';
 
 /*exam*/
 $route['dashboard/exam'] = 'Admin_Controller/view_exam';
+$route['dashboard/exam/add'] = 'Exam_controller/add';
+$route['dashboard/exam/delete/(:num)'] = 'Exam_controller/delete/$1';
+
 
 /*attendence*/
-$route['dashboard/attendence'] = 'Admin_Controller/add_attendence';
+$route['dashboard/attendance'] = 'Admin_Controller/view_attendence';
+$route['dashboard/attendance/add'] = 'Attendence_Controller/add_attendence';
 
 
 
@@ -119,14 +137,18 @@ $route['dashboard/attendence'] = 'Admin_Controller/add_attendence';
 $route['dashboard/subject'] = 'Admin_Controller/add_subject';
 
 /*payroll*/
-$route['dashboard/payroll'] = 'Admin_Controller/Add_payroll';
-//$route['dashboard/payroll/add/submit'] = 'Payroll_Controller/add';
-//$route['dashboard/payroll'] = 'Payroll_Controller/view';
+
+$route['dashboard/payroll'] = 'Admin_Controller/view_payroll';
+$route['dashboard/payroll/add'] = 'Payroll_Controller/add';
+
+
 
 /*student_details*/
-$route['dashboard/students/view'] = 'Admin_Controller/view_student_details';
 $route['dashboard/students'] = 'Student_Details_Controller';
-//$route['dashboard/payroll/add/submit'] = 'Payroll_Controller/add';
+$route['dashboard/students/view'] = 'Admin_Controller/view_student_details';
+$route['dashboard/students/search'] = 'Student_Details_Controller/search';
+$route['dashboard/students/add'] = 'Student_Details_Controller/add';
+$route['dashboard/students/add/submit'] = 'Student_Details_Controller/submit';
 //$route['dashboard/payroll'] = 'Payroll_Controller/view';
 
 

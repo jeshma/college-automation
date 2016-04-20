@@ -120,16 +120,21 @@ function dashboard_menu($current)
             'icon' => 'fa-folder',
             'link' => 'payroll'
         ],
-         'attendence' => [
-            'title' => 'attendence',
+         'attendance' => [
+            'title' => 'attendance',
             'icon' => 'fa-folder',
-            'link' => 'attendence'
+            'link' => 'attendance'
         ],
          'students' => [
             'title' => 'students',
             'icon' => 'fa-folder',
             'link' => 'students'
         ],
+        'applications' => [
+            'title' => 'applications',
+            'icon' => 'fa-folder',
+            'link' => 'applications'
+        ]
 
     ];
 

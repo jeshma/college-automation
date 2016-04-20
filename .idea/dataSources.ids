@@ -56,7 +56,6 @@
       <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="description" sqlType="VARCHAR" precision="500" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="department_id" table="examtypes" schema="" catalog="website" columns="department_id"/>
     </table>
     <table name="examresults" schema="" catalog="website" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -80,9 +79,9 @@
       <column name="name" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
       <column name="time" sqlType="TIME" precision="8" scale="0" nullable="true" jdbcType="92"/>
       <column name="date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
-      <column name="department_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="duration" sqlType="TIME" precision="8" scale="0" nullable="true" jdbcType="92"/>
+      <column name="departments_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="department_id" columns="department_id" ref-table="departments" ref-schema="" ref-catalog="website" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="exam_type" table="examresults" schema="" catalog="website" columns="exam_type_id"/>
     </table>
     <table name="marks" schema="" catalog="website" type="TABLE">
@@ -194,6 +193,21 @@
       <primary-key name="PRIMARY" columns="id"/>
       <exported-key name="staff" table="payroll" schema="" catalog="website" columns="staff_id"/>
       <exported-key name="staffid" table="staffattend" schema="" catalog="website" columns="staff_id"/>
+    </table>
+    <table name="students" schema="" catalog="website" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="dob" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="gender" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12" remarks="CQ=="/>
+      <column name="application_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="cource_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="department_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="course_name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="department_name" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
     </table>
     <table name="subject" schema="" catalog="website" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
