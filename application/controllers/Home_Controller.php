@@ -28,7 +28,7 @@ class Home_Controller extends CI_Controller
 	{
 		$this->load->view($page);
 	}
-	public function registration($page = 'regist')
+	public function registration($page = 'application')
 	{
 		$this->load->view($page);
 	}

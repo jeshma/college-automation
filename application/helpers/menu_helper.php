@@ -134,33 +134,17 @@ function dashboard_menu($current)
             'title' => 'applications',
             'icon' => 'fa-folder',
             'link' => 'applications'
+        ],
+        'subjects' => [
+            'title' => 'subjects',
+            'icon' => 'fa-folder',
+            'link' => 'subjects'
         ]
+
 
     ];
 
     $html = '';
-    /*$html .='<nav class="sidebar-left">
-        <div class="">
-          <ul class="menu-left">
-            <li>
-              <div class="user-img">
-                <img class="img-responsive img-circle center-block" src="'.base_url().'" alt="User">
-              </div>
-              <div class="user-id text-center">
-                <span class="">Jamia</span>
-              </div>
-            </li>';
-    foreach ($menu as $key => $value) {
-        if ($current == $key) {
-            $html .='<li><a href="'.base_url('dashboard/'.$value['link']).'" class="active">'.ucfirst($key).' &nbsp;<i class="menu-icon fa '.$value['icon'].' pull-right"></i></a></li>';
-        } else {
-            $html .='<li><a href="'.base_url('dashboard/'.$value['link']).'" class="">'.ucfirst($key).' &nbsp;<i class="menu-icon fa '.$value['icon'].' pull-right"></i></a></li>';
-        }
-    }
-    $html .= '</ul>
-        </div>
-      </nav>';*/
-
     $html .= '<ul>';
     foreach ($menu as $key => $value) {
         if ($current == $key) {

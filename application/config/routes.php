@@ -134,7 +134,8 @@ $route['dashboard/attendance/add'] = 'Attendence_Controller/add_attendence';
 
 
 /*subject*/
-$route['dashboard/subject'] = 'Admin_Controller/add_subject';
+$route['dashboard/subjects'] = 'Admin_Controller/add_subject';
+$route['dashboard/subjects/add'] = 'Subject_Controller/add';
 
 /*payroll*/
 
@@ -152,6 +153,11 @@ $route['dashboard/students/add/submit'] = 'Student_Details_Controller/submit';
 
 $route['dashboard/students/add/(:num)'] = 'Student_Details_Controller/add_dir/$1';
 //$route['dashboard/payroll'] = 'Payroll_Controller/view';
+
+
+
+/*subjects*/
+$route['dashboard/subjects'] = 'Admin_Controller/add_subject';
 
 
 /*application routes*/
