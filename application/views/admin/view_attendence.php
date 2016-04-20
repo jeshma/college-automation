@@ -48,7 +48,7 @@
 
         <!-- Main Nav -->
         <div id="navigation">
-            <?php echo dashboard_menu('dashboard')?>
+            <?php echo dashboard_menu('attendance')?>
         </div>
         <!-- End Main Nav -->
         <div class="msg msg-error">

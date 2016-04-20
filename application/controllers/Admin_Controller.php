@@ -18,6 +18,7 @@ class Admin_Controller extends Check_Logged
 		$this->load->model('Attendence_Model');
 		$this->load->model('Department_Model');
 		$this->load->model('Payroll_Model');
+		$this->load->model('Course_Model');
 		$this->load->model('Exam_Model');
 		$this->load->model('Student_Details_Model');
 		}
@@ -31,7 +32,7 @@ class Admin_Controller extends Check_Logged
 	
 	{
 		if ($this->logged == true) {
-		$this->load->view('admin/dashboard');	
+			$this->load->view('admin/dashboard');	
 		}
 		else
 		{
@@ -42,24 +43,37 @@ class Admin_Controller extends Check_Logged
 
 	public function login()
 	{
-		$this->load->view('admin/login');
+		if ($this->logged == true) {
+			redirect(base_url('dashboard'));
+		}
+		else
+		{
+			$this->load->view('admin/login');
+		}
 	}
 
 	public function view_application()
 	
 	{
-		$where = ['status' => 'request'];
-		$data['result'] =$this->Application_Model->view_where($where);
+		if ($this->logged == true) {
+			# code...
+			$where = ['status' => 'request'];
+			$data['result'] =$this->Application_Model->view_where($where);
 
-		if( $data['result']!= FALSE)
-		{
-			$this->load->view('admin/view_applications', $data);
+			if( $data['result']!= FALSE)
+			{
+				$this->load->view('admin/view_applications', $data);
 
+			}
+			else
+			{
+				$data['message'] = 'No data available';
+				$this->load->view('admin/view_applications', $data);
+			}
 		}
 		else
 		{
-			$data['message'] = 'No data available';
-			$this->load->view('admin/view_applications', $data);
+			redirect(base_url('login'));
 		}
 	}
 
@@ -67,10 +81,15 @@ class Admin_Controller extends Check_Logged
 	public function view_selected()
 	
 	{
+		if ($this->logged == true) {
+			# code...
 		$where = ['status' => 'listed'];
 		$result =$this->Application_Model->view_where($where);
 		$data['result'] = $result;
 		$this->load->view('admin/view_selected', $data);
+		}
+		else
+			redirect(base_url('login'));
 	}
 
 	public function accept($id)
@@ -109,10 +128,15 @@ class Admin_Controller extends Check_Logged
 
 	public function view_approved()
 	{
-		$where =['status' => 'approve'];
-		$result = $this->Application_Model->view_where($where);
-		$data['result'] =$result;
-		$this->load->view('admin/view_approved',$data); 
+		if ($this->logged == true) {
+			# code...
+			$where =['status' => 'approve'];
+			$result = $this->Application_Model->view_where($where);
+			$data['result'] =$result;
+			$this->load->view('admin/view_approved',$data); 
+		}else
+			redirect(base_url('login'));
+
 	}
 
 	public function delete($id)
@@ -146,8 +170,12 @@ class Admin_Controller extends Check_Logged
 
 	public function add_exam()
 	{
-		$data['departments']= $this->Department_Model->get_all();
-		$this->load->view('admin/add_exam',$data);
+		if ($this->logged == true) {
+			# code...
+			$data['departments']= $this->Department_Model->get_all();
+			$this->load->view('admin/add_exam',$data);
+		}else
+			redirect(base_url('login'));
 	}
 
 	public function examdele($id)
@@ -165,44 +193,54 @@ class Admin_Controller extends Check_Logged
 	public function view_exam()
 
 	{
-        $data['departments']= $this->Department_Model->get_all();
+		if ($this->logged == true) {
+	        $data['departments']= $this->Department_Model->get_all();
 
-		$data['result'] = $this->Exam_Model->view_all();
+			$data['result'] = $this->Exam_Model->view_all();
 
-		if($data['result']!= FALSE)
-		{
-		$this->load->view('admin/view_exam', $data);
-
-		}
-		else
-		{
-			$data['message'] = 'No data available';
+			if($data['result']!= FALSE)
+			{
 			$this->load->view('admin/view_exam', $data);
-		}
+
+			}
+			else
+			{
+				$data['message'] = 'No data available';
+				$this->load->view('admin/view_exam', $data);
+			}
+		}else
+			redirect(base_url('login'));
 
 	}
 
 
 	public function add_staff()
-	
 	{
+	
+		if ($this->logged == true) {
+			# code...
 		// get all department and pass to the view
-		$data['departments'] = $this->Department_Model->get_all();
-		$this->load->view('admin/view_staffs',$data);
+			$data['departments'] = $this->Department_Model->get_all();
+			$this->load->view('admin/view_staffs',$data);
+		}else
+			redirect(base_url('login'));
 	}
 
 
     public function view_staffs()
     
 	{
-
-        $data['departments'] = $this->Department_Model->get_all();
-		$result =$this->Staff_Model->view_all();
-		if( $result != FALSE)
-		{
-            $data['result'] = $result;
-        }
-        $this->load->view('admin/view_staffs', $data);
+		if ($this->logged == true) {
+			# code...
+	        $data['departments'] = $this->Department_Model->get_all();
+			$result =$this->Staff_Model->view_all();
+			if( $result != FALSE)
+			{
+	            $data['result'] = $result;
+	        }
+	        $this->load->view('admin/view_staffs', $data);
+		}else
+			redirect(base_url('login'));
 
     }
 	public function staffdele($id)
@@ -221,25 +259,34 @@ class Admin_Controller extends Check_Logged
 	public function add_department()
 	
 	{
-		$this->load->view('admin/add_department');
+		if ($this->logged == true) {
+			$this->load->view('admin/add_department');
+		}else
+			redirect(base_url('login'));
 	}
 
 	public function add_attendence()
-	
 	{
-		$data['staffs'] = $this->Staff_Model->view_all();
-		$this->load->view('admin/add_attendence',$data);
-
-
+	
+		if ($this->logged == true) {
+			$data['staffs'] = $this->Staff_Model->view_all();
+			$this->load->view('admin/add_attendence',$data);
+		}else
+			redirect(base_url('login'));
 	}
 
 
 	public function view_attendence()
 	{
-        $data['staff'] = $this->Staff_Model->view_all();
-		$result =$this->Attendence_Model->get_last_month();
-		$data['result'] = $result;
-		$this->load->view('admin/view_attendence', $data);
+
+		if ($this->logged == true) {
+			# code...
+	        $data['staff'] = $this->Staff_Model->view_all();
+			$result =$this->Attendence_Model->get_last_month();
+			$data['result'] = $result;
+			$this->load->view('admin/view_attendence', $data);
+		}else
+			redirect(base_url('login'));
 		
 
 	}
@@ -249,22 +296,29 @@ class Admin_Controller extends Check_Logged
 	public function add_payroll()
 	
 	{ 	
-		$data['result'] = $this->Staff_Model->view_all();
-		$this->load->view('admin/Add_payroll',$data);
+		if ($this->logged == true) {
+			# code...
+			$data['result'] = $this->Staff_Model->view_all();
+			$this->load->view('admin/Add_payroll',$data);
+		}else
+			redirect(base_url('login'));
 	}
 
 
     public function view_payroll()
 
     {
+		if ($this->logged == true) {
+			# code...
+	        $data = $this->Payroll_Model->get_last_month();
+	        if ($data != false) {
+	            $data['payroll'] = $data;
+	        }
 
-        $data = $this->Payroll_Model->get_last_month();
-        if ($data != false) {
-            $data['payroll'] = $data;
-        }
-
-        $data['staff'] = $this->Staff_Model->view_all();
-        $this->load->view('admin/view_payroll',$data);
+	        $data['staff'] = $this->Staff_Model->view_all();
+	        $this->load->view('admin/view_payroll',$data);
+		}else
+			redirect(base_url('login'));
     }
 
 
@@ -274,7 +328,11 @@ class Admin_Controller extends Check_Logged
 public function add_semester()
 
 	{
-		$this->load->view('admin/add_semester');
+		if ($this->logged == true) {
+			# code...
+			$this->load->view('admin/add_semester');
+		}else
+			redirect(base_url('login'));
 	}
 
 	public function semdelete($id)
@@ -292,19 +350,28 @@ public function add_semester()
 
 	public function add_subject()
 	{
-		$this->load->view('admin/add_subject');
+		if ($this->logged == true) {
+			# code...
+			$this->load->view('admin/add_subject');
+		}else
+			redirect(base_url('login'));
 	}
     
 
     public function view_student_details()
     {
-    	$data['result'] =$this->Student_Details_Model->view_all();
-	
-		if( $data['result']!= FALSE)
-		{
-			$this->load->view('admin/view_student_details', $data);
+    	if ($this->logged == true) {
+    		# code...
+	    	$data['course'] = $this->Course_Model->get_all();
+	    	$data['result'] =$this->Student_Details_Model->view_all();
+			if( $data['result']!= FALSE)
+			{
+				$this->load->view('admin/view_student_details', $data);
 
-		}
+			}
+    	}
+    	else
+    		redirect(base_url('login'));
     }
 
 

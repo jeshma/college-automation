@@ -18,8 +18,14 @@ class Department_Controller extends Check_Logged
 
 	public function index()
 	{
-		$data['result'] = $this->Department_Model->get_all();
-		$this->load->view('admin/dashboard',$data);
+		if ($this->logged == true) {
+				# code...
+			$data['result'] = $this->Department_Model->get_all();
+			$this->load->view('admin/dashboard',$data);
+		}
+		else
+			redirect(base_url('login'));
+
 	}
 
 

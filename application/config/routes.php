@@ -66,7 +66,7 @@ $route['login'] = 'Admin_Controller/login';
 
 $route['dashboard/login'] = 'User_Controller/verify_login';
 
-$route['dashboard/logout'] = 'User_Controller/logout';
+$route['logout'] = 'User_Controller/logout';
 
 $route['dashboard/login'] = 'Admin_Controller/login';
 $route['dashboard'] = 'Department_Controller';
@@ -149,6 +149,8 @@ $route['dashboard/students/view'] = 'Admin_Controller/view_student_details';
 $route['dashboard/students/search'] = 'Student_Details_Controller/search';
 $route['dashboard/students/add'] = 'Student_Details_Controller/add';
 $route['dashboard/students/add/submit'] = 'Student_Details_Controller/submit';
+
+$route['dashboard/students/add/(:num)'] = 'Student_Details_Controller/add_dir/$1';
 //$route['dashboard/payroll'] = 'Payroll_Controller/view';
 
 

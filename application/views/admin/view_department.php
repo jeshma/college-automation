@@ -20,7 +20,7 @@
 
         <!-- Main Nav -->
         <div id="navigation">
-            <?php echo dashboard_menu('dashboard')?>
+            <?php echo dashboard_menu('department')?>
         </div>
         <!-- End Main Nav -->
         <div class="msg msg-error">
