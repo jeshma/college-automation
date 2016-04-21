@@ -32,23 +32,18 @@
 		else
 		{
 	 		$name = $this->input->post('name');
-	 		$id = $this->input->post('id');
 
-	 		$data = ['name'=>$name];
+	 		$data = ['name' => $name];
 	 					
 	 		$subject_id = $this->Subject_Model->add($data);
 			
 			if($subject_id != FALSE)
 			{
-				$data = [
-					'subject_id' => $subject_id,
-					'semester_id' => $id
-				];
-				// $data['message'] = '<script type="text/javascript">
-				// 						alert("adding success");
-				// 						window.location = "'.$_SERVER["HTTP_REFERER"].'"
-				// 					</script>';
-				// $this->load->view('admin/add_subject',$data);
+				$data['message'] = '<script type="text/javascript">
+										alert("adding success");
+										window.location = "'.$_SERVER["HTTP_REFERER"].'"
+									</script>';
+				$this->load->view('admin/add_subject',$data);
 			}
 			else
 			{

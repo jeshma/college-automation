@@ -227,7 +227,7 @@
 
         <!-- Main Nav -->
         <div id="navigation">
-            <?php echo dashboard_menu('dashboard')?>
+            <?php echo dashboard_menu('students')?>
         </div>
         <!-- End Main Nav -->
         <div class="msg msg-error">
@@ -254,139 +254,222 @@
 
             <!-- Content -->
             <div id="content">
-
                 <!-- Box -->
                 <div class="box">
                     <!-- Box Head -->
                     <div class="box-head">
-                        <h2 class="left">Exams</h2>
+                        <h2 class="left">Student details</h2>
                     </div>
 
-                    <form action="<?php echo base_url('dashboard/students/add/submit') ?>" name="addform" id="addform" method="POST">
-                        <div class="sort form">
-                            <div>
-                                <label for="name">Name</label>
-                                <input type="text" required="" name="name" id="name" required="" class="field size5">
-                            </div>
-                            <div>
-                                <label for="course">Course</label>
-                                <select name="course" id="course" class="field" required="" >
-                                    <option value="" disabled selected >select course</option>
-                                    <?php foreach ($course as $value) {
-                                        echo '<option value="'.$value->id.'">'.$value->name.'</option>';
-                                    } ?>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="dob">D O B</label>
-                                <input class="field size5" type="text" name="date" id="date" required="" />
-<!--                                <select name="day" required="" >-->
-<!--                                    <option value="1995">1995</option>-->
-<!--                                    <option value="1996">1996</option>-->
-<!--                                    <option value="1997">1997</option>-->
-<!--                                    <option value="1998">1998</option>-->
-<!--                                </select>-->
-<!--                                <select name="day" >-->
-<!--                                    <option value="1">1</option>-->
-<!--                                    <option value="2">2</option>-->
-<!--                                    <option value="3">3</option>-->
-<!--                                    <option value="4">4</option>-->
-<!--                                </select>-->
-<!--                                <select name="day" >-->
-<!--                                    <option value="1">1</option>-->
-<!--                                    <option value="2">2</option>-->
-<!--                                    <option value="3">3</option>-->
-<!--                                    <option value="4">4</option>-->
-<!--                                </select>-->
-                            </div>
-                            <div>
-                                <label for="address">Address</label>
-                                    <textarea name="address" required="" class="field size5"></textarea>
-                            </div>
-                            <div>
-                                <label for="gender">Gender</label>
-                            <input class="field size5" type="radio" name="gender" value="male">Male
-                                <input class="field size5" type="radio" name="gender" value="female">Female
-                            </div>
-                            <div>
-                                <label for="father">Father</label>
-                            <input class="field size5" type="text" name="father" id="father">
-                            </div>
-                            <div>
-                                <label for="mother">Mother</label>
-                                <input class="field size5" type="text" name="mother" id="mother">
-                            </div>
-                            <div>
-                                <label for="pin">Pin code</label>
-                                <input class="field size5" type="text" name="pin" id="pin" required="" >
-                            </div>
-                            <div>
-                                <label for="income">Income</label>
-                                <input class="field size5" type="text" name="income" id="income">
-                            </div>
-                            <div>
-                                <label for="phone">Phone</label>
-                                <input class="field size5" type="text" name="phone" id="phone" >
-                            </div>
-                            <div>
-                                <label for="mail">Mail</label>
-                                <input class="field size5" type="text" name="mail" id="mail">
-                            </div>
-                            <div>
-                                <label for="community">Community</label>
-                                <input class="field size5" type="text" name="community" id="community">
-                            </div>
-                            <div>
-                                <label for="cast">Cast</label>
-                                <input class="field size5" type="text" name="cast" id="cast">
-                            </div>
-                            <div>
-                                <label for="panchayath">Panchayath</label>
-                                <input class="field size5" type="text" name="panchayath" id="panchayath">
-                            </div>
-                            <div>
-                                <label for="taluk">taluk</label>
-                                 <input class="field size5" type="text" name="taluk" id="taluk">
-                            </div>
-                            <div>
-                                <label for="district">District</label>
-                                 <input class="field size5" type="text" name="district" id="district">
-                            </div>
-                            <div>
-                                <label for="marital_status">Marital status</label>
-<!--                                 <input class="field size5" type="text" name="martial_status" id="martial_status">-->
-                                <select class="field size5" name="marital_status" id="marital_status">
-                                    <option value="married">married</option>
-                                    <option value="un-married">un-married</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="institute">Last studied institute</label>
-                                <input class="field size5" type="text" name="institute" id="institute">
-                            </div>
-                            <div>
-                                <label for="physical">Physical handicapped</label>
-                                <select class="field size5" name="physical" id="physical">
-                                    <option value="yes">yes</option>
-                                    <option value="no">no</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="course">Course</label>
-                                 <select name="course" id="course" required="" class="field size5">
-                                     <option value=""disabled selected>select course</option>
-                                    <?php foreach ($course as $value) {
-                                        echo '<option value="'.$value->id.'">'.$value->name.'</option>';
-                                    } ?>
-                                </select>
-                            </div>
+                    <?php if (isset($applicant) and $applicant != false) {  ?>
+                        <form action="<?php echo base_url('dashboard/students/add/submit') ?>" name="addform" id="addform" method="POST">
+                            <div class="sort form">
+                                <div>
+                                    <label for="name">Name</label>
+                                    <input type="text" required="" name="name" id="name" required="" class="field size5" value="<?php echo $applicant[0]->name;?>">
+                                </div>
+                                <div>
+                                    <label for="course">Course</label>
+                                    <select name="course" id="course" class="field" required="" >
+                                        <option value="" disabled selected >select course</option>
+                                        <?php foreach ($course as $value) {
+                                            echo '<option value="'.$value->id.'">'.$value->name.'</option>';
+                                        } ?>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="dob">D O B</label>
+                                    <input class="field size5" type="text" name="date" id="date" required="" value="<?php echo $applicant[0]->dob;?>"/>
+                                </div>
+                                <div>
+                                    <label for="address">Address</label>
+                                        <textarea name="address" required="" class="field size5"><?php echo $applicant[0]->dob;?></textarea>
+                                </div>
+                                <div>
+                                    <label for="gender">Gender</label>
+                                <input class="field size5" type="radio" name="gender" value="male">Male
+                                    <input class="field size5" type="radio" name="gender" value="female">Female
+                                </div>
+                                <div>
+                                    <label for="father">Father</label>
+                                <input class="field size5" type="text" name="father" id="father">
+                                </div>
+                                <div>
+                                    <label for="mother">Mother</label>
+                                    <input class="field size5" type="text" name="mother" id="mother">
+                                </div>
+                                <div>
+                                    <label for="pin">Pin code</label>
+                                    <input class="field size5" type="text" name="pin" id="pin" required="" >
+                                </div>
+                                <div>
+                                    <label for="income">Income</label>
+                                    <input class="field size5" type="text" name="income" id="income">
+                                </div>
+                                <div>
+                                    <label for="phone">Phone</label>
+                                    <input class="field size5" type="text" name="phone" id="phone" >
+                                </div>
+                                <div>
+                                    <label for="mail">Mail</label>
+                                    <input class="field size5" type="text" name="mail" id="mail">
+                                </div>
+                                <div>
+                                    <label for="community">Community</label>
+                                    <input class="field size5" type="text" name="community" id="community">
+                                </div>
+                                <div>
+                                    <label for="cast">Cast</label>
+                                    <input class="field size5" type="text" name="cast" id="cast">
+                                </div>
+                                <div>
+                                    <label for="panchayath">Panchayath</label>
+                                    <input class="field size5" type="text" name="panchayath" id="panchayath">
+                                </div>
+                                <div>
+                                    <label for="taluk">taluk</label>
+                                     <input class="field size5" type="text" name="taluk" id="taluk">
+                                </div>
+                                <div>
+                                    <label for="district">District</label>
+                                     <input class="field size5" type="text" name="district" id="district">
+                                </div>
+                                <div>
+                                    <label for="marital_status">Marital status</label>
+    <!--                                 <input class="field size5" type="text" name="martial_status" id="martial_status">-->
+                                    <select class="field size5" name="marital_status" id="marital_status">
+                                        <option value="married">married</option>
+                                        <option value="un-married">un-married</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="institute">Last studied institute</label>
+                                    <input class="field size5" type="text" name="institute" id="institute">
+                                </div>
+                                <div>
+                                    <label for="physical">Physical handicapped</label>
+                                    <select class="field size5" name="physical" id="physical">
+                                        <option value="yes">yes</option>
+                                        <option value="no">no</option>
+                                    </select>
+                                </div>
+                               <!--  <div>
+                                    <label for="course">Course</label>
+                                     <select name="course" id="course" required="" class="field size5">
+                                         <option value=""disabled selected>select course</option>
+                                        <?php foreach ($course as $value) {
+                                            echo '<option value="'.$value->id.'">'.$value->name.'</option>';
+                                        } ?>
+                                    </select>
+                                </div> -->
 
+                                </div>
+                                <div class="buttons button-left">
+                                    <input type="submit" class="button" value="submit" />
+                                </div>
                             </div>
-                            <div class="buttons button-left">
-                                <input type="submit" class="button" value="submit" />
+                        </form>
+                    <?php  } else { ?>
+
+                        <form action="<?php echo base_url('dashboard/students/add/submit') ?>" name="addform" id="addform" method="POST">
+                            <div class="sort form">
+                                <div>
+                                    <label for="name">Name</label>
+                                    <input type="text" required="" name="name" id="name" required="" class="field size5">
+                                </div>
+                                <div>
+                                    <label for="course">Course</label>
+                                    <select name="course" id="course" class="field" required="" >
+                                        <option value="" disabled selected >select course</option>
+                                        <?php foreach ($course as $value) {
+                                            echo '<option value="'.$value->id.'">'.$value->name.'</option>';
+                                        } ?>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="dob">D O B</label>
+                                    <input class="field size5" type="text" name="date" id="date" required="" />
+                                </div>
+                                <div>
+                                    <label for="address">Address</label>
+                                        <textarea name="address" required="" class="field size5"></textarea>
+                                </div>
+                                <div>
+                                    <label for="gender">Gender</label>
+                                <input class="field size5" type="radio" name="gender" value="male">Male
+                                    <input class="field size5" type="radio" name="gender" value="female">Female
+                                </div>
+                                <div>
+                                    <label for="father">Father</label>
+                                <input class="field size5" type="text" name="father" id="father">
+                                </div>
+                                <div>
+                                    <label for="mother">Mother</label>
+                                    <input class="field size5" type="text" name="mother" id="mother">
+                                </div>
+                                <div>
+                                    <label for="pin">Pin code</label>
+                                    <input class="field size5" type="text" name="pin" id="pin" required="" >
+                                </div>
+                                <div>
+                                    <label for="income">Income</label>
+                                    <input class="field size5" type="text" name="income" id="income">
+                                </div>
+                                <div>
+                                    <label for="phone">Phone</label>
+                                    <input class="field size5" type="text" name="phone" id="phone" >
+                                </div>
+                                <div>
+                                    <label for="mail">Mail</label>
+                                    <input class="field size5" type="text" name="mail" id="mail">
+                                </div>
+                                <div>
+                                    <label for="community">Community</label>
+                                    <input class="field size5" type="text" name="community" id="community">
+                                </div>
+                                <div>
+                                    <label for="cast">Cast</label>
+                                    <input class="field size5" type="text" name="cast" id="cast">
+                                </div>
+                                <div>
+                                    <label for="panchayath">Panchayath</label>
+                                    <input class="field size5" type="text" name="panchayath" id="panchayath">
+                                </div>
+                                <div>
+                                    <label for="taluk">taluk</label>
+                                     <input class="field size5" type="text" name="taluk" id="taluk">
+                                </div>
+                                <div>
+                                    <label for="district">District</label>
+                                     <input class="field size5" type="text" name="district" id="district">
+                                </div>
+                                <div>
+                                    <label for="marital_status">Marital status</label>
+    <!--                                 <input class="field size5" type="text" name="martial_status" id="martial_status">-->
+                                    <select class="field size5" name="marital_status" id="marital_status">
+                                        <option value="married">married</option>
+                                        <option value="un-married">un-married</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="institute">Last studied institute</label>
+                                    <input class="field size5" type="text" name="institute" id="institute">
+                                </div>
+                                <div>
+                                    <label for="physical">Physical handicapped</label>
+                                    <select class="field size5" name="physical" id="physical">
+                                        <option value="yes">yes</option>
+                                        <option value="no">no</option>
+                                    </select>
+                                </div>
+                                
+                                </div>
+                                <div class="buttons button-left">
+                                    <input type="submit" class="button" value="submit" />
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                       <?php } ?>     
                 </div>
             </div>
             <!-- End Content -->

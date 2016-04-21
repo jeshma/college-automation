@@ -13,14 +13,14 @@
 		<div id="top">
 			<h1><a href="#">Jamia Collage</a></h1>
 			<div id="top-navigation">
-				Welcome <a href="#"><strong>Administrator</strong></a>
+				Welcome <a href="<?php echo base_url('logout')?>"><strong>logout</strong></a>
 			</div>
 		</div>
 		<!-- End Logo + Top Nav -->
 		
 		<!-- Main Nav -->
 		<div id="navigation">
-            <?php echo dashboard_menu('dashboard')?>
+            <?php echo dashboard_menu('departments')?>
         </div>
 		<!-- End Main Nav -->
 	</div>

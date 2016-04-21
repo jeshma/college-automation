@@ -13,14 +13,14 @@
         <div id="top">
             <h1><a href="#">Jamia Collage</a></h1>
             <div id="top-navigation">
-                Welcome <a href="#"><strong>Administrator</strong></a>
+                Welcome <a href="<?php echo base_url('logout'); ?>"><strong>Logout</strong></a>
             </div>
         </div>
         <!-- End Logo + Top Nav -->
 
         <!-- Main Nav -->
         <div id="navigation">
-            <?php echo dashboard_menu('dashboard')?>
+            <?php echo dashboard_menu('departments')?>
         </div>
         <!-- End Main Nav -->
         <div class="msg msg-error">
@@ -116,7 +116,7 @@
 
                             <div class="sort form">
                                 <div>
-                                    <select name="subjects" id="subjects" required="">
+                                    <select name="subjects" id="subjects" required="" class="field size5"> 
                                         <option value="" disabled="" selected="">subjects</option>
                                         <?php foreach ($subjects as $key => $value): ?>
                                         <option value="<?php echo $value->id ?>"><?php echo $value->name ?></option>

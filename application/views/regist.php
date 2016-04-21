@@ -1,21 +1,9 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="<?php echo base_url('css/styleapp.css');?>">
-</head>
-<body>
-<form name="register"action="" method="post">
-=======
-<html lang="en">
-  <head>
-    <!--=============================================== 
-    Template Design By WpFreeware Team.
-    Author URI : http://www.wpfreeware.com/
-    ====================================================-->
+	
 
     <!-- Basic Page Needs
     ================================================== -->
@@ -85,6 +73,7 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                 <li class="active"><a href="<?php echo base_url('index')?>">Home</a></li>
+                <li class="active"><a href="<?php echo base_url('registration')?>">Registration</a></li>
                 <li><a href="<?php echo base_url('scholarship') ?>">Scholarship</a></li>
                 <li><a href="<?php echo base_url('login') ?>">Login</a></li>
               </ul>
@@ -97,95 +86,84 @@
     <!--=========== END HEADER SECTION ================-->
 			<div>
 				
-				<form name="register"action="" method="post">
->>>>>>> 24cea2d2f728f78104c348fc68d4f5404dfde5c5
+	<form name="register"action="" method="post">
 	<h2>APPLICATION FORM</h2>
-	<BR/>
-	<br/>
 	<div class="group">
-	NAME:<input type="text"name="NAME"ID="NAME"><br/><br/>
-	DOB:<select name="day">
-<option namevalue="1">1</option>
-<option namevalue="2">2</option>
-<option namevalue="3">3</option>
-<option namevalue="4">4</option>
-<option namevalue="5">5</option>
-<option namevalue="6">6</option>
-<option namevalue="7">7</option>
-<option namevalue="8">8</option>
-<option namevalue="9">9</option>
-<option namevalue="10">10</option>
-<option namevalue="11">11</option>
-<option namevalue="12">12</option>
-<option namevalue="13">13</option>
-<option namevalue="14">14</option>
-<option namevalue="15">15</option>
-<option namevalue="16">16</option>
-<option namevalue="17">17</option>
-<option namevalue="18">18</option>
-<option namevalue="19">19</option>
-<option namevalue="20">20</option>
-<option namevalue="21">21</option>
-<option namevalue="22">22</option>
-<option namevalue="23">23</option>
-<option namevalue="24">24</option>
-<option namevalue="25">25</option>
-<option namevalue="26">26</option>
-<option namevalue="27">27</option>
-<option namevalue="28">28</option>
-<option namevalue="29">29</option>
-<option namevalue="30">30</option>
-<option namevalue="31">31</option>
-</select>
-<select name="Month">
-<option namevalue="1">1</option>
-<option namevalue="2">2</option>
-<option namevalue="3">3</option>
-<option namevalue="4">4</option>
-<option namevalue="5">5</option>
-<option namevalue="6">6</option>
-<option namevalue="7">7</option>
-<option namevalue="8">8</option>
-<option namevalue="9">9</option>
-<option namevalue="10">10</option>
-<option namevalue="11">11</option>
-<option namevalue="12">12</option>
-</select>
-<select name="year">
-<option namevalue="1990">1990</option>
-<option namevalue="1991">1991</option>
-<option namevalue="1992">1992</option>
-<option namevalue="1993">1993</option>
-<option namevalue="1994">1994</option>
-<option namevalue="1995">1995</option>
-<option namevalue="1996">1996</option>
-<option namevalue="1997">1997</option>
-<option namevalue="1998">1998</option>
-<option namevalue="1999">1999</option>
-<option namevalue="2000">2000</option>
-</select>
-<br/><br/>
-
-ADDRESS:<textarea name="address" id="SADDRES"></textarea><br/><br/>
-GENDER:</font></td><td><input type="radio"name="sex"value="M">M
-<input type="radio"name="sex"value="F">F
-<BR/><br/>
-FATHER NAME:<input type="text"name="ufather" id="father"><br/><br/>
+  <div>
+      <label for="name">Name</label>
+  	  NAME:<input type="text"name="name" id="name"><br/><br/>
+  </div>
+  <div>
+    <label for="day"></label>
+  	<input type="text" name="day" id="day"></input>
+  </div>
+  <div>
+    <label for="address">Address</label>
+    ADDRESS:<textarea name="address" id="address"></textarea><br/><br/>
+  </div>
+  <div>
+    <label for="sex">Gender</label>
+    GENDER:</font></td><td><input type="radio"name="sex"value="M">M
+    <input type="radio"name="sex"value="F">F
+  </div>
+  <div>
+    <label for="father">Father</label>
+    FATHER NAME:<input type="text"name="ufather" id="father"><br/><br/>
+  </div>
+  <div>
+    <label for="mother"></label>
 MOTHER NAME:<input type="text"name="umother" id="mother"><br/><br/>
-PIN:<input type="tell" name="num" id="pin"><br/><br/>
-INCOME:<input type="tell" name="in" id="income"><br/><br/>
-NUMBER:<input type="tell" name="num" id="number"><br/><br/>
-MAIL:<input type="mail" name="ma" id="mail"><br/><br/>
-RELIGION&COMMUNITY:<input type="text" name="RELIGION" id="community"><br/><br/>
-CAST:<input type="text"name="ucast"id="cast"><br/><br/>
-PANCHAYATH:<input type="text"name="upanchayath"id="panchayath">
+  </div>
+  <div>
+    <label for="pin"></label>
+PIN:<input type="text" name="pin" id="pin"><br/><br/>
+  </div>
+  <div>
+    <label for="income"></label>
+INCOME:<input type="text" name="income" id="income"><br/><br/>
+  </div>
+  <div>
+    <label for="phone"></label>
+NUMBER:<input type="text" name="phone" id="phone"><br/><br/>
+  </div>
+  <div>
+    <label for="mail"></label>
+MAIL:<input type="mail" name="mail" id="mail"><br/><br/>
+  </div>
+  <div>
+    <label for="comunity"></label>
+RELIGION&COMMUNITY:<input type="text" name="religion" id="community"><br/><br/>
+  </div>
+  <div>
+    <label for="cast"></label>
+  CAST:<input type="text"name="ucast"id="cast"><br/><br/>
+  </div>
+  <div>
+    <label for="panchayath"></label>
+PANCHAYATH:<input type="text"name="panchayath"id="panchayath">
+  </div>
 <br/><br/>
-TALUK:<input type="text"name="uyaluk"id="taluk"><br/><br/>
-DISTRICT:<input type="text"name="udistrict"id="dist"><br/><br/>
-MARTIAL STATUS:<input type="radio" name="umartial"id="martial">Yes
-<input type="radio" name="um"id="mart">No<br/><br/>
-SPOUSE NAME:<input type="text"name="NAME"id="sname"><br/><br/>
+<div>
+  <label for="taluk"></label>
+TALUK:<input type="text"name="taluk"id="taluk"><br/><br/>
+</div>
+<div>
+  <label for="district"></label>
+DISTRICT:<input type="text"name="district"id="dist"><br/><br/>
+</div>
+<div>
+  <label for="merital">Marital status</label>
+  <select name="marital" id="marital">
+    <option value="yes">yes</option>
+    <option value="no">no</option>
+  </select>
+</divi>
+<div>
+  <label for="spouse_name"></label>
+SPOUSE NAME:<input type="text"name="spouse_name"id="spouse_name"><br/><br/>
+</div>
 
+di
 LAST INSTITUTION:<input type="text"name="NAME" ID="last"><br/><br/>
 PHYSICALLY HANDICAPPED:<input type="radio" name="uhand"id="hand">Yes
 <input type="radio" name="phand"id="phand">No<br/><br/>
@@ -194,7 +172,6 @@ COURSE ID:<input type="text"name="Ucourse"id="cours"><br/><br/>
 <input type="submit" name="usubmit" id="submit" value="submit">
 <input type="submit" name="ucancel" id="cancel" value="cancel">
 </form>
-<<<<<<< HEAD
 <?php if (isset($error))
  {
 	echo $error;
@@ -207,9 +184,6 @@ if (isset($message))
 }?>
 
 </div>
-</body>
-=======
-
 			</div>
 
     <!--=========== BEGIN FOOTER SECTION ================-->
