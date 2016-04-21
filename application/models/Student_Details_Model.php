@@ -21,6 +21,25 @@ class Student_Details_Model extends CI_Model
 		$this->load->helper(['url', 'form']);
 		$this->load->database();
 	}
+
+    public function view_all_limit($limit)
+    {
+        $this->db->select($this->fields);
+        $this->db->join('courses', 'courses.id = students.cource_id');
+        // $this->db->join('departments', 'departments.id = students.department_id');
+        $this->db->limit($limit);
+        $result = $this->db->get($this->table);
+        if($result->num_rows() >= 1)
+        {
+            return $result->result();
+
+        }
+        else
+        {
+            return FALSE;
+        }
+    }
+
 		public function view_all()
 	{
 		$this->db->select($this->fields);

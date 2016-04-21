@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="<?php echo base_url('admin/css/style.css')?>" type="text/css" media="all" />
     <link rel="stylesheet" href="<?php echo base_url('admin/css/jquery.timepicker.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('admin/css/jquery.timepicker.min.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('admin/css/jquery-ui.min.css');?>">
 
     <script type="text/javascript" src="<?php echo base_url('js/appjs.js');?>"></script>
 

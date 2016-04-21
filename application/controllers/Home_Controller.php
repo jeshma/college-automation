@@ -52,13 +52,13 @@ class Home_Controller extends CI_Controller
 
 	public function add_application()
 	{
-		 $this->form_validation->set_rules('name', 'Name', 'required');
-		 $this->form_validation->set_rules('address', 'address', 'required');
-		 $this->form_validation->set_rules('guardian', 'guardian', 'required');
-		 $this->form_validation->set_rules('pin', 'pin', 'required');
-		 $this->form_validation->set_rules('course', 'course', 'required');
-		 $this->form_validation->set_rules('firstlang', 'first_lang', 'required');
-		 $this->form_validation->set_rules('secondlang', 'second_lang', 'required');
+		 /*$this->form_validation->set_rules('name', 'Name');
+		 $this->form_validation->set_rules('address', 'address');
+		 $this->form_validation->set_rules('guardian', 'guardian');
+		 $this->form_validation->set_rules('pin', 'pin');
+		 $this->form_validation->set_rules('course', 'course');
+		 $this->form_validation->set_rules('firstlang', 'first_lang');
+		 $this->form_validation->set_rules('secondlang', 'second_lang');
 		 $this->form_validation->set_rules('maths', 'maths', '');
 		 $this->form_validation->set_rules('english', 'english', '');
 		 $this->form_validation->set_rules('chemistry', 'chemistry', '');
@@ -72,14 +72,14 @@ class Home_Controller extends CI_Controller
 		 $this->form_validation->set_rules('politics', 'politics', '');
 		 $this->form_validation->set_rules('statistics', 'statistics', '');
 
-		
+
 
 		if($this->form_validation->run() === FALSE)
-		{
-			$this->load->view('application');
-		}
+        {
+            $this->load->view('application');
+        }
 		else
-		{
+		{*/
 			$name = $this->input->post('name');
 			$address = $this->input->post('address');
 			$guardian = $this->input->post('guardian');
@@ -122,12 +122,12 @@ class Home_Controller extends CI_Controller
 				'statistics'=> $statistics,
 				'status' => 'request'
 			];
-				if ($this->Student_Model->add($data) != FALSE) 
+				if ($this->Application_Model->add($data) != FALSE)
 				{
 					// redirect(base_url('dashboard/payroll'));
 
 					$data['message'] = '<script type="text/javascript">
-											alert("adding success");
+											alert("registration success");
 											window.location = "'.base_url('Home_Controller/registration').'";
 										</script>';
 					$this->load->view('regist',$data);
@@ -138,7 +138,7 @@ class Home_Controller extends CI_Controller
 				    $this->load->view('regist',$data);
 				}
 			 
-		}
+//		}
 		
 	}
 
@@ -146,4 +146,3 @@ class Home_Controller extends CI_Controller
 
 }
 
- ?>

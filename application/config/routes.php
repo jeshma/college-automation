@@ -57,6 +57,7 @@ $route['index'] = 'Home_Controller/index';
 $route['scholarship'] = 'Home_Controller/scholarship';
 $route['contact'] = 'Home_Controller/contact';
 $route['registration'] = 'Home_Controller/registration';
+$route['registration/submit'] = 'Home_Controller/add_application';
 
 
 ///////Admin//////////

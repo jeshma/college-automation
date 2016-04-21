@@ -2,7 +2,8 @@
 /**
 * 
 */
-class Student_Details_Controller extends CI_Controller
+require_once(APPPATH.'controllers/Check_Logged.php');
+class Student_Details_Controller extends Check_Logged
 {
 	
 	public function __construct()
@@ -48,8 +49,11 @@ class Student_Details_Controller extends CI_Controller
 
     public function add()
     {
-        $data['course'] = $this->Course_Model->get_all();
-        $this->load->view('admin/add_student_details', $data);
+        if ($this->logged == true) {
+            $data['course'] = $this->Course_Model->get_all();
+            $this->load->view('admin/add_student_details', $data);
+        }else
+            redirect(base_url('login'));
     }
 
     public function add_dir($id)
@@ -101,20 +105,19 @@ class Student_Details_Controller extends CI_Controller
 						'dob'=>$this->input->post('day'),
 						'address'=>$this->input->post('address'),
 						'gender'=>$this->input->post('gender'),
-						// 'father'=>$this->input->post('father'),
+						 'father'=>$this->input->post('father'),
 						// 'pin'=>$this->input->post('mother'),
-						// 'income'=>$this->input->post('income'),
+						 'income'=>$this->input->post('income'),
 						'phone'=>$this->input->post('phone'),
-						// 'mail'=>$this->input->post('mail'),
-						// 'religion_community'=>$this->input->post('community'),
-						// 'cast'=>$this->input->post('cast'),
-						// 'panchayath'=>$this->input->post('panchayath'),
-						// 'taluk'=>$this->input->post('taluk'),
-						// 'district'=>$this->input->post('district'),
-						// 'martia_status'=>$this->input->post('martial_status'),
-						// 'spouse_name_address'=>$this->input->post('spouse'),
-						// 'institution_last_attend'=>$this->input->post('institute'),
-						// 'physically_handicapped'=>$this->input->post('phycical'),
+						 'email'=>$this->input->post('mail'),
+						 'community'=>$this->input->post('community'),
+						 'cast'=>$this->input->post('cast'),
+						 'panchayath'=>$this->input->post('panchayath'),
+						 'taluk'=>$this->input->post('taluk'),
+						 'district'=>$this->input->post('district'),
+						 'marital_status'=>$this->input->post('martial_status'),
+						 'last_institute'=>$this->input->post('institute'),
+						 'physical_handicaped'=>$this->input->post('phycical'),
 						'cource_id'=>$this->input->post('course')
 						// 'cource_name'=>$this->input->post('course_name')
 

@@ -363,7 +363,7 @@ public function add_semester()
     	if ($this->logged == true) {
     		# code...
 	    	$data['course'] = $this->Course_Model->get_all();
-	    	$data['result'] =$this->Student_Details_Model->view_all();
+	    	$data['result'] =$this->Student_Details_Model->view_all_limit(10);
 			if( $data['result']!= FALSE)
 			{
 				$this->load->view('admin/view_student_details', $data);

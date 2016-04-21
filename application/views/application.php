@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>application</title>
-	<link rel="stylesheet" href="">
-</head>
-<body>
-
-</body>
-</html>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,7 +46,7 @@
    <link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>     -->
 
   </head>
-  <body>
+  <body style="padding-top: 80px">
 
     <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"></a>
@@ -102,36 +88,93 @@
     <!--=========== END HEADER SECTION ================-->
 		<div>
 			<!-- <form name="application"action=""method="post"> -->
-<?php echo form_open(base_url('Home_Controller/add_application'), ['name' => 'addform', 'id' => 'addform']); 
-	echo validation_errors();
-?>
-<h1>Application</h1><br/><br/>
-NAME:<input type="text"name="name"ID="name"><br/><br/>
-ADDRESS:<textarea name="address" id="address"></textarea><br/><br/>
-
-<br/><br/>guardian:<input type="text"name="guardian"ID="guardian"><br/><br/>
-pin:<input type="tell" name="pin" id="pin"><br/><br/>
-course:<input type="text"name="course"id="course"><br/><br/>
-first langauge:<input type="text"name="firstlang"id="firstlang"><br/><br/>
-second langauge:<input type="text"name="secondlang"id="secondlang"><br/><br/>
-maths<input type="text"name="maths"id="maths"><br/><br/>
-english:<input type="text"name="english"id="english"><br/><br/>
-chemistry:<input type="text"name="chemistry"id="chemistry"><br/><br/>
-physics:<input type="text"name="physics"id="physics"><br/><br/>
-electronics:<input type="text"name="electronics"id="electronics"><br/><br/>
-zoology:<input type="text"name="zoology"id="zoology"><br/><br/>
-botony:<input type="text"name="botony"id="botony"><br/><br/>
-bussiness:<input type="text"name="bussiness"id="bussiness"><br/><br/>
-accounting:<input type="text"name="accounting"id="accounting"><br/><br/>
-economics:<input type="text"name="economics"id="economics"><br/><br/>
-politics:<input type="text"name="politics"id="politics"><br/><br/>
-statistics:<input type="text"name="statistics"id="statistics"><br/><br/>
-<input type="submit" name="usubmit" id="submit" value="submit">
-<input type="submit" name="ucancel" id="cancel" value="cancel">
-
-</form>
+            <div>
+                <?php echo form_open(base_url('registration/submit'), ['name' => 'addform', 'id' => 'addform']); ?>
+                    <h1>Application</h1>
+                    <div class="form-group col-sm-4">
+                        <label for="name" class="control-label">name</label>
+                        <input type="text" name="name" id="name" class="form-control" required="">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="address">Address</label>
+                        <textarea name="address" id="address"  class="form-control" rows="1" cols="10" required=""></textarea>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="guardian">Guardian</label>
+                        <br/><br/><input type="text" name="guardian"  id="guardian" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="pin">Pin</label>
+                        <input type="text" name="pin" id="pin" class="form-control" required="">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="course">course</label>
+                        <input type="text" name="course" id="course" class="form-control" required="">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="firstlang">First Language</label>
+                        <input type="text" name="firstlang" id="firstlang" class="form-control" required="">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="secondlang">Second Language</label>
+                        <input type="text" name="secondlang" id="secondlang" class="form-control" required="">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="maths">maths</label>
+                        <input type="text" name="maths" id="maths" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="english">English</label>
+                        <input type="text" name="english" id="english" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="chemistry">Chemistry</label>
+                        <input type="text" name="chemistry" id="chemistry" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="physics">Physics</label>
+                        <input type="text" name="physics" id="physics" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="electronics">electronics</label>
+                        <input type="text" name="electronics" id="electronics" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="zoology">zoology</label>
+                        <input type="text" name="zoology" id="zoology" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="botony"></label>
+                        <input type="text" name="botony" id="botony" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="bussiness">business</label>
+                        <input type="text" name="bussiness" id="bussiness" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="accounting">accounting</label>
+                        <input type="text" name="accounting" id="accounting" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="economics">economics</label>
+                        <input type="text" name="economics" id="economics" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="politics">politics</label>
+                        <input type="text" name="politics" id="politics" class="form-control">
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label for="statistics">statistics</label>
+                        <input type="text" name="statistics" id="statistics" class="form-control">
+                    </div>
+                    <div class="col-sm-12">
+                        <input type="submit" name="submit" id="submit" value="submit" class="btn btn-default">
+                        <input type="reset" name="cancel" id="cancel" value="reset" class="btn btn-danger">
+                    </div>
+                </form>
+        </div>
 			
-		</div>
+    </div>
 
     <!--=========== BEGIN FOOTER SECTION ================-->
     <footer id="footer">
